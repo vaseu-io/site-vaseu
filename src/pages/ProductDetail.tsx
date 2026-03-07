@@ -88,7 +88,7 @@ const ProductDetail = () => {
       <Header />
 
       {/* Breadcrumb */}
-      <div className="border-b border-neutral-200">
+      <div className="hidden md:block border-b border-neutral-200">
         <div className="container py-3 flex items-center gap-2 text-[11px] uppercase tracking-[0.15em] text-neutral-400">
           <Link to="/" className="hover:text-black transition-colors">Início</Link>
           <span>/</span>
@@ -152,7 +152,7 @@ const ProductDetail = () => {
 
             {/* Thumbnail Strip */}
             {images.length > 1 && (
-              <div className="flex gap-1 px-4 pb-4 overflow-x-auto">
+              <div className="hidden md:flex gap-1 px-4 pb-4 overflow-x-auto">
                 {images.map((img, i) => (
                   <button
                     key={i}
