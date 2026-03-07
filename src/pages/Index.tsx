@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Index = () => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
@@ -18,12 +20,12 @@ const Index = () => {
         <p className="text-sm md:text-base tracking-[0.5em] uppercase opacity-80 mb-12">
           Streetwear Company
         </p>
-        <a
-          href="https://vaseu-company.myshopify.com/collections/all"
+        <Link
+          to="/produtos"
           className="border border-white px-10 py-4 text-xs md:text-sm uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all duration-300"
         >
           Linha Basic
-        </a>
+        </Link>
       </div>
     </div>
   );
