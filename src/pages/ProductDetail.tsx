@@ -261,7 +261,6 @@ const ProductDetail = () => {
             {(() => {
               const otherProducts = allProducts?.filter(p => p.node.handle !== product.handle) || [];
               if (otherProducts.length === 0) return null;
-              // Pick a random but stable suggestion (based on product id hash)
               const suggestedIndex = product.id ? product.id.split('').reduce((a, c) => a + c.charCodeAt(0), 0) % otherProducts.length : 0;
               const suggested = otherProducts[suggestedIndex];
               const suggestedImage = suggested.node.images?.edges?.[0]?.node;
@@ -271,7 +270,6 @@ const ProductDetail = () => {
               const totalDiscounted = totalOriginal * (1 - BUNDLE_DISCOUNT);
               const savings = totalOriginal - totalDiscounted;
 
-              // Build combo checkout URL
               const sizeOption = selectedVariant?.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho');
               const currentSize = sizeOption?.value || selectedVariant?.title || 'M';
               const suggestedDefaultSize = suggested.node.options?.find(o => o.name === 'Size' || o.name === 'Tamanho')?.values?.[0] || 'M';
@@ -282,11 +280,26 @@ const ProductDetail = () => {
 
               return (
                 <div className="px-6 md:px-10 py-6 border-b border-neutral-200">
+                  {/* Placeholder Image Grid - adicione suas fotos do modelo aqui */}
+                  <div className="grid grid-cols-2 gap-2 mb-5">
+                    <div className="aspect-[3/4] bg-neutral-100 border border-neutral-200 flex items-center justify-center">
+                      <span className="text-[10px] uppercase tracking-widest text-neutral-300">Foto 1</span>
+                    </div>
+                    <div className="grid grid-rows-2 gap-2">
+                      <div className="bg-neutral-100 border border-neutral-200 flex items-center justify-center">
+                        <span className="text-[10px] uppercase tracking-widest text-neutral-300">Foto 2</span>
+                      </div>
+                      <div className="bg-neutral-100 border border-neutral-200 flex items-center justify-center">
+                        <span className="text-[10px] uppercase tracking-widest text-neutral-300">Foto 3</span>
+                      </div>
+                    </div>
+                  </div>
+
                   <div className="border border-neutral-200 p-5 space-y-4">
                     {/* Header */}
                     <div>
                       <p className="text-[11px] uppercase tracking-[0.2em] text-neutral-400 mb-1">Oferta Especial</p>
-                      <p className="text-sm font-medium text-black">Compre junto e economize {Math.round(BUNDLE_DISCOUNT * 100)}%</p>
+                      <p className="text-sm text-black">Conjunto Linha Basic Oficial</p>
                     </div>
 
                     {/* Product Images Row */}
@@ -303,8 +316,8 @@ const ProductDetail = () => {
                         <p className="text-[10px] uppercase tracking-wider text-neutral-500 text-center truncate w-full">{product.title}</p>
                       </div>
 
-                      {/* Plus Icon */}
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full border border-neutral-300 flex items-center justify-center">
+                      {/* Plus Icon - sem círculo */}
+                      <div className="flex-shrink-0">
                         <Plus className="w-4 h-4 text-neutral-400" />
                       </div>
 
@@ -326,19 +339,19 @@ const ProductDetail = () => {
                       <div>
                         <p className="text-xs text-neutral-400 line-through">R$ {totalOriginal.toFixed(2).replace('.', ',')}</p>
                         <p className="text-base font-bold text-black">R$ {totalDiscounted.toFixed(2).replace('.', ',')}</p>
-                        <p className="text-[10px] text-green-600 font-medium">Economize R$ {savings.toFixed(2).replace('.', ',')}</p>
+                        <p className="text-[10px] text-green-600">Economize R$ {savings.toFixed(2).replace('.', ',')}</p>
                       </div>
                       {comboUrl ? (
                         <a
                           href={comboUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="px-5 h-11 bg-black text-white text-[11px] uppercase tracking-[0.2em] font-medium flex items-center justify-center hover:bg-neutral-800 transition-all active:scale-[0.98]"
+                          className="px-5 h-11 bg-black text-white text-[11px] uppercase tracking-[0.2em] flex items-center justify-center hover:bg-neutral-800 transition-all active:scale-[0.98]"
                         >
-                          Comprar Combo
+                          Comprar All Basic
                         </a>
                       ) : (
-                        <span className="px-5 h-11 bg-neutral-200 text-neutral-400 text-[11px] uppercase tracking-[0.2em] font-medium flex items-center justify-center cursor-not-allowed">
+                        <span className="px-5 h-11 bg-neutral-200 text-neutral-400 text-[11px] uppercase tracking-[0.2em] flex items-center justify-center cursor-not-allowed">
                           Indisponível
                         </span>
                       )}
