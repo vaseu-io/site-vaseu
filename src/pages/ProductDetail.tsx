@@ -6,6 +6,7 @@ import { useCartStore } from "@/stores/cartStore";
 import { ShopifyProduct } from "@/lib/shopify";
 import { Loader2, ChevronLeft, ChevronRight } from "lucide-react";
 import { toast } from "sonner";
+import { getYampiCheckoutUrl } from "@/lib/yampi";
 
 const ProductDetail = () => {
   const { handle } = useParams<{ handle: string }>();
@@ -201,10 +202,10 @@ const ProductDetail = () => {
                           onClick={() => setSelectedOptions(prev => ({ ...prev, [option.name]: value }))}
                           disabled={!isAvailable}
                           className={`min-w-[48px] h-11 px-4 border text-xs uppercase tracking-wider transition-all ${isSelected
-                              ? 'border-black bg-black text-white'
-                              : isAvailable
-                                ? 'border-neutral-300 bg-white text-black hover:border-black'
-                                : 'border-neutral-200 bg-neutral-50 text-neutral-300 cursor-not-allowed line-through'
+                            ? 'border-black bg-black text-white'
+                            : isAvailable
+                              ? 'border-neutral-300 bg-white text-black hover:border-black'
+                              : 'border-neutral-200 bg-neutral-50 text-neutral-300 cursor-not-allowed line-through'
                             }`}
                         >
                           {value}
@@ -216,14 +217,14 @@ const ProductDetail = () => {
               )
             ))}
 
-            {/* Add to Cart */}
-            <div className="px-6 md:px-10 py-6 border-b border-neutral-200">
+            {/* Add to Cart + Buy Now */}
+            <div className="px-6 md:px-10 py-6 border-b border-neutral-200 space-y-3">
               <button
                 onClick={handleAddToCart}
                 disabled={cartLoading || !selectedVariant?.availableForSale}
                 className={`w-full h-14 text-xs uppercase tracking-[0.25em] font-medium transition-all ${!selectedVariant?.availableForSale
-                    ? 'bg-neutral-200 text-neutral-400 cursor-not-allowed'
-                    : 'bg-black text-white hover:bg-neutral-800 active:scale-[0.98]'
+                  ? 'bg-neutral-200 text-neutral-400 cursor-not-allowed'
+                  : 'bg-black text-white hover:bg-neutral-800 active:scale-[0.98]'
                   }`}
               >
                 {cartLoading ? (
@@ -234,6 +235,21 @@ const ProductDetail = () => {
                   'Adicionar ao Carrinho'
                 )}
               </button>
+              {selectedVariant?.availableForSale && (() => {
+                const sizeOption = selectedVariant.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho');
+                const yampiUrl = getYampiCheckoutUrl(product.title, sizeOption?.value || selectedVariant.title || 'M');
+                if (!yampiUrl) return null;
+                return (
+                  <a
+                    href={yampiUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full h-14 border-2 border-black text-xs uppercase tracking-[0.25em] font-medium text-black hover:bg-neutral-100 transition-all flex items-center justify-center active:scale-[0.98]"
+                  >
+                    Comprar Agora
+                  </a>
+                );
+              })()}
             </div>
 
             {/* Description */}

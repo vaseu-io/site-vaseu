@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { ShoppingCart, Minus, Plus, Trash2, ExternalLink, Loader2 } from "lucide-react";
 import { useCartStore } from "@/stores/cartStore";
+import { getYampiCartCheckoutUrl } from "@/lib/yampi";
 
 export const CartDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +15,24 @@ export const CartDrawer = () => {
   useEffect(() => { if (isOpen) syncCart(); }, [isOpen, syncCart]);
 
   const handleCheckout = () => {
+    // Try Yampi checkout first
+    const yampiItems = items.map(item => {
+      const sizeOption = item.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho');
+      return {
+        productTitle: item.product.node.title,
+        size: sizeOption?.value || item.variantTitle || 'M',
+        quantity: item.quantity,
+      };
+    });
+
+    const yampiUrl = getYampiCartCheckoutUrl(yampiItems);
+    if (yampiUrl) {
+      window.open(yampiUrl, '_blank');
+      setIsOpen(false);
+      return;
+    }
+
+    // Fallback to Shopify checkout
     const checkoutUrl = getCheckoutUrl();
     if (checkoutUrl) {
       window.open(checkoutUrl, '_blank');
