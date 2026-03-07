@@ -30,7 +30,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
       </div>
       <div className="space-y-1">
         <h3 className="font-medium text-sm uppercase tracking-wide truncate">{node.title}</h3>
-        <p className="text-sm font-mono text-muted-foreground">
+        <p className="text-sm font-mono">
           R$ {priceValue.toFixed(2)}
         </p>
         <p className="text-xs text-muted-foreground">

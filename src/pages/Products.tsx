@@ -17,11 +17,6 @@ const Products = () => {
                     <h1 className="text-2xl md:text-3xl font-black uppercase tracking-[0.3em]">
                         All Collection
                     </h1>
-                    {products && (
-                        <p className="text-xs text-muted-foreground mt-2 tracking-[0.2em] uppercase">
-                            {products.length} {products.length === 1 ? "produto" : "produtos"}
-                        </p>
-                    )}
                 </div>
             </div>
 
