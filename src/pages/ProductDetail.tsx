@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useCartStore } from "@/stores/cartStore";
 import { ShopifyProduct } from "@/lib/shopify";
-import { Loader2, ChevronLeft, ChevronRight } from "lucide-react";
+import { Loader2, ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
 import { toast } from "sonner";
 import { getYampiCheckoutUrl } from "@/lib/yampi";
 
@@ -16,6 +16,7 @@ const ProductDetail = () => {
   const cartLoading = useCartStore(state => state.isLoading);
   const [selectedOptions, setSelectedOptions] = useState<Record<string, string>>({});
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [openTabs, setOpenTabs] = useState<Record<string, boolean>>({ design: true, envio: true });
 
   if (isLoading) {
     return (
@@ -253,26 +254,48 @@ const ProductDetail = () => {
               })()}
             </div>
 
-            {/* Description */}
-            {product.description && (
-              <div className="px-6 md:px-10 py-6 border-b border-neutral-200">
-                <h3 className="text-[11px] uppercase tracking-[0.2em] text-neutral-400 mb-4">
-                  1. Descrição
-                </h3>
-                <p className="text-sm leading-relaxed text-neutral-600">
-                  {product.description}
-                </p>
+            {/* Design Accordion Tab */}
+            <div className="border-b border-neutral-200">
+              <button
+                onClick={() => setOpenTabs(prev => ({ ...prev, design: !prev.design }))}
+                className="w-full px-6 md:px-10 py-5 flex items-center justify-between text-left hover:bg-neutral-50 transition-colors"
+              >
+                <span className="text-sm font-normal text-black">Design</span>
+                <ChevronDown
+                  className={`w-5 h-5 text-neutral-400 transition-transform duration-300 ${openTabs.design ? 'rotate-180' : ''}`}
+                />
+              </button>
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${openTabs.design ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+              >
+                <div className="px-6 md:px-10 pb-5">
+                  <p className="text-sm leading-relaxed text-neutral-600">
+                    {product.description || 'Design exclusivo Vaseu com acabamento premium e atenção aos detalhes.'}
+                  </p>
+                </div>
               </div>
-            )}
+            </div>
 
-            {/* Secure Payment */}
-            <div className="px-6 md:px-10 py-6 border-b border-neutral-200">
-              <h3 className="text-[11px] uppercase tracking-[0.2em] text-neutral-400 mb-4">
-                2. Pagamento Seguro
-              </h3>
-              <p className="text-sm leading-relaxed text-neutral-600">
-                Suas informações de pagamento são processadas com segurança. Nós não armazenamos dados do cartão de crédito.
-              </p>
+            {/* Envio Accordion Tab */}
+            <div className="border-b border-neutral-200">
+              <button
+                onClick={() => setOpenTabs(prev => ({ ...prev, envio: !prev.envio }))}
+                className="w-full px-6 md:px-10 py-5 flex items-center justify-between text-left hover:bg-neutral-50 transition-colors"
+              >
+                <span className="text-sm font-normal text-black">Envio</span>
+                <ChevronDown
+                  className={`w-5 h-5 text-neutral-400 transition-transform duration-300 ${openTabs.envio ? 'rotate-180' : ''}`}
+                />
+              </button>
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${openTabs.envio ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+              >
+                <div className="px-6 md:px-10 pb-5">
+                  <p className="text-sm leading-relaxed text-neutral-600">
+                    Enviamos para todo o Brasil. Prazo de entrega de 5 a 15 dias úteis. Frete calculado no checkout.
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Back Link */}
