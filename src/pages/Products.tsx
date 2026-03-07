@@ -14,11 +14,8 @@ const Products = () => {
             {/* Page Header */}
             <div className="border-b border-border">
                 <div className="container py-8">
-                    <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-2">
-                        all collection linha basic
-                    </p>
-                    <h1 className="text-2xl md:text-3xl font-black uppercase tracking-[0.3em]">
-                        All Collection
+                    <h1 className="text-xs text-muted-foreground uppercase tracking-[0.2em]">
+                        all collection - basic
                     </h1>
                 </div>
             </div>
