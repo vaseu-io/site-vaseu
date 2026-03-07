@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { ProductCard } from "@/components/ProductCard";
 import { useProducts } from "@/hooks/useProducts";
 import { Loader2 } from "lucide-react";
@@ -7,7 +8,7 @@ const Products = () => {
     const { data: products, isLoading, error } = useProducts();
 
     return (
-        <div className="min-h-screen bg-background text-foreground">
+        <div className="min-h-screen bg-background text-foreground flex flex-col">
             <Header />
 
             {/* Page Header */}
@@ -56,6 +57,9 @@ const Products = () => {
                     </div>
                 )}
             </div>
+
+            <div className="flex-1" />
+            <Footer />
         </div>
     );
 };

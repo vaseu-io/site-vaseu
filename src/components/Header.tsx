@@ -16,6 +16,12 @@ export const Header = () => {
           <Link to="/produtos" className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors">
             Produtos
           </Link>
+          <Link to="/contato" className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors">
+            Contato
+          </Link>
+          <Link to="/trocas-e-devolucoes" className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors">
+            Trocas
+          </Link>
         </nav>
         <CartDrawer />
       </div>

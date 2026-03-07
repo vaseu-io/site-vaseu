@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useProduct } from "@/hooks/useProducts";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { useCartStore } from "@/stores/cartStore";
 import { ShopifyProduct } from "@/lib/shopify";
 import { Loader2, ChevronLeft, ChevronRight } from "lucide-react";
@@ -286,6 +287,8 @@ const ProductDetail = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
