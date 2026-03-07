@@ -29,9 +29,7 @@ export const Footer = () => {
                             <Link to="/produtos" className="block text-sm text-neutral-300 hover:text-white transition-colors">
                                 Todos os Produtos
                             </Link>
-                            <Link to="/contato" className="block text-sm text-neutral-300 hover:text-white transition-colors">
-                                Contato
-                            </Link>
+
                             <Link to="/trocas-e-devolucoes" className="block text-sm text-neutral-300 hover:text-white transition-colors">
                                 Trocas e Devoluções
                             </Link>
@@ -49,18 +47,38 @@ export const Footer = () => {
 
                     {/* Payment & Social */}
                     <div>
-                        <h4 className="text-[11px] uppercase tracking-[0.2em] text-neutral-400 mb-4">
-                            Formas de Pagamento
+                        <h4 className="text-sm italic text-neutral-400 mb-4">
+                            Nós aceitamos
                         </h4>
-                        <div className="flex flex-wrap gap-3">
-                            {['Visa', 'Mastercard', 'Amex', 'Elo', 'Hipercard', 'Boleto', 'Pix'].map((method) => (
-                                <span
-                                    key={method}
-                                    className="px-3 py-1.5 border border-neutral-700 text-[10px] uppercase tracking-wider text-neutral-400"
-                                >
-                                    {method}
-                                </span>
-                            ))}
+                        <div className="flex flex-wrap gap-2">
+                            {/* AMEX */}
+                            <div className="w-12 h-8 rounded flex items-center justify-center" style={{ backgroundColor: '#016fd0' }}>
+                                <span className="text-[8px] font-bold text-white tracking-wide">AMEX</span>
+                            </div>
+                            {/* Boleto */}
+                            <div className="w-12 h-8 rounded flex items-center justify-center" style={{ backgroundColor: '#3e3e3e' }}>
+                                <span className="text-[7px] font-bold text-white">Boleto</span>
+                            </div>
+                            {/* Elo */}
+                            <div className="w-12 h-8 rounded flex items-center justify-center bg-black">
+                                <span className="text-[10px] font-bold" style={{ color: '#ffcb05' }}>elo</span>
+                            </div>
+                            {/* Hipercard */}
+                            <div className="w-12 h-8 rounded flex items-center justify-center" style={{ backgroundColor: '#822124' }}>
+                                <span className="text-[6px] font-bold text-white">hipercard</span>
+                            </div>
+                            {/* Mastercard */}
+                            <div className="w-12 h-8 rounded flex items-center justify-center bg-white overflow-hidden p-1">
+                                <svg viewBox="0 0 40 24" className="w-full h-full">
+                                    <circle cx="15" cy="12" r="8" fill="#EB001B" />
+                                    <circle cx="25" cy="12" r="8" fill="#F79E1B" />
+                                    <path d="M20 5.8a8 8 0 010 12.4 8 8 0 000-12.4z" fill="#FF5F00" />
+                                </svg>
+                            </div>
+                            {/* Visa */}
+                            <div className="w-12 h-8 rounded flex items-center justify-center" style={{ backgroundColor: '#1a1f71' }}>
+                                <span className="text-[9px] font-bold italic text-white">VISA</span>
+                            </div>
                         </div>
                     </div>
                 </div>
