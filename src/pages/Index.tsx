@@ -19,7 +19,7 @@ const Index = () => {
           Streetwear Company
         </p>
         <a
-          href="#products"
+          href="https://mk3vev-zk.myshopify.com/collections/all"
           className="border border-white px-10 py-4 text-xs md:text-sm uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all duration-300"
         >
           Linha Basic
