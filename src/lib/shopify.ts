@@ -1,7 +1,7 @@
 import { toast } from "sonner";
 
 const SHOPIFY_API_VERSION = '2025-07';
-const SHOPIFY_STORE_PERMANENT_DOMAIN = 'mk3vev-zk.myshopify.com';
+const SHOPIFY_STORE_PERMANENT_DOMAIN = 'vaseu-company.myshopify.com';
 const SHOPIFY_STOREFRONT_URL = `https://${SHOPIFY_STORE_PERMANENT_DOMAIN}/api/${SHOPIFY_API_VERSION}/graphql.json`;
 const SHOPIFY_STOREFRONT_TOKEN = '06d07699c902453a35081d37159dbd8c';
 

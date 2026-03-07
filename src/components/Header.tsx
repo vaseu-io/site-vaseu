@@ -13,9 +13,9 @@ export const Header = () => {
           <Link to="/" className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors">
             Início
           </Link>
-          <a href="#products" className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors">
+          <Link to="/produtos" className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors">
             Produtos
-          </a>
+          </Link>
         </nav>
         <CartDrawer />
       </div>
