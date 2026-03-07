@@ -15,7 +15,7 @@ const Products = () => {
             <div className="border-b border-border">
                 <div className="container py-8">
                     <h1 className="text-2xl md:text-3xl font-black uppercase tracking-[0.3em]">
-                        Todos os Produtos
+                        All Collection
                     </h1>
                     {products && (
                         <p className="text-xs text-muted-foreground mt-2 tracking-[0.2em] uppercase">

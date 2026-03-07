@@ -1,36 +1,16 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { ShoppingCart, Loader2 } from "lucide-react";
-import { useCartStore } from "@/stores/cartStore";
 import { ShopifyProduct } from "@/lib/shopify";
-import { toast } from "sonner";
 
 interface ProductCardProps {
   product: ShopifyProduct;
 }
 
 export const ProductCard = ({ product }: ProductCardProps) => {
-  const addItem = useCartStore(state => state.addItem);
-  const isLoading = useCartStore(state => state.isLoading);
   const { node } = product;
   const image = node.images?.edges?.[0]?.node;
-  const variant = node.variants?.edges?.[0]?.node;
   const price = node.priceRange.minVariantPrice;
-
-  const handleAddToCart = async (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (!variant) return;
-    await addItem({
-      product,
-      variantId: variant.id,
-      variantTitle: variant.title,
-      price: variant.price,
-      quantity: 1,
-      selectedOptions: variant.selectedOptions || [],
-    });
-    toast.success("Adicionado ao carrinho", { position: "top-center" });
-  };
+  const priceValue = parseFloat(price.amount);
+  const installmentValue = (priceValue / 3).toFixed(2);
 
   return (
     <Link to={`/product/${node.handle}`} className="group block">
@@ -48,20 +28,14 @@ export const ProductCard = ({ product }: ProductCardProps) => {
           </div>
         )}
       </div>
-      <div className="space-y-2">
+      <div className="space-y-1">
         <h3 className="font-medium text-sm uppercase tracking-wide truncate">{node.title}</h3>
         <p className="text-sm font-mono text-muted-foreground">
-          R$ {parseFloat(price.amount).toFixed(2)}
+          R$ {priceValue.toFixed(2)}
         </p>
-        <Button
-          variant="outline"
-          size="sm"
-          className="w-full uppercase tracking-wider text-xs"
-          onClick={handleAddToCart}
-          disabled={isLoading || !variant?.availableForSale}
-        >
-          {isLoading ? <Loader2 className="w-3 h-3 animate-spin" /> : !variant?.availableForSale ? "Esgotado" : <><ShoppingCart className="w-3 h-3 mr-2" />Adicionar</>}
-        </Button>
+        <p className="text-xs text-muted-foreground">
+          ou 3x de R$ {installmentValue}
+        </p>
       </div>
     </Link>
   );
