@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-import { Instagram } from "lucide-react";
+
+
 
 export const Footer = () => {
     return (
         <footer className="bg-neutral-900 text-white">
             <div className="container py-12">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
                     {/* Legal Info */}
                     <div>
@@ -18,31 +18,6 @@ export const Footer = () => {
                             <p>CEP: 08730-790</p>
                             <p>CNPJ: 53.416.490/0001-78</p>
                         </div>
-                    </div>
-
-                    {/* Menu */}
-                    <div>
-                        <h4 className="text-[11px] uppercase tracking-[0.2em] text-neutral-400 mb-4">
-                            Menu
-                        </h4>
-                        <nav className="space-y-3">
-                            <Link to="/produtos" className="block text-sm text-neutral-300 hover:text-white transition-colors">
-                                Todos os Produtos
-                            </Link>
-
-                            <Link to="/trocas-e-devolucoes" className="block text-sm text-neutral-300 hover:text-white transition-colors">
-                                Trocas e Devoluções
-                            </Link>
-                            <a
-                                href="https://www.instagram.com/vaseu_company/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition-colors"
-                            >
-                                <Instagram className="w-4 h-4" />
-                                @vaseu_company
-                            </a>
-                        </nav>
                     </div>
 
                     {/* Payment & Social */}

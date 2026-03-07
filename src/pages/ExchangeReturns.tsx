@@ -73,12 +73,10 @@ const ExchangeReturns = () => {
                         Precisa de ajuda?
                     </h3>
                     <p className="text-sm text-neutral-500 mb-4">
-                        Entre em contato conosco pelo e-mail suporte@vaseu.com.br ou pelo nosso WhatsApp.
+                        Entre em contato conosco pelo e-mail suporte@vaseu.com.br ou pela nossa página de contato.
                     </p>
                     <a
-                        href="https://wa.me/5511910105904"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="/contato"
                         className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-medium hover:gap-3 transition-all"
                     >
                         Fale Conosco <ArrowRight className="w-4 h-4" />

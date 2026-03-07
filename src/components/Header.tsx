@@ -16,11 +16,11 @@ export const Header = () => {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link to="/" className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors">
-            Início
-          </Link>
           <Link to="/produtos" className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors">
-            Produtos
+            All Collection
+          </Link>
+          <Link to="/contato" className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors">
+            Contato
           </Link>
           <Link to="/trocas-e-devolucoes" className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors">
             Trocas e Devoluções
@@ -45,18 +45,18 @@ export const Header = () => {
         <div className="md:hidden border-t border-border bg-background animate-in slide-in-from-top-2 duration-200">
           <nav className="container py-4 flex flex-col gap-4">
             <Link
-              to="/"
-              onClick={() => setMenuOpen(false)}
-              className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors py-2"
-            >
-              Início
-            </Link>
-            <Link
               to="/produtos"
               onClick={() => setMenuOpen(false)}
               className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors py-2"
             >
-              Todos os Produtos
+              All Collection
+            </Link>
+            <Link
+              to="/contato"
+              onClick={() => setMenuOpen(false)}
+              className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors py-2"
+            >
+              Contato
             </Link>
             <Link
               to="/trocas-e-devolucoes"
@@ -65,14 +65,6 @@ export const Header = () => {
             >
               Trocas e Devoluções
             </Link>
-            <a
-              href="https://www.instagram.com/vaseu_company/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors py-2"
-            >
-              @vaseu_company
-            </a>
           </nav>
         </div>
       )}
