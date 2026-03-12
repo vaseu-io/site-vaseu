@@ -19,6 +19,8 @@ const ProductDetail = () => {
   const cartLoading = useCartStore(state => state.isLoading);
   const [selectedOptions, setSelectedOptions] = useState<Record<string, string>>({});
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [buyNowLoading, setBuyNowLoading] = useState(false);
+  const [comboLoading, setComboLoading] = useState(false);
   const [openTabs, setOpenTabs] = useState<Record<string, boolean>>({ design: true, envio: true });
 
   if (isLoading) {
@@ -240,21 +242,39 @@ const ProductDetail = () => {
                   'Adicionar ao Carrinho'
                 )}
               </button>
-              {selectedVariant?.availableForSale && (() => {
-                const sizeOption = selectedVariant.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho');
-                const yampiUrl = getYampiCheckoutUrl(product.title, sizeOption?.value || selectedVariant.title || 'M');
-                if (!yampiUrl) return null;
-                return (
-                  <a
-                    href={yampiUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full h-14 border-2 border-black text-xs uppercase tracking-[0.25em] font-medium text-black hover:bg-neutral-100 transition-all flex items-center justify-center active:scale-[0.98]"
-                  >
-                    Comprar Agora
-                  </a>
-                );
-              })()}
+              {selectedVariant?.availableForSale && (
+                <button
+                  onClick={async () => {
+                    setBuyNowLoading(true);
+                    const sizeOption = selectedVariant.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho');
+                    const currentSize = sizeOption?.value || selectedVariant.title || 'M';
+
+                    try {
+                      const res = await fetch('/api/checkout', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ items: [{ productTitle: product.title, size: currentSize, quantity: 1 }] })
+                      });
+
+                      if (res.ok) {
+                        const data = await res.json();
+                        window.open(data.url, '_blank');
+                      } else {
+                        const fallback = getYampiCheckoutUrl(product.title, currentSize);
+                        if (fallback) window.open(fallback, '_blank');
+                      }
+                    } catch (e) {
+                      const fallback = getYampiCheckoutUrl(product.title, currentSize);
+                      if (fallback) window.open(fallback, '_blank');
+                    }
+                    setBuyNowLoading(false);
+                  }}
+                  disabled={buyNowLoading}
+                  className="w-full h-14 border-2 border-black text-xs uppercase tracking-[0.25em] font-medium text-black hover:bg-neutral-100 transition-all flex items-center justify-center active:scale-[0.98]"
+                >
+                  {buyNowLoading ? <Loader2 className="w-4 h-4 animate-spin mx-auto" /> : 'Comprar Agora'}
+                </button>
+              )}
             </div>
 
             {/* Bundle Deal Section */}
@@ -270,16 +290,31 @@ const ProductDetail = () => {
               if (titleLower.includes("black") || titleLower.includes("preta")) targetColor = "black";
               else if (titleLower.includes("white") || titleLower.includes("branca") || titleLower.includes("off-white")) targetColor = "white";
 
-              // Only show bundle for T-shirts (or Oversized) with a target color
-              if (!titleLower.includes("t-shirt") && !titleLower.includes("oversized")) return null;
+              // Check item type
+              const isShorts = titleLower.includes("shorts");
+              const isTShirt = titleLower.includes("t-shirt") || titleLower.includes("oversized");
+
+              // Only show bundle for T-shirts (or Oversized) or Shorts with a target color
+              if (!isShorts && !isTShirt) return null;
               if (!targetColor) return null;
 
-              // Find matching shorts
+              // Find matching companion
               const suggested = allProducts.find(p => {
                 const pTitle = p.node.title.toLowerCase();
-                if (!pTitle.includes("shorts")) return false;
+
+                // If current item is shorts, suggest a t-shirt. Avoid boxy.
+                if (isShorts) {
+                  if (pTitle.includes("boxy")) return false;
+                  if (!pTitle.includes("t-shirt") && !pTitle.includes("oversized")) return false;
+                }
+
+                // If current item is a t-shirt, suggest shorts.
+                if (isTShirt && !pTitle.includes("shorts")) return false;
+
+                // Match color
                 if (targetColor === "black" && (pTitle.includes("black") || pTitle.includes("preto"))) return true;
                 if (targetColor === "white" && (pTitle.includes("white") || pTitle.includes("branco") || pTitle.includes("off-white"))) return true;
+
                 return false;
               });
 
@@ -291,15 +326,14 @@ const ProductDetail = () => {
               const isComboBlack = targetColor === "black";
               const comboPrice = isComboBlack ? 289.90 : 289.90; // Ambos combos são 289,90 segundo histórico
 
+              const sizeOption = selectedVariant?.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho');
+              const currentSize = sizeOption?.value || selectedVariant?.title || 'M';
+              const suggestedDefaultSize = suggested.node.options?.find(o => o.name === 'Size' || o.name === 'Tamanho')?.values?.[0] || 'M';
+
               const currentPriceRaw = parseFloat(selectedVariant?.price?.amount || product.priceRange.minVariantPrice.amount);
               const suggestedPriceRaw = parseFloat(suggested.node.priceRange.minVariantPrice.amount);
               const totalOriginal = currentPriceRaw + suggestedPriceRaw;
               const savings = totalOriginal - comboPrice;
-
-              // Find the tokens
-              const comboUrl = isComboBlack
-                ? "https://vaseu2.pay.yampi.com.br/r/7K0H6R910Y:1" // Token for Conjunto All Basic Black
-                : "https://vaseu2.pay.yampi.com.br/r/V5Y42R5D2Z:1"; // Token for Conjunto All Basic White
 
               return (
                 <div className="px-6 md:px-10 py-6 border-b border-neutral-200">
@@ -349,20 +383,42 @@ const ProductDetail = () => {
                         <p className="text-base font-bold text-black">R$ {comboPrice.toFixed(2).replace('.', ',')}</p>
                         <p className="text-[10px] text-green-600">Economize R$ {savings.toFixed(2).replace('.', ',')}</p>
                       </div>
-                      {comboUrl ? (
-                        <a
-                          href={comboUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="px-5 h-11 bg-black text-white text-[11px] uppercase tracking-[0.2em] flex items-center justify-center hover:bg-neutral-800 transition-all active:scale-[0.98]"
-                        >
-                          Comprar All Basic
-                        </a>
-                      ) : (
-                        <span className="px-5 h-11 bg-neutral-200 text-neutral-400 text-[11px] uppercase tracking-[0.2em] flex items-center justify-center cursor-not-allowed">
-                          Indisponível
-                        </span>
-                      )}
+                      <button
+                        onClick={async () => {
+                          setComboLoading(true);
+                          try {
+                            const res = await fetch('/api/checkout', {
+                              method: 'POST',
+                              headers: { 'Content-Type': 'application/json' },
+                              body: JSON.stringify({
+                                items: [
+                                  { productTitle: product.title, size: currentSize, quantity: 1 },
+                                  { productTitle: suggested.node.title, size: suggestedDefaultSize, quantity: 1 }
+                                ]
+                              })
+                            });
+                            if (res.ok) {
+                              const data = await res.json();
+                              window.open(data.url, '_blank');
+                            } else {
+                              const fallbackUrl = isComboBlack
+                                ? "https://vaseu2.pay.yampi.com.br/r/7K0H6R910Y:1"
+                                : "https://vaseu2.pay.yampi.com.br/r/V5Y42R5D2Z:1";
+                              window.open(fallbackUrl, '_blank');
+                            }
+                          } catch (e) {
+                            const fallbackUrl = isComboBlack
+                              ? "https://vaseu2.pay.yampi.com.br/r/7K0H6R910Y:1"
+                              : "https://vaseu2.pay.yampi.com.br/r/V5Y42R5D2Z:1";
+                            window.open(fallbackUrl, '_blank');
+                          }
+                          setComboLoading(false);
+                        }}
+                        disabled={comboLoading}
+                        className="px-5 h-11 bg-black text-white text-[11px] uppercase tracking-[0.2em] flex items-center justify-center hover:bg-neutral-800 transition-all active:scale-[0.98]"
+                      >
+                        {comboLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Comprar All Basic'}
+                      </button>
                     </div>
                   </div>
                 </div>

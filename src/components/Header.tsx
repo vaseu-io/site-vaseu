@@ -9,9 +9,9 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex flex-col">
-          <span className="text-xl font-black tracking-[0.3em] uppercase">VASEU</span>
-          <span className="text-[9px] tracking-[0.25em] uppercase text-muted-foreground -mt-1">Streetwear Company</span>
+        <Link to="/" className="flex flex-col flex-shrink-0">
+          <span className="text-lg md:text-xl font-black tracking-[0.2em] md:tracking-[0.3em] uppercase">VASEU</span>
+          <span className="text-[8px] md:text-[9px] tracking-[0.1em] md:tracking-[0.25em] uppercase text-muted-foreground -mt-1">Streetwear Company</span>
         </Link>
 
         {/* Desktop nav */}

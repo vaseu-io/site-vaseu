@@ -12,32 +12,68 @@ export const CartDrawer = () => {
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
   const totalPrice = items.reduce((sum, item) => sum + (parseFloat(item.price.amount) * item.quantity), 0);
 
+  const [checkoutLoading, setCheckoutLoading] = useState(false);
+
   useEffect(() => { if (isOpen) syncCart(); }, [isOpen, syncCart]);
 
-  const handleCheckout = () => {
-    // Try Yampi checkout first
-    const yampiItems = items.map(item => {
-      const sizeOption = item.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho');
-      return {
-        productTitle: item.product.node.title,
-        size: sizeOption?.value || item.variantTitle || 'M',
-        quantity: item.quantity,
-      };
-    });
+  const handleCheckout = async () => {
+    setCheckoutLoading(true);
 
-    const yampiUrl = getYampiCartCheckoutUrl(yampiItems);
-    if (yampiUrl) {
-      window.open(yampiUrl, '_blank');
+    try {
+      const yampiItems = items.map(item => {
+        const sizeOption = item.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho');
+        return {
+          productTitle: item.product.node.title,
+          size: sizeOption?.value || item.variantTitle || 'M',
+          quantity: item.quantity,
+        };
+      });
+
+      // Call the dynamic serverless backend
+      const res = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ items: yampiItems }),
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.url) {
+          window.open(data.url, '_blank');
+          setIsOpen(false);
+          setCheckoutLoading(false);
+          return; // Success
+        }
+      }
+
+      console.warn("Dynamic Yampi failed, falling back to cached local search or Shopify");
+    } catch (err) {
+      console.error("Yampi Dynamic API Checkout Error:", err);
+    }
+
+    // Fallback to local hardcoded dictionary just in case
+    const cachedUrl = getYampiCartCheckoutUrl(items.map(i => ({
+      productTitle: i.product.node.title,
+      size: i.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho')?.value || 'M',
+      quantity: i.quantity
+    })));
+
+    if (cachedUrl) {
+      window.open(cachedUrl, '_blank');
       setIsOpen(false);
+      setCheckoutLoading(false);
       return;
     }
 
-    // Fallback to Shopify checkout
+    // Absolute Worst-Case Fallback to Shopify
     const checkoutUrl = getCheckoutUrl();
     if (checkoutUrl) {
       window.open(checkoutUrl, '_blank');
       setIsOpen(false);
     }
+    setCheckoutLoading(false);
   };
 
   const currencyCode = items[0]?.price.currencyCode || 'BRL';
@@ -108,8 +144,8 @@ export const CartDrawer = () => {
                   <span className="text-lg font-semibold">Total</span>
                   <span className="text-xl font-bold font-mono">R$ {totalPrice.toFixed(2)}</span>
                 </div>
-                <Button onClick={handleCheckout} className="w-full" size="lg" disabled={items.length === 0 || isLoading || isSyncing}>
-                  {isLoading || isSyncing ? <Loader2 className="w-4 h-4 animate-spin" /> : <><ExternalLink className="w-4 h-4 mr-2" />Finalizar Compra</>}
+                <Button onClick={handleCheckout} className="w-full" size="lg" disabled={items.length === 0 || isLoading || isSyncing || checkoutLoading}>
+                  {isLoading || isSyncing || checkoutLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <><ExternalLink className="w-4 h-4 mr-2" />Finalizar Compra</>}
                 </Button>
               </div>
             </>

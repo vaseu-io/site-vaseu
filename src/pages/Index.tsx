@@ -14,7 +14,7 @@ const Index = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white text-center px-4">
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-[0.3em] uppercase mb-4">
+        <h1 className="text-5xl md:text-8xl lg:text-9xl font-black tracking-[0.3em] uppercase mb-4">
           VASEU
         </h1>
         <p className="text-sm md:text-base tracking-[0.5em] uppercase opacity-80 mb-12">

@@ -1,0 +1,2950 @@
+﻿[
+    {
+        "relevance":  null,
+        "id":  40253274,
+        "merchant_id":  1361896,
+        "seller_id":  null,
+        "affiliation_id":  null,
+        "active":  true,
+        "gift_value":  null,
+        "searchable":  true,
+        "simple":  false,
+        "erp_id":  null,
+        "ncm":  null,
+        "has_variations":  true,
+        "is_digital":  false,
+        "warranty":  0,
+        "custom_shipping":  false,
+        "shipping_price":  "0.00",
+        "name":  "T-Shirt `Reflexo Preta",
+        "slug":  "t-shirt-reflexo-preta-680a8688af70b",
+        "sku":  "RABRWHMSRS,P4FJS7BZLF,D5A4SS7ULU,DX93S4OC9I",
+        "rating":  0,
+        "priority":  1,
+        "url":  "https://www.vaseu.com.br/t-shirt-reflexo-preta-680a8688af70b/p",
+        "redirect_url_card":  null,
+        "redirect_url_billet":  null,
+        "preview_url":  "https://vaseu2.bubbstorelive.com.br/t-shirt-reflexo-preta-680a8688af70b/p?skipCache=1",
+        "skus":  {
+                     "data":  [
+                                  {
+                                      "id":  268800422,
+                                      "product_id":  40253274,
+                                      "seller_id":  null,
+                                      "sku":  "RABRWHMSRS",
+                                      "token":  "63V1H8JQGY",
+                                      "erp_id":  null,
+                                      "blocked_sale":  true,
+                                      "barcode":  null,
+                                      "title":  "T-Shirt `Reflexo Preta P",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  69.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Tamanho; id=4451155; value=P; value_id=62458347}"
+                                                     ],
+                                      "combinations":  "62458347",
+                                      "order":  0,
+                                      "total_in_stock":  0,
+                                      "stock_status":  "out_of_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/63V1H8JQGY",
+                                      "created_at":  {
+                                                         "date":  "2025-04-24 15:44:24.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:32.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  268800423,
+                                      "product_id":  40253274,
+                                      "seller_id":  null,
+                                      "sku":  "P4FJS7BZLF",
+                                      "token":  "1PSWEME94M",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "T-Shirt `Reflexo Preta M",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  69.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Tamanho; id=4451155; value=M; value_id=62458348}"
+                                                     ],
+                                      "combinations":  "62458348",
+                                      "order":  1,
+                                      "total_in_stock":  3,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/1PSWEME94M",
+                                      "created_at":  {
+                                                         "date":  "2025-04-24 15:44:24.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-07 15:08:26.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  268800425,
+                                      "product_id":  40253274,
+                                      "seller_id":  null,
+                                      "sku":  "D5A4SS7ULU",
+                                      "token":  "JUFITU1GF9",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "T-Shirt `Reflexo Preta G",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  69.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Tamanho; id=4451155; value=G; value_id=62458349}"
+                                                     ],
+                                      "combinations":  "62458349",
+                                      "order":  2,
+                                      "total_in_stock":  2,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/JUFITU1GF9",
+                                      "created_at":  {
+                                                         "date":  "2025-04-24 15:44:24.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-07 15:08:27.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  268800429,
+                                      "product_id":  40253274,
+                                      "seller_id":  null,
+                                      "sku":  "DX93S4OC9I",
+                                      "token":  "NMLLLV5N1G",
+                                      "erp_id":  null,
+                                      "blocked_sale":  true,
+                                      "barcode":  null,
+                                      "title":  "T-Shirt `Reflexo Preta GG",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  69.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Tamanho; id=4451155; value=GG; value_id=62458350}"
+                                                     ],
+                                      "combinations":  "62458350",
+                                      "order":  3,
+                                      "total_in_stock":  0,
+                                      "stock_status":  "out_of_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/NMLLLV5N1G",
+                                      "created_at":  {
+                                                         "date":  "2025-04-24 15:44:24.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:32.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  }
+                              ]
+                 }
+    },
+    {
+        "relevance":  null,
+        "id":  40253275,
+        "merchant_id":  1361896,
+        "seller_id":  null,
+        "affiliation_id":  null,
+        "active":  true,
+        "gift_value":  null,
+        "searchable":  true,
+        "simple":  false,
+        "erp_id":  null,
+        "ncm":  null,
+        "has_variations":  true,
+        "is_digital":  false,
+        "warranty":  null,
+        "custom_shipping":  false,
+        "shipping_price":  "0.00",
+        "name":  "T-Shirt `Reflexo Off-White",
+        "slug":  "t-shirt-reflexo-off-white-680a8688c688d",
+        "sku":  "LY14G43ZVY,64SAA1PN81,TA87LCL8IE,2LD55BLMX6",
+        "rating":  0,
+        "priority":  1,
+        "url":  "https://www.vaseu.com.br/t-shirt-reflexo-off-white-680a8688c688d/p",
+        "redirect_url_card":  null,
+        "redirect_url_billet":  null,
+        "preview_url":  "https://vaseu2.bubbstorelive.com.br/t-shirt-reflexo-off-white-680a8688c688d/p?skipCache=1",
+        "skus":  {
+                     "data":  [
+                                  {
+                                      "id":  268800424,
+                                      "product_id":  40253275,
+                                      "seller_id":  null,
+                                      "sku":  "LY14G43ZVY",
+                                      "token":  "M1LSKDK12K",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "T-Shirt `Reflexo Off-White P",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  69.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Tamanho; id=4451155; value=P; value_id=62458347}"
+                                                     ],
+                                      "combinations":  "62458347",
+                                      "order":  0,
+                                      "total_in_stock":  1,
+                                      "stock_status":  "low_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/M1LSKDK12K",
+                                      "created_at":  {
+                                                         "date":  "2025-04-24 15:44:24.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-13 23:25:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  268800428,
+                                      "product_id":  40253275,
+                                      "seller_id":  null,
+                                      "sku":  "64SAA1PN81",
+                                      "token":  "GV5J8FBJRG",
+                                      "erp_id":  null,
+                                      "blocked_sale":  true,
+                                      "barcode":  null,
+                                      "title":  "T-Shirt `Reflexo Off-White M",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  69.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Tamanho; id=4451155; value=M; value_id=62458348}"
+                                                     ],
+                                      "combinations":  "62458348",
+                                      "order":  0,
+                                      "total_in_stock":  0,
+                                      "stock_status":  "out_of_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/GV5J8FBJRG",
+                                      "created_at":  {
+                                                         "date":  "2025-04-24 15:44:24.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:32.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  268800431,
+                                      "product_id":  40253275,
+                                      "seller_id":  null,
+                                      "sku":  "TA87LCL8IE",
+                                      "token":  "I0PMS4RRK4",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "T-Shirt `Reflexo Off-White G",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  69.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Tamanho; id=4451155; value=G; value_id=62458349}"
+                                                     ],
+                                      "combinations":  "62458349",
+                                      "order":  0,
+                                      "total_in_stock":  3,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/I0PMS4RRK4",
+                                      "created_at":  {
+                                                         "date":  "2025-04-24 15:44:24.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-05 21:20:05.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  268800434,
+                                      "product_id":  40253275,
+                                      "seller_id":  null,
+                                      "sku":  "2LD55BLMX6",
+                                      "token":  "8NXDYAVTX4",
+                                      "erp_id":  null,
+                                      "blocked_sale":  true,
+                                      "barcode":  null,
+                                      "title":  "T-Shirt `Reflexo Off-White GG",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  69.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Tamanho; id=4451155; value=GG; value_id=62458350}"
+                                                     ],
+                                      "combinations":  "62458350",
+                                      "order":  0,
+                                      "total_in_stock":  0,
+                                      "stock_status":  "out_of_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/8NXDYAVTX4",
+                                      "created_at":  {
+                                                         "date":  "2025-04-24 15:44:25.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:32.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  }
+                              ]
+                 }
+    },
+    {
+        "relevance":  null,
+        "id":  40253276,
+        "merchant_id":  1361896,
+        "seller_id":  null,
+        "affiliation_id":  null,
+        "active":  true,
+        "gift_value":  null,
+        "searchable":  true,
+        "simple":  false,
+        "erp_id":  null,
+        "ncm":  null,
+        "has_variations":  true,
+        "is_digital":  false,
+        "warranty":  null,
+        "custom_shipping":  false,
+        "shipping_price":  "0.00",
+        "name":  "T-Shirt `Ruínas",
+        "slug":  "t-shirt-ruinas-680a8688cb931",
+        "sku":  "HPP4GRMFHE,DMR2VDS23Q,KZ5ZVIY76X,NEFG85V5IB",
+        "rating":  0,
+        "priority":  1,
+        "url":  "https://www.vaseu.com.br/t-shirt-ruinas-680a8688cb931/p",
+        "redirect_url_card":  null,
+        "redirect_url_billet":  null,
+        "preview_url":  "https://vaseu2.bubbstorelive.com.br/t-shirt-ruinas-680a8688cb931/p?skipCache=1",
+        "skus":  {
+                     "data":  [
+                                  {
+                                      "id":  268800427,
+                                      "product_id":  40253276,
+                                      "seller_id":  null,
+                                      "sku":  "HPP4GRMFHE",
+                                      "token":  "A1YPDZJPP0",
+                                      "erp_id":  null,
+                                      "blocked_sale":  true,
+                                      "barcode":  null,
+                                      "title":  "T-Shirt `Ruínas P",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  69.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Tamanho; id=4451155; value=P; value_id=62458347}"
+                                                     ],
+                                      "combinations":  "62458347",
+                                      "order":  0,
+                                      "total_in_stock":  0,
+                                      "stock_status":  "out_of_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/A1YPDZJPP0",
+                                      "created_at":  {
+                                                         "date":  "2025-04-24 15:44:24.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:32.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  268800430,
+                                      "product_id":  40253276,
+                                      "seller_id":  null,
+                                      "sku":  "DMR2VDS23Q",
+                                      "token":  "RZOFGN6UU2",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "T-Shirt `Ruínas M",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  69.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Tamanho; id=4451155; value=M; value_id=62458348}"
+                                                     ],
+                                      "combinations":  "62458348",
+                                      "order":  0,
+                                      "total_in_stock":  2,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/RZOFGN6UU2",
+                                      "created_at":  {
+                                                         "date":  "2025-04-24 15:44:24.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-05 21:20:05.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  268800432,
+                                      "product_id":  40253276,
+                                      "seller_id":  null,
+                                      "sku":  "KZ5ZVIY76X",
+                                      "token":  "T8BC0EO07J",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "T-Shirt `Ruínas G",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  69.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Tamanho; id=4451155; value=G; value_id=62458349}"
+                                                     ],
+                                      "combinations":  "62458349",
+                                      "order":  0,
+                                      "total_in_stock":  7,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/T8BC0EO07J",
+                                      "created_at":  {
+                                                         "date":  "2025-04-24 15:44:25.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-05 21:20:05.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  268800435,
+                                      "product_id":  40253276,
+                                      "seller_id":  null,
+                                      "sku":  "NEFG85V5IB",
+                                      "token":  "7S0Z0R004D",
+                                      "erp_id":  null,
+                                      "blocked_sale":  true,
+                                      "barcode":  null,
+                                      "title":  "T-Shirt `Ruínas GG",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  69.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Tamanho; id=4451155; value=GG; value_id=62458350}"
+                                                     ],
+                                      "combinations":  "62458350",
+                                      "order":  0,
+                                      "total_in_stock":  0,
+                                      "stock_status":  "out_of_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/7S0Z0R004D",
+                                      "created_at":  {
+                                                         "date":  "2025-04-24 15:44:25.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:32.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  }
+                              ]
+                 }
+    },
+    {
+        "relevance":  null,
+        "id":  40253277,
+        "merchant_id":  1361896,
+        "seller_id":  null,
+        "affiliation_id":  null,
+        "active":  true,
+        "gift_value":  null,
+        "searchable":  true,
+        "simple":  false,
+        "erp_id":  null,
+        "ncm":  null,
+        "has_variations":  true,
+        "is_digital":  false,
+        "warranty":  null,
+        "custom_shipping":  false,
+        "shipping_price":  "0.00",
+        "name":  "T-Shirt `Orquidário | Vaseu x Ibanez",
+        "slug":  "t-shirt-orquidario-vaseu-x-ibanez-680a868907cee",
+        "sku":  "QQO3F4OT11,HPU17FITLK,R4GLKD2C66,R4M3NDM82X",
+        "rating":  0,
+        "priority":  1,
+        "url":  "https://www.vaseu.com.br/t-shirt-orquidario-vaseu-x-ibanez-680a868907cee/p",
+        "redirect_url_card":  null,
+        "redirect_url_billet":  null,
+        "preview_url":  "https://vaseu2.bubbstorelive.com.br/t-shirt-orquidario-vaseu-x-ibanez-680a868907cee/p?skipCache=1",
+        "skus":  {
+                     "data":  [
+                                  {
+                                      "id":  268800436,
+                                      "product_id":  40253277,
+                                      "seller_id":  null,
+                                      "sku":  "QQO3F4OT11",
+                                      "token":  "21I4KNWHHT",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "T-Shirt `Orquidário | Vaseu x Ibanez P",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  69.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Tamanho; id=4451155; value=P; value_id=62458347}"
+                                                     ],
+                                      "combinations":  "62458347",
+                                      "order":  0,
+                                      "total_in_stock":  5,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/21I4KNWHHT",
+                                      "created_at":  {
+                                                         "date":  "2025-04-24 15:44:25.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-05 21:20:05.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  268800437,
+                                      "product_id":  40253277,
+                                      "seller_id":  null,
+                                      "sku":  "HPU17FITLK",
+                                      "token":  "PE24CN2E6F",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "T-Shirt `Orquidário | Vaseu x Ibanez M",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  69.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Tamanho; id=4451155; value=M; value_id=62458348}"
+                                                     ],
+                                      "combinations":  "62458348",
+                                      "order":  0,
+                                      "total_in_stock":  5,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/PE24CN2E6F",
+                                      "created_at":  {
+                                                         "date":  "2025-04-24 15:44:25.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-05 21:20:05.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  268800439,
+                                      "product_id":  40253277,
+                                      "seller_id":  null,
+                                      "sku":  "R4GLKD2C66",
+                                      "token":  "MUJ5T459O0",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "T-Shirt `Orquidário | Vaseu x Ibanez G",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  69.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Tamanho; id=4451155; value=G; value_id=62458349}"
+                                                     ],
+                                      "combinations":  "62458349",
+                                      "order":  0,
+                                      "total_in_stock":  1,
+                                      "stock_status":  "low_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/MUJ5T459O0",
+                                      "created_at":  {
+                                                         "date":  "2025-04-24 15:44:25.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-05 21:20:05.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  268800441,
+                                      "product_id":  40253277,
+                                      "seller_id":  null,
+                                      "sku":  "R4M3NDM82X",
+                                      "token":  "E0XWEM17JL",
+                                      "erp_id":  null,
+                                      "blocked_sale":  true,
+                                      "barcode":  null,
+                                      "title":  "T-Shirt `Orquidário | Vaseu x Ibanez GG",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  69.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Tamanho; id=4451155; value=GG; value_id=62458350}"
+                                                     ],
+                                      "combinations":  "62458350",
+                                      "order":  0,
+                                      "total_in_stock":  0,
+                                      "stock_status":  "out_of_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/E0XWEM17JL",
+                                      "created_at":  {
+                                                         "date":  "2025-04-24 15:44:25.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:32.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  }
+                              ]
+                 }
+    },
+    {
+        "relevance":  null,
+        "id":  42557311,
+        "merchant_id":  1361896,
+        "seller_id":  null,
+        "affiliation_id":  null,
+        "active":  true,
+        "gift_value":  null,
+        "searchable":  true,
+        "simple":  true,
+        "erp_id":  null,
+        "ncm":  null,
+        "has_variations":  false,
+        "is_digital":  true,
+        "warranty":  null,
+        "custom_shipping":  false,
+        "shipping_price":  "0.00",
+        "name":  "Drop Box",
+        "slug":  "drop-box-68e309d74c07f",
+        "sku":  "TCI5UJHNWH,HH45P5W7KY,BRUQUXFSI7,MYYNU7RQQM,BQBTUN1CPE",
+        "rating":  0,
+        "priority":  1,
+        "url":  "https://www.vaseu.com.br/drop-box-68e309d74c07f/p",
+        "redirect_url_card":  null,
+        "redirect_url_billet":  null,
+        "preview_url":  "https://vaseu2.bubbstorelive.com.br/drop-box-68e309d74c07f/p?skipCache=1",
+        "skus":  {
+                     "data":  [
+                                  {
+                                      "id":  282921640,
+                                      "product_id":  42557311,
+                                      "seller_id":  null,
+                                      "sku":  "TCI5UJHNWH",
+                                      "token":  "DX0IZ5D8C1",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Drop Box",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  59.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.2,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921640",
+                                      "order":  0,
+                                      "total_in_stock":  29,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/DX0IZ5D8C1",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:23:25.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921641,
+                                      "product_id":  42557311,
+                                      "seller_id":  null,
+                                      "sku":  "HH45P5W7KY",
+                                      "token":  "4MOW2L5H2R",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Drop Box",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  59.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.2,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921641",
+                                      "order":  0,
+                                      "total_in_stock":  29,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/4MOW2L5H2R",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:23:25.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921642,
+                                      "product_id":  42557311,
+                                      "seller_id":  null,
+                                      "sku":  "BRUQUXFSI7",
+                                      "token":  "B3CEPP53GT",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Drop Box",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  59.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.2,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921642",
+                                      "order":  0,
+                                      "total_in_stock":  29,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/B3CEPP53GT",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:23:25.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921643,
+                                      "product_id":  42557311,
+                                      "seller_id":  null,
+                                      "sku":  "MYYNU7RQQM",
+                                      "token":  "1HWY4PEH1K",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Drop Box",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  59.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.2,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921643",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/1HWY4PEH1K",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:23:25.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921644,
+                                      "product_id":  42557311,
+                                      "seller_id":  null,
+                                      "sku":  "BQBTUN1CPE",
+                                      "token":  "1XPXS362P7",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Drop Box",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  59.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.2,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921644",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/1XPXS362P7",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:23:25.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  }
+                              ]
+                 }
+    },
+    {
+        "relevance":  null,
+        "id":  42557327,
+        "merchant_id":  1361896,
+        "seller_id":  null,
+        "affiliation_id":  null,
+        "active":  true,
+        "gift_value":  null,
+        "searchable":  true,
+        "simple":  true,
+        "erp_id":  null,
+        "ncm":  null,
+        "has_variations":  false,
+        "is_digital":  false,
+        "warranty":  null,
+        "custom_shipping":  false,
+        "shipping_price":  "0.00",
+        "name":  "Premium Oversized - Legacy",
+        "slug":  "premium-t-shirt-legacy-68e30b35e083c",
+        "sku":  "1SZYA6ESXP,H012GTEMAC,SNMY7MU5N0,9K5Q4O7UKH,IFXIFXU5I6",
+        "rating":  0,
+        "priority":  1,
+        "url":  "https://www.vaseu.com.br/premium-t-shirt-legacy-68e30b35e083c/p",
+        "redirect_url_card":  null,
+        "redirect_url_billet":  null,
+        "preview_url":  "https://vaseu2.bubbstorelive.com.br/premium-t-shirt-legacy-68e30b35e083c/p?skipCache=1",
+        "skus":  {
+                     "data":  [
+                                  {
+                                      "id":  282921561,
+                                      "product_id":  42557327,
+                                      "seller_id":  null,
+                                      "sku":  "1SZYA6ESXP",
+                                      "token":  "259HBPYY4V",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Premium Oversized - Legacy",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  99.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921561",
+                                      "order":  0,
+                                      "total_in_stock":  29,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/259HBPYY4V",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:18:11.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:32.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921562,
+                                      "product_id":  42557327,
+                                      "seller_id":  null,
+                                      "sku":  "H012GTEMAC",
+                                      "token":  "G804314VKW",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Premium Oversized - Legacy",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  99.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921562",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/G804314VKW",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:18:11.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:32.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921563,
+                                      "product_id":  42557327,
+                                      "seller_id":  null,
+                                      "sku":  "SNMY7MU5N0",
+                                      "token":  "IVEMB5Y1VL",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Premium Oversized - Legacy",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  99.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921563",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/IVEMB5Y1VL",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:18:11.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921564,
+                                      "product_id":  42557327,
+                                      "seller_id":  null,
+                                      "sku":  "9K5Q4O7UKH",
+                                      "token":  "A1QWY5D4WE",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Premium Oversized - Legacy",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  99.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921564",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/A1QWY5D4WE",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:18:12.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921565,
+                                      "product_id":  42557327,
+                                      "seller_id":  null,
+                                      "sku":  "IFXIFXU5I6",
+                                      "token":  "P3N7KF7A9X",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Premium Oversized - Legacy",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  99.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921565",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/P3N7KF7A9X",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:18:12.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  }
+                              ]
+                 }
+    },
+    {
+        "relevance":  null,
+        "id":  42557328,
+        "merchant_id":  1361896,
+        "seller_id":  null,
+        "affiliation_id":  null,
+        "active":  true,
+        "gift_value":  null,
+        "searchable":  true,
+        "simple":  true,
+        "erp_id":  null,
+        "ncm":  null,
+        "has_variations":  false,
+        "is_digital":  false,
+        "warranty":  null,
+        "custom_shipping":  false,
+        "shipping_price":  "0.00",
+        "name":  "Premium Oversized - Discipline",
+        "slug":  "premium-t-shirt-discipline-68e30b360555c",
+        "sku":  "HQZH3NS957,O94MNXC917,FIDCCE4401,BQDVHM5UX5,26RSPBDRW5",
+        "rating":  0,
+        "priority":  1,
+        "url":  "https://www.vaseu.com.br/premium-t-shirt-discipline-68e30b360555c/p",
+        "redirect_url_card":  null,
+        "redirect_url_billet":  null,
+        "preview_url":  "https://vaseu2.bubbstorelive.com.br/premium-t-shirt-discipline-68e30b360555c/p?skipCache=1",
+        "skus":  {
+                     "data":  [
+                                  {
+                                      "id":  282921555,
+                                      "product_id":  42557328,
+                                      "seller_id":  null,
+                                      "sku":  "HQZH3NS957",
+                                      "token":  "6MTV9AIWNA",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Premium Oversized - Discipline",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  99.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921555",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/6MTV9AIWNA",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:17:46.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-07 15:17:46.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921556,
+                                      "product_id":  42557328,
+                                      "seller_id":  null,
+                                      "sku":  "O94MNXC917",
+                                      "token":  "HFZIPZHK4H",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Premium Oversized - Discipline",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  99.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921556",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/HFZIPZHK4H",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:17:46.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-07 15:17:46.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921557,
+                                      "product_id":  42557328,
+                                      "seller_id":  null,
+                                      "sku":  "FIDCCE4401",
+                                      "token":  "O0OKND7MJ0",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Premium Oversized - Discipline",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  99.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921557",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/O0OKND7MJ0",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:17:46.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-07 15:17:46.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921558,
+                                      "product_id":  42557328,
+                                      "seller_id":  null,
+                                      "sku":  "BQDVHM5UX5",
+                                      "token":  "4O5OHD9Y7G",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Premium Oversized - Discipline",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  99.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921558",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/4O5OHD9Y7G",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:17:47.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-07 15:17:47.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921559,
+                                      "product_id":  42557328,
+                                      "seller_id":  null,
+                                      "sku":  "26RSPBDRW5",
+                                      "token":  "FSJ4JLV7E3",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Premium Oversized - Discipline",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  99.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921559",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/FSJ4JLV7E3",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:17:47.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-07 15:17:47.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  }
+                              ]
+                 }
+    },
+    {
+        "relevance":  null,
+        "id":  42557329,
+        "merchant_id":  1361896,
+        "seller_id":  null,
+        "affiliation_id":  null,
+        "active":  true,
+        "gift_value":  null,
+        "searchable":  true,
+        "simple":  true,
+        "erp_id":  null,
+        "ncm":  null,
+        "has_variations":  false,
+        "is_digital":  true,
+        "warranty":  null,
+        "custom_shipping":  false,
+        "shipping_price":  "0.00",
+        "name":  "Moletom Premium | Beija Flor",
+        "slug":  "moletom-premium-beija-flor-68e30b361bf26",
+        "sku":  "AJFMGJERB4,O0KR1G31B1,8JNDAEJMWZ,MFR08J1DO3,5SQGVPGKC2",
+        "rating":  0,
+        "priority":  1,
+        "url":  "https://www.vaseu.com.br/moletom-premium-beija-flor-68e30b361bf26/p",
+        "redirect_url_card":  null,
+        "redirect_url_billet":  null,
+        "preview_url":  "https://vaseu2.bubbstorelive.com.br/moletom-premium-beija-flor-68e30b361bf26/p?skipCache=1",
+        "skus":  {
+                     "data":  [
+                                  {
+                                      "id":  282921535,
+                                      "product_id":  42557329,
+                                      "seller_id":  null,
+                                      "sku":  "AJFMGJERB4",
+                                      "token":  "2GIFQAU576",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Moletom Premium | Beija Flor",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  189.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921535",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/2GIFQAU576",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:16:50.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921536,
+                                      "product_id":  42557329,
+                                      "seller_id":  null,
+                                      "sku":  "O0KR1G31B1",
+                                      "token":  "J7LP2GQBUA",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Moletom Premium | Beija Flor",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  189.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921536",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/J7LP2GQBUA",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:16:50.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921537,
+                                      "product_id":  42557329,
+                                      "seller_id":  null,
+                                      "sku":  "8JNDAEJMWZ",
+                                      "token":  "NUI9VMJUB0",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Moletom Premium | Beija Flor",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  189.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921537",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/NUI9VMJUB0",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:16:50.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921538,
+                                      "product_id":  42557329,
+                                      "seller_id":  null,
+                                      "sku":  "MFR08J1DO3",
+                                      "token":  "A8SHS558H8",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Moletom Premium | Beija Flor",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  189.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921538",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/A8SHS558H8",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:16:50.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921539,
+                                      "product_id":  42557329,
+                                      "seller_id":  null,
+                                      "sku":  "5SQGVPGKC2",
+                                      "token":  "BDXF9LSPSB",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Moletom Premium | Beija Flor",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  189.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921539",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/BDXF9LSPSB",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:16:50.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  }
+                              ]
+                 }
+    },
+    {
+        "relevance":  null,
+        "id":  42557330,
+        "merchant_id":  1361896,
+        "seller_id":  null,
+        "affiliation_id":  null,
+        "active":  true,
+        "gift_value":  null,
+        "searchable":  true,
+        "simple":  true,
+        "erp_id":  null,
+        "ncm":  null,
+        "has_variations":  false,
+        "is_digital":  false,
+        "warranty":  null,
+        "custom_shipping":  false,
+        "shipping_price":  "0.00",
+        "name":  "Premium Oversized - Time`s Now",
+        "slug":  "premium-t-shirt-times-now-68e30b3619473",
+        "sku":  "E9VY8BK87M,5EG4M5VWLR,MEFYGNW0CY,7R6N0GN0EP,K4NK6WO295",
+        "rating":  0,
+        "priority":  1,
+        "url":  "https://www.vaseu.com.br/premium-t-shirt-times-now-68e30b3619473/p",
+        "redirect_url_card":  null,
+        "redirect_url_billet":  null,
+        "preview_url":  "https://vaseu2.bubbstorelive.com.br/premium-t-shirt-times-now-68e30b3619473/p?skipCache=1",
+        "skus":  {
+                     "data":  [
+                                  {
+                                      "id":  282921569,
+                                      "product_id":  42557330,
+                                      "seller_id":  null,
+                                      "sku":  "E9VY8BK87M",
+                                      "token":  "99I4160XHI",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Premium Oversized - Time`s Now",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  99.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921569",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/99I4160XHI",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:18:47.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921570,
+                                      "product_id":  42557330,
+                                      "seller_id":  null,
+                                      "sku":  "5EG4M5VWLR",
+                                      "token":  "L2A9BRS89B",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Premium Oversized - Time`s Now",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  99.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921570",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/L2A9BRS89B",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:18:47.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921571,
+                                      "product_id":  42557330,
+                                      "seller_id":  null,
+                                      "sku":  "MEFYGNW0CY",
+                                      "token":  "I55EB5CLJ0",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Premium Oversized - Time`s Now",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  99.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921571",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/I55EB5CLJ0",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:18:47.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921572,
+                                      "product_id":  42557330,
+                                      "seller_id":  null,
+                                      "sku":  "7R6N0GN0EP",
+                                      "token":  "1WI1BRCU6N",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Premium Oversized - Time`s Now",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  99.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921572",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/1WI1BRCU6N",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:18:47.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921573,
+                                      "product_id":  42557330,
+                                      "seller_id":  null,
+                                      "sku":  "K4NK6WO295",
+                                      "token":  "FH5EHI151K",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Premium Oversized - Time`s Now",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  99.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921573",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/FH5EHI151K",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:18:47.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  }
+                              ]
+                 }
+    },
+    {
+        "relevance":  null,
+        "id":  42557331,
+        "merchant_id":  1361896,
+        "seller_id":  null,
+        "affiliation_id":  null,
+        "active":  true,
+        "gift_value":  null,
+        "searchable":  true,
+        "simple":  true,
+        "erp_id":  null,
+        "ncm":  null,
+        "has_variations":  false,
+        "is_digital":  true,
+        "warranty":  null,
+        "custom_shipping":  false,
+        "shipping_price":  "0.00",
+        "name":  "Oversized Premium Lisa | Branca",
+        "slug":  "oversized-premium-lisa-branca-68e30b3629e8c",
+        "sku":  "CYSN4LD9IV,EKNMDRI5WL,DPIV4RS2ML,BCZHXTTFQ3,PZGPPE82VG",
+        "rating":  0,
+        "priority":  1,
+        "url":  "https://www.vaseu.com.br/oversized-premium-lisa-branca-68e30b3629e8c/p",
+        "redirect_url_card":  null,
+        "redirect_url_billet":  null,
+        "preview_url":  "https://vaseu2.bubbstorelive.com.br/oversized-premium-lisa-branca-68e30b3629e8c/p?skipCache=1",
+        "skus":  {
+                     "data":  [
+                                  {
+                                      "id":  282921511,
+                                      "product_id":  42557331,
+                                      "seller_id":  null,
+                                      "sku":  "CYSN4LD9IV",
+                                      "token":  "9I47Q3BNEP",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Oversized Premium Lisa | Branca",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  79.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921511",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/9I47Q3BNEP",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:16:37.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921512,
+                                      "product_id":  42557331,
+                                      "seller_id":  null,
+                                      "sku":  "EKNMDRI5WL",
+                                      "token":  "1L3JJ1C6NY",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Oversized Premium Lisa | Branca",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  79.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921512",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/1L3JJ1C6NY",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:16:37.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921513,
+                                      "product_id":  42557331,
+                                      "seller_id":  null,
+                                      "sku":  "DPIV4RS2ML",
+                                      "token":  "GYATYRHMHP",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Oversized Premium Lisa | Branca",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  79.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921513",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/GYATYRHMHP",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:16:37.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921514,
+                                      "product_id":  42557331,
+                                      "seller_id":  null,
+                                      "sku":  "BCZHXTTFQ3",
+                                      "token":  "LNYV42AUN5",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Oversized Premium Lisa | Branca",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  79.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921514",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/LNYV42AUN5",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:16:37.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921515,
+                                      "product_id":  42557331,
+                                      "seller_id":  null,
+                                      "sku":  "PZGPPE82VG",
+                                      "token":  "89EIABHPUO",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Oversized Premium Lisa | Branca",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  79.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  200,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921515",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/89EIABHPUO",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:16:37.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  }
+                              ]
+                 }
+    },
+    {
+        "relevance":  null,
+        "id":  42557332,
+        "merchant_id":  1361896,
+        "seller_id":  null,
+        "affiliation_id":  null,
+        "active":  true,
+        "gift_value":  null,
+        "searchable":  true,
+        "simple":  true,
+        "erp_id":  null,
+        "ncm":  null,
+        "has_variations":  false,
+        "is_digital":  true,
+        "warranty":  null,
+        "custom_shipping":  false,
+        "shipping_price":  "0.00",
+        "name":  "Oversized Premium Lisa | Preta",
+        "slug":  "oversized-premium-lisa-preta-68e30b363c7ac",
+        "sku":  "PDJHY9I8SG,EGPL1T5QU7,7OXGAFM0OC,QVW2LM54PX,9JZCEHY6K8",
+        "rating":  0,
+        "priority":  1,
+        "url":  "https://www.vaseu.com.br/oversized-premium-lisa-preta-68e30b363c7ac/p",
+        "redirect_url_card":  null,
+        "redirect_url_billet":  null,
+        "preview_url":  "https://vaseu2.bubbstorelive.com.br/oversized-premium-lisa-preta-68e30b363c7ac/p?skipCache=1",
+        "skus":  {
+                     "data":  [
+                                  {
+                                      "id":  282921503,
+                                      "product_id":  42557332,
+                                      "seller_id":  null,
+                                      "sku":  "PDJHY9I8SG",
+                                      "token":  "DNN5ENYY1F",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Oversized Premium Lisa | Preta",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  79.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.2,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921503",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/DNN5ENYY1F",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:16:22.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921504,
+                                      "product_id":  42557332,
+                                      "seller_id":  null,
+                                      "sku":  "EGPL1T5QU7",
+                                      "token":  "F5N2AMZEVS",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Oversized Premium Lisa | Preta",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  79.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.2,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921504",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/F5N2AMZEVS",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:16:22.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921505,
+                                      "product_id":  42557332,
+                                      "seller_id":  null,
+                                      "sku":  "7OXGAFM0OC",
+                                      "token":  "O9VBQ3DDCR",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Oversized Premium Lisa | Preta",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  79.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.2,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921505",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/O9VBQ3DDCR",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:16:23.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921506,
+                                      "product_id":  42557332,
+                                      "seller_id":  null,
+                                      "sku":  "QVW2LM54PX",
+                                      "token":  "7FB5JAS2BT",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Oversized Premium Lisa | Preta",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  79.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.2,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921506",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/7FB5JAS2BT",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:16:23.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  282921507,
+                                      "product_id":  42557332,
+                                      "seller_id":  null,
+                                      "sku":  "9JZCEHY6K8",
+                                      "token":  "R1BF9O6GBL",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "Oversized Premium Lisa | Preta",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  79.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.2,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+
+                                                     ],
+                                      "combinations":  "282921507",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/R1BF9O6GBL",
+                                      "created_at":  {
+                                                         "date":  "2025-10-07 15:16:23.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:37:33.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  }
+                              ]
+                 }
+    },
+    {
+        "relevance":  null,
+        "id":  42657762,
+        "merchant_id":  1361896,
+        "seller_id":  null,
+        "affiliation_id":  null,
+        "active":  true,
+        "gift_value":  null,
+        "searchable":  true,
+        "simple":  false,
+        "erp_id":  null,
+        "ncm":  null,
+        "has_variations":  true,
+        "is_digital":  false,
+        "warranty":  null,
+        "custom_shipping":  false,
+        "shipping_price":  "0.00",
+        "name":  "DROP BOX",
+        "slug":  "drop-box-68edc894a3faa",
+        "sku":  "N2TPU0X8PH,QI90OU4J6X,3XKVR3EJX3,DD0U94H7LW,AQUQK0S6TJ",
+        "rating":  0,
+        "priority":  1,
+        "url":  "https://www.vaseu.com.br/drop-box-68edc894a3faa/p",
+        "redirect_url_card":  null,
+        "redirect_url_billet":  null,
+        "preview_url":  "https://vaseu2.bubbstorelive.com.br/drop-box-68edc894a3faa/p?skipCache=1",
+        "skus":  {
+                     "data":  [
+                                  {
+                                      "id":  283384745,
+                                      "product_id":  42657762,
+                                      "seller_id":  null,
+                                      "sku":  "N2TPU0X8PH",
+                                      "token":  "HLOFHQHK0G",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "DROP BOX P",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  59.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Seu tamanho; id=4566126; value=P; value_id=64097609}"
+                                                     ],
+                                      "combinations":  "64097609",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/HLOFHQHK0G",
+                                      "created_at":  {
+                                                         "date":  "2025-10-14 00:50:44.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:50:44.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  283384746,
+                                      "product_id":  42657762,
+                                      "seller_id":  null,
+                                      "sku":  "QI90OU4J6X",
+                                      "token":  "SUD37R2MDE",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "DROP BOX M",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  59.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Seu tamanho; id=4566126; value=M; value_id=64097610}"
+                                                     ],
+                                      "combinations":  "64097610",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/SUD37R2MDE",
+                                      "created_at":  {
+                                                         "date":  "2025-10-14 00:50:44.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:50:44.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  283384747,
+                                      "product_id":  42657762,
+                                      "seller_id":  null,
+                                      "sku":  "3XKVR3EJX3",
+                                      "token":  "SQZ3NBAWWJ",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "DROP BOX G",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  59.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Seu tamanho; id=4566126; value=G; value_id=64097611}"
+                                                     ],
+                                      "combinations":  "64097611",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/SQZ3NBAWWJ",
+                                      "created_at":  {
+                                                         "date":  "2025-10-14 00:50:44.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:50:44.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  283384748,
+                                      "product_id":  42657762,
+                                      "seller_id":  null,
+                                      "sku":  "DD0U94H7LW",
+                                      "token":  "J0Q19XQQPU",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "DROP BOX GG",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  59.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Seu tamanho; id=4566126; value=GG; value_id=64097612}"
+                                                     ],
+                                      "combinations":  "64097612",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/J0Q19XQQPU",
+                                      "created_at":  {
+                                                         "date":  "2025-10-14 00:50:44.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:50:44.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  },
+                                  {
+                                      "id":  283384749,
+                                      "product_id":  42657762,
+                                      "seller_id":  null,
+                                      "sku":  "AQUQK0S6TJ",
+                                      "token":  "1842O1HRUB",
+                                      "erp_id":  null,
+                                      "blocked_sale":  false,
+                                      "barcode":  null,
+                                      "title":  "DROP BOX G1",
+                                      "availability":  1,
+                                      "availability_soldout":  -1,
+                                      "days_availability_formated":  "1 dia útil",
+                                      "price_cost":  0,
+                                      "price_sale":  0,
+                                      "price_discount":  59.9,
+                                      "width":  1,
+                                      "height":  1,
+                                      "length":  1,
+                                      "weight":  0.3,
+                                      "quantity_managed":  true,
+                                      "variations":  [
+                                                         "@{name=Seu tamanho; id=4566126; value=G1; value_id=64097613}"
+                                                     ],
+                                      "combinations":  "64097613",
+                                      "order":  0,
+                                      "total_in_stock":  30,
+                                      "stock_status":  "in_stock",
+                                      "total_orders":  null,
+                                      "allow_sell_without_customization":  false,
+                                      "image_reference_sku_id":  null,
+                                      "purchase_url":  "https://seguro.vaseu.com.br/r/1842O1HRUB",
+                                      "created_at":  {
+                                                         "date":  "2025-10-14 00:50:44.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "updated_at":  {
+                                                         "date":  "2025-10-14 00:50:44.000000",
+                                                         "timezone_type":  3,
+                                                         "timezone":  "America/Sao_Paulo"
+                                                     },
+                                      "customizations":  {
+                                                             "data":  ""
+                                                         }
+                                  }
+                              ]
+                 }
+    }
+]
