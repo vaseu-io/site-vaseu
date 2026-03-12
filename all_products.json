@@ -1,0 +1,246 @@
+[
+  {
+    "name": "T-Shirt `Reflexo Preta",
+    "skus": [
+      {
+        "token": "63V1H8JQGY",
+        "size": "P"
+      },
+      {
+        "token": "1PSWEME94M",
+        "size": "M"
+      },
+      {
+        "token": "JUFITU1GF9",
+        "size": "G"
+      },
+      {
+        "token": "NMLLLV5N1G",
+        "size": "GG"
+      }
+    ]
+  },
+  {
+    "name": "T-Shirt `Reflexo Off-White",
+    "skus": [
+      {
+        "token": "M1LSKDK12K",
+        "size": "P"
+      },
+      {
+        "token": "GV5J8FBJRG",
+        "size": "M"
+      },
+      {
+        "token": "I0PMS4RRK4",
+        "size": "G"
+      },
+      {
+        "token": "8NXDYAVTX4",
+        "size": "GG"
+      }
+    ]
+  },
+  {
+    "name": "T-Shirt `Ruínas",
+    "skus": [
+      {
+        "token": "A1YPDZJPP0",
+        "size": "P"
+      },
+      {
+        "token": "RZOFGN6UU2",
+        "size": "M"
+      },
+      {
+        "token": "T8BC0EO07J",
+        "size": "G"
+      },
+      {
+        "token": "7S0Z0R004D",
+        "size": "GG"
+      }
+    ]
+  },
+  {
+    "name": "T-Shirt `Orquidário | Vaseu x Ibanez",
+    "skus": [
+      {
+        "token": "21I4KNWHHT",
+        "size": "P"
+      },
+      {
+        "token": "PE24CN2E6F",
+        "size": "M"
+      },
+      {
+        "token": "MUJ5T459O0",
+        "size": "G"
+      },
+      {
+        "token": "E0XWEM17JL",
+        "size": "GG"
+      }
+    ]
+  },
+  {
+    "name": "Drop Box",
+    "skus": [
+      {
+        "token": "DX0IZ5D8C1"
+      },
+      {
+        "token": "4MOW2L5H2R"
+      },
+      {
+        "token": "B3CEPP53GT"
+      },
+      {
+        "token": "1HWY4PEH1K"
+      },
+      {
+        "token": "1XPXS362P7"
+      }
+    ]
+  },
+  {
+    "name": "Premium Oversized - Legacy",
+    "skus": [
+      {
+        "token": "259HBPYY4V"
+      },
+      {
+        "token": "G804314VKW"
+      },
+      {
+        "token": "IVEMB5Y1VL"
+      },
+      {
+        "token": "A1QWY5D4WE"
+      },
+      {
+        "token": "P3N7KF7A9X"
+      }
+    ]
+  },
+  {
+    "name": "Premium Oversized - Discipline",
+    "skus": [
+      {
+        "token": "6MTV9AIWNA"
+      },
+      {
+        "token": "HFZIPZHK4H"
+      },
+      {
+        "token": "O0OKND7MJ0"
+      },
+      {
+        "token": "4O5OHD9Y7G"
+      },
+      {
+        "token": "FSJ4JLV7E3"
+      }
+    ]
+  },
+  {
+    "name": "Moletom Premium | Beija Flor",
+    "skus": [
+      {
+        "token": "2GIFQAU576"
+      },
+      {
+        "token": "J7LP2GQBUA"
+      },
+      {
+        "token": "NUI9VMJUB0"
+      },
+      {
+        "token": "A8SHS558H8"
+      },
+      {
+        "token": "BDXF9LSPSB"
+      }
+    ]
+  },
+  {
+    "name": "Premium Oversized - Time`s Now",
+    "skus": [
+      {
+        "token": "99I4160XHI"
+      },
+      {
+        "token": "L2A9BRS89B"
+      },
+      {
+        "token": "I55EB5CLJ0"
+      },
+      {
+        "token": "1WI1BRCU6N"
+      },
+      {
+        "token": "FH5EHI151K"
+      }
+    ]
+  },
+  {
+    "name": "Oversized Premium Lisa | Branca",
+    "skus": [
+      {
+        "token": "9I47Q3BNEP"
+      },
+      {
+        "token": "1L3JJ1C6NY"
+      },
+      {
+        "token": "GYATYRHMHP"
+      },
+      {
+        "token": "LNYV42AUN5"
+      },
+      {
+        "token": "89EIABHPUO"
+      }
+    ]
+  },
+  {
+    "name": "Oversized Premium Lisa | Preta",
+    "skus": [
+      {
+        "token": "DNN5ENYY1F"
+      },
+      {
+        "token": "F5N2AMZEVS"
+      },
+      {
+        "token": "O9VBQ3DDCR"
+      },
+      {
+        "token": "7FB5JAS2BT"
+      },
+      {
+        "token": "R1BF9O6GBL"
+      }
+    ]
+  },
+  {
+    "name": "DROP BOX",
+    "skus": [
+      {
+        "token": "HLOFHQHK0G"
+      },
+      {
+        "token": "SUD37R2MDE"
+      },
+      {
+        "token": "SQZ3NBAWWJ"
+      },
+      {
+        "token": "J0Q19XQQPU"
+      },
+      {
+        "token": "1842O1HRUB"
+      }
+    ]
+  }
+]

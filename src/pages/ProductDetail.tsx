@@ -259,42 +259,50 @@ const ProductDetail = () => {
 
             {/* Bundle Deal Section */}
             {(() => {
-              const otherProducts = allProducts?.filter(p => p.node.handle !== product.handle) || [];
-              if (otherProducts.length === 0) return null;
-              const suggestedIndex = product.id ? product.id.split('').reduce((a, c) => a + c.charCodeAt(0), 0) % otherProducts.length : 0;
-              const suggested = otherProducts[suggestedIndex];
+              if (!allProducts) return null;
+
+              const titleLower = product.title.toLowerCase();
+
+              // No bundle for Boxy
+              if (titleLower.includes("boxy")) return null;
+
+              let targetColor = "";
+              if (titleLower.includes("black") || titleLower.includes("preta")) targetColor = "black";
+              else if (titleLower.includes("white") || titleLower.includes("branca") || titleLower.includes("off-white")) targetColor = "white";
+
+              // Only show bundle for T-shirts (or Oversized) with a target color
+              if (!titleLower.includes("t-shirt") && !titleLower.includes("oversized")) return null;
+              if (!targetColor) return null;
+
+              // Find matching shorts
+              const suggested = allProducts.find(p => {
+                const pTitle = p.node.title.toLowerCase();
+                if (!pTitle.includes("shorts")) return false;
+                if (targetColor === "black" && (pTitle.includes("black") || pTitle.includes("preto"))) return true;
+                if (targetColor === "white" && (pTitle.includes("white") || pTitle.includes("branco") || pTitle.includes("off-white"))) return true;
+                return false;
+              });
+
+              if (!suggested || suggested.node.handle === product.handle) return null;
               const suggestedImage = suggested.node.images?.edges?.[0]?.node;
               const currentImage = images[0]?.node;
-              const suggestedPrice = parseFloat(suggested.node.priceRange.minVariantPrice.amount);
-              const totalOriginal = currentPrice + suggestedPrice;
-              const totalDiscounted = totalOriginal * (1 - BUNDLE_DISCOUNT);
-              const savings = totalOriginal - totalDiscounted;
 
-              const sizeOption = selectedVariant?.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho');
-              const currentSize = sizeOption?.value || selectedVariant?.title || 'M';
-              const suggestedDefaultSize = suggested.node.options?.find(o => o.name === 'Size' || o.name === 'Tamanho')?.values?.[0] || 'M';
-              const comboUrl = getYampiCartCheckoutUrl([
-                { productTitle: product.title, size: currentSize, quantity: 1 },
-                { productTitle: suggested.node.title, size: suggestedDefaultSize, quantity: 1 },
-              ]);
+              // Combo prices for Black and White
+              const isComboBlack = targetColor === "black";
+              const comboPrice = isComboBlack ? 289.90 : 289.90; // Ambos combos são 289,90 segundo histórico
+
+              const currentPriceRaw = parseFloat(selectedVariant?.price?.amount || product.priceRange.minVariantPrice.amount);
+              const suggestedPriceRaw = parseFloat(suggested.node.priceRange.minVariantPrice.amount);
+              const totalOriginal = currentPriceRaw + suggestedPriceRaw;
+              const savings = totalOriginal - comboPrice;
+
+              // Find the tokens
+              const comboUrl = isComboBlack
+                ? "https://vaseu2.pay.yampi.com.br/r/7K0H6R910Y:1" // Token for Conjunto All Basic Black
+                : "https://vaseu2.pay.yampi.com.br/r/V5Y42R5D2Z:1"; // Token for Conjunto All Basic White
 
               return (
                 <div className="px-6 md:px-10 py-6 border-b border-neutral-200">
-                  {/* Placeholder Image Grid - adicione suas fotos do modelo aqui */}
-                  <div className="grid grid-cols-2 gap-2 mb-5">
-                    <div className="aspect-[3/4] bg-neutral-100 border border-neutral-200 flex items-center justify-center">
-                      <span className="text-[10px] uppercase tracking-widest text-neutral-300">Foto 1</span>
-                    </div>
-                    <div className="grid grid-rows-2 gap-2">
-                      <div className="bg-neutral-100 border border-neutral-200 flex items-center justify-center">
-                        <span className="text-[10px] uppercase tracking-widest text-neutral-300">Foto 2</span>
-                      </div>
-                      <div className="bg-neutral-100 border border-neutral-200 flex items-center justify-center">
-                        <span className="text-[10px] uppercase tracking-widest text-neutral-300">Foto 3</span>
-                      </div>
-                    </div>
-                  </div>
-
                   <div className="border border-neutral-200 p-5 space-y-4">
                     {/* Header */}
                     <div>
@@ -338,7 +346,7 @@ const ProductDetail = () => {
                     <div className="flex items-center justify-between pt-2 border-t border-neutral-100">
                       <div>
                         <p className="text-xs text-neutral-400 line-through">R$ {totalOriginal.toFixed(2).replace('.', ',')}</p>
-                        <p className="text-base font-bold text-black">R$ {totalDiscounted.toFixed(2).replace('.', ',')}</p>
+                        <p className="text-base font-bold text-black">R$ {comboPrice.toFixed(2).replace('.', ',')}</p>
                         <p className="text-[10px] text-green-600">Economize R$ {savings.toFixed(2).replace('.', ',')}</p>
                       </div>
                       {comboUrl ? (
