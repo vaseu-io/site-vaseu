@@ -377,8 +377,8 @@ const ProductDetail = () => {
                     </div>
 
                     {/* Pricing */}
-                    <div className="flex items-center justify-between pt-2 border-t border-neutral-100">
-                      <div>
+                    <div className="flex flex-col sm:flex-row items-center sm:justify-between pt-4 border-t border-neutral-100 gap-4">
+                      <div className="w-full sm:w-auto text-center sm:text-left">
                         <p className="text-xs text-neutral-400 line-through">R$ {totalOriginal.toFixed(2).replace('.', ',')}</p>
                         <p className="text-base font-bold text-black">R$ {comboPrice.toFixed(2).replace('.', ',')}</p>
                         <p className="text-[10px] text-green-600">Economize R$ {savings.toFixed(2).replace('.', ',')}</p>
@@ -415,7 +415,7 @@ const ProductDetail = () => {
                           setComboLoading(false);
                         }}
                         disabled={comboLoading}
-                        className="px-5 h-11 bg-black text-white text-[11px] uppercase tracking-[0.2em] flex items-center justify-center hover:bg-neutral-800 transition-all active:scale-[0.98]"
+                        className="w-full sm:w-auto px-5 h-11 bg-black text-white text-[11px] uppercase tracking-[0.2em] flex items-center justify-center hover:bg-neutral-800 transition-all active:scale-[0.98]"
                       >
                         {comboLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Comprar All Basic'}
                       </button>
