@@ -23,6 +23,20 @@ const ProductDetail = () => {
   const [comboLoading, setComboLoading] = useState(false);
   const [openTabs, setOpenTabs] = useState<Record<string, boolean>>({ design: true, envio: true });
 
+  useLayoutEffect(() => {
+    const resetScroll = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+
+    resetScroll();
+    requestAnimationFrame(resetScroll);
+    const timeoutId = window.setTimeout(resetScroll, 60);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [handle]);
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-white">
