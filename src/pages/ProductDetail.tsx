@@ -440,9 +440,12 @@ const ProductDetail = () => {
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${openTabs.design ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
               >
                 <div className="px-6 md:px-10 pb-5">
-                  <p className="text-sm leading-relaxed text-neutral-600">
-                    {product.description || 'Design exclusivo Vaseu com acabamento premium e atenção aos detalhes.'}
-                  </p>
+                  <div className="text-sm leading-relaxed text-neutral-600 space-y-4">
+                    <p>Sua melhor versão não precisa de artifícios. O básico bem feito com Deus é o que sustenta o Reino. Comece em um ambiente limpo. Comece pelo fundamento.</p>
+                    <p>Malha 180g Premium.</p>
+                    <p>100% Algodão Sustentável.</p>
+                    <p>Corte Minimalista.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -463,7 +466,7 @@ const ProductDetail = () => {
               >
                 <div className="px-6 md:px-10 pb-5">
                   <p className="text-sm leading-relaxed text-neutral-600">
-                    Enviamos para todo o Brasil. Prazo de entrega de 5 a 15 dias úteis. Frete calculado no checkout.
+                    Todas as nossas encomendas são enviadas pela Azul Cargo Express, com código de rastreio e total segurança. Oferecemos envio gratuito para todo o Brasil, não nos responsabilizamos por erros no preenchimento dos dados de envio, em casos de divergência resolvemos junto com você.
                   </p>
                 </div>
               </div>
