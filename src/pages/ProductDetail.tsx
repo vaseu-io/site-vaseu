@@ -79,12 +79,6 @@ const ProductDetail = () => {
   const images = product.images?.edges || [];
   const options = product.options || [];
 
-  // Initialize selected options
-  if (Object.keys(selectedOptions).length === 0 && options.length > 0) {
-    const initial: Record<string, string> = {};
-    options.forEach(opt => { initial[opt.name] = opt.values[0]; });
-    setTimeout(() => setSelectedOptions(initial), 0);
-  }
 
   const selectedVariant = product.variants?.edges?.find(v =>
     v.node.selectedOptions.every(so => selectedOptions[so.name] === so.value)
