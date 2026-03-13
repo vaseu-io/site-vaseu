@@ -25,6 +25,9 @@ export const Header = () => {
           <Link to="/trocas-e-devolucoes" className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors">
             Trocas e Devoluções
           </Link>
+          <Link to="/rastreio" className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors">
+            Rastreio
+          </Link>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -64,6 +67,13 @@ export const Header = () => {
               className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors py-2"
             >
               Trocas e Devoluções
+            </Link>
+            <Link
+              to="/rastreio"
+              onClick={() => setMenuOpen(false)}
+              className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors py-2"
+            >
+              Rastreio
             </Link>
           </nav>
         </div>
