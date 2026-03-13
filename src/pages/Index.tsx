@@ -6,7 +6,7 @@ const Index = () => {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+        style={{ backgroundImage: "url('/Modelo 4.png')" }}
       />
 
       {/* Dark overlay for better text readability */}
