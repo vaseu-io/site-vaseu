@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useProduct, useProducts } from "@/hooks/useProducts";
 import { Header } from "@/components/Header";
@@ -22,6 +22,38 @@ const ProductDetail = () => {
   const [buyNowLoading, setBuyNowLoading] = useState(false);
   const [comboLoading, setComboLoading] = useState(false);
   const [openTabs, setOpenTabs] = useState<Record<string, boolean>>({ design: true, envio: true });
+
+  useLayoutEffect(() => {
+    const resetScroll = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+
+    resetScroll();
+    requestAnimationFrame(resetScroll);
+    const timeoutId = window.setTimeout(resetScroll, 60);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [handle]);
+
+  useEffect(() => {
+    if (!product) return;
+
+    const options = product.options || [];
+    if (options.length === 0) return;
+
+    setSelectedOptions(prev => {
+      if (Object.keys(prev).length > 0) return prev;
+
+      const initial: Record<string, string> = {};
+      options.forEach(opt => {
+        initial[opt.name] = opt.values[0];
+      });
+
+      return initial;
+    });
+  }, [product]);
 
   if (isLoading) {
     return (
@@ -47,12 +79,6 @@ const ProductDetail = () => {
   const images = product.images?.edges || [];
   const options = product.options || [];
 
-  // Initialize selected options
-  if (Object.keys(selectedOptions).length === 0 && options.length > 0) {
-    const initial: Record<string, string> = {};
-    options.forEach(opt => { initial[opt.name] = opt.values[0]; });
-    setTimeout(() => setSelectedOptions(initial), 0);
-  }
 
   const selectedVariant = product.variants?.edges?.find(v =>
     v.node.selectedOptions.every(so => selectedOptions[so.name] === so.value)
@@ -90,7 +116,7 @@ const ProductDetail = () => {
   const prevImage = () => setSelectedImageIndex(prev => (prev - 1 + images.length) % images.length);
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black" style={{ overflowAnchor: "none" }}>
       <Header />
 
       {/* Breadcrumb */}
@@ -110,7 +136,7 @@ const ProductDetail = () => {
           {/* Image Gallery - Full bleed, Pace-style */}
           <div className="relative border-r border-neutral-200">
             {/* Main Image */}
-            <div className="aspect-[3/4] bg-neutral-50 overflow-hidden relative group">
+            <div className="aspect-square md:aspect-[3/4] bg-neutral-50 overflow-hidden relative group">
               {images[selectedImageIndex] ? (
                 <img
                   src={images[selectedImageIndex].node.url}
@@ -364,7 +390,15 @@ const ProductDetail = () => {
                       </div>
 
                       {/* Suggested Product */}
-                      <Link to={`/product/${suggested.node.handle}`} className="flex flex-col items-center gap-2 flex-1 min-w-0 group">
+                      <Link
+                        to={`/product/${suggested.node.handle}`}
+                        className="flex flex-col items-center gap-2 flex-1 min-w-0 group"
+                        onClick={() => {
+                          window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+                          document.documentElement.scrollTop = 0;
+                          document.body.scrollTop = 0;
+                        }}
+                      >
                         <div className="w-20 h-24 md:w-24 md:h-28 bg-neutral-50 overflow-hidden border border-neutral-100 group-hover:border-neutral-400 transition-colors">
                           {suggestedImage ? (
                             <img src={suggestedImage.url} alt={suggested.node.title} className="w-full h-full object-cover" />
