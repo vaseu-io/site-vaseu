@@ -203,7 +203,7 @@ const ProductDetail = () => {
           <div className="flex flex-col">
 
             {/* Title + Price */}
-            <div className="px-6 md:px-10 pt-8 pb-6 border-b border-neutral-200">
+            <div className="px-4 md:px-6 lg:px-10 pt-8 pb-6 border-b border-neutral-200">
               <h1 className="text-base md:text-lg font-bold uppercase tracking-[0.15em]">
                 {product.title}
               </h1>
@@ -220,7 +220,7 @@ const ProductDetail = () => {
             {/* Size / Option Selectors */}
             {options.map(option => (
               option.values.length > 1 && (
-                <div key={option.name} className="px-6 md:px-10 py-5 border-b border-neutral-200">
+                <div key={option.name} className="px-4 md:px-6 lg:px-10 py-5 border-b border-neutral-200">
                   <label className="text-[11px] uppercase tracking-[0.2em] text-neutral-400 block mb-3">
                     {option.name}
                   </label>
@@ -251,7 +251,7 @@ const ProductDetail = () => {
             ))}
 
             {/* Add to Cart + Buy Now */}
-            <div className="px-6 md:px-10 py-6 border-b border-neutral-200 space-y-3">
+            <div className="px-4 md:px-6 lg:px-10 py-6 border-b border-neutral-200 space-y-3">
               <button
                 onClick={handleAddToCart}
                 disabled={cartLoading || !selectedVariant?.availableForSale}
@@ -362,7 +362,7 @@ const ProductDetail = () => {
               const savings = totalOriginal - comboPrice;
 
               return (
-                <div className="px-6 md:px-10 py-6 border-b border-neutral-200">
+                <div className="px-4 md:px-6 lg:px-10 py-6 border-b border-neutral-200">
                   <div className="border border-neutral-200 p-5 space-y-4">
                     {/* Header */}
                     <div>
@@ -463,7 +463,7 @@ const ProductDetail = () => {
             <div className="border-b border-neutral-200">
               <button
                 onClick={() => setOpenTabs(prev => ({ ...prev, design: !prev.design }))}
-                className="w-full px-6 md:px-10 py-5 flex items-center justify-between text-left hover:bg-neutral-50 transition-colors"
+                className="w-full px-4 md:px-6 lg:px-10 py-5 flex items-center justify-between text-left hover:bg-neutral-50 transition-colors"
               >
                 <span className="text-sm font-normal text-black">Design</span>
                 <ChevronDown
@@ -473,7 +473,7 @@ const ProductDetail = () => {
               <div
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${openTabs.design ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
               >
-                <div className="px-6 md:px-10 pb-5">
+                <div className="px-4 md:px-6 lg:px-10 pb-5">
                   <div className="text-sm leading-relaxed text-neutral-600 space-y-4">
                     <p>Sua melhor versão não precisa de artifícios. O básico bem feito com Deus é o que sustenta o Reino. Comece em um ambiente limpo. Comece pelo fundamento.</p>
                     <div className="pt-2 space-y-2">
@@ -490,7 +490,7 @@ const ProductDetail = () => {
             <div className="border-b border-neutral-200">
               <button
                 onClick={() => setOpenTabs(prev => ({ ...prev, envio: !prev.envio }))}
-                className="w-full px-6 md:px-10 py-5 flex items-center justify-between text-left hover:bg-neutral-50 transition-colors"
+                className="w-full px-4 md:px-6 lg:px-10 py-5 flex items-center justify-between text-left hover:bg-neutral-50 transition-colors"
               >
                 <span className="text-sm font-normal text-black">Envio</span>
                 <ChevronDown
@@ -500,7 +500,7 @@ const ProductDetail = () => {
               <div
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${openTabs.envio ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
               >
-                <div className="px-6 md:px-10 pb-5">
+                <div className="px-4 md:px-6 lg:px-10 pb-5">
                   <p className="text-sm leading-relaxed text-neutral-600">
                     Todas as nossas encomendas são enviadas pela Azul Cargo Express, com código de rastreio e total segurança. Oferecemos envio gratuito para todo o Brasil, não nos responsabilizamos por erros no preenchimento dos dados de envio, em casos de divergência resolvemos junto com você.
                   </p>
@@ -509,7 +509,7 @@ const ProductDetail = () => {
             </div>
 
             {/* Back Link */}
-            <div className="px-6 md:px-10 py-6">
+            <div className="px-4 md:px-6 lg:px-10 py-6">
               <Link
                 to="/produtos"
                 className="text-[11px] uppercase tracking-[0.2em] text-neutral-400 hover:text-black transition-colors"
