@@ -37,6 +37,24 @@ const ProductDetail = () => {
     return () => window.clearTimeout(timeoutId);
   }, [handle]);
 
+  useEffect(() => {
+    if (!product) return;
+
+    const options = product.options || [];
+    if (options.length === 0) return;
+
+    setSelectedOptions(prev => {
+      if (Object.keys(prev).length > 0) return prev;
+
+      const initial: Record<string, string> = {};
+      options.forEach(opt => {
+        initial[opt.name] = opt.values[0];
+      });
+
+      return initial;
+    });
+  }, [product]);
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-white">
