@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useProduct, useProducts } from "@/hooks/useProducts";
 import { Header } from "@/components/Header";
