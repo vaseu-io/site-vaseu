@@ -16,8 +16,25 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  const { pathname, search } = useLocation();
+
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
+
+  useLayoutEffect(() => {
+    const resetScroll = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+
+    resetScroll();
+    requestAnimationFrame(resetScroll);
+  }, [pathname, search]);
+
   return null;
 };
 
