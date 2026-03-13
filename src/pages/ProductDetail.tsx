@@ -110,7 +110,7 @@ const ProductDetail = () => {
           {/* Image Gallery - Full bleed, Pace-style */}
           <div className="relative border-r border-neutral-200">
             {/* Main Image */}
-            <div className="aspect-[3/4] bg-neutral-50 overflow-hidden relative group">
+            <div className="aspect-square md:aspect-[3/4] bg-neutral-50 overflow-hidden relative group">
               {images[selectedImageIndex] ? (
                 <img
                   src={images[selectedImageIndex].node.url}
