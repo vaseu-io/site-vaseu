@@ -116,7 +116,7 @@ const ProductDetail = () => {
   const prevImage = () => setSelectedImageIndex(prev => (prev - 1 + images.length) % images.length);
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black" style={{ overflowAnchor: "none" }}>
       <Header />
 
       {/* Breadcrumb */}
