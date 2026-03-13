@@ -1,0 +1,72 @@
+/* YAMPI CHECKOUT CUSTOM CSS - VASEU STYLE */
+/* Cole este código nas Configurações -> Checkout -> CSS Customizado da Yampi */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* Alterando fontes globalmente */
+body, h1, h2, h3, h4, h5, h6, p, a, span, div, input, button, select {
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+/* Fundo padrão */
+body {
+  background-color: #fafafa !important;
+}
+
+/* Remover arredondamentos de campos e botões (Design Quadrado) */
+.form-control, 
+.btn, 
+.card,
+.box,
+input,
+select,
+.checkout-header {
+  border-radius: 0 !important;
+}
+
+/* Estilo do Botão Principal de Compra e Avançar (Todo Preto) */
+.btn-primary, 
+.btn-success, 
+#btn-finish-checkout, 
+.btn-action {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  border-radius: 0 !important;
+}
+
+.btn-primary:hover, 
+.btn-success:hover, 
+#btn-finish-checkout:hover {
+  background-color: #222222 !important;
+  border-color: #222222 !important;
+}
+
+/* Caixas de Rumo e Produtos */
+.checkout-box, .summary-box {
+  background-color: #ffffff !important;
+  border: 1px solid #e5e5e5 !important;
+  box-shadow: none !important;
+}
+
+/* Campos de preenchimento ativos (borda preta) */
+.form-control:focus, 
+input:focus, 
+select:focus {
+  border-color: #000000 !important;
+  box-shadow: none !important;
+}
+
+/* Barra de Progresso no topo */
+.progress-bar {
+  background-color: #000000 !important;
+}
+
+/* Loader / Spinner de carregamento */
+.spinner-border {
+  color: #000000 !important;
+}
