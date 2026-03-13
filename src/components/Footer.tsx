@@ -22,12 +22,9 @@ export const Footer = () => {
                 </div>
 
                 {/* Divider + Copyright */}
-                <div className="border-t border-neutral-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-[11px] text-neutral-500 uppercase tracking-[0.15em]">
+                <div className="border-t border-neutral-800 mt-10 pt-6 flex justify-center items-center gap-4">
+                    <p className="text-[11px] text-neutral-500 uppercase tracking-[0.15em] text-center">
                         © {new Date().getFullYear()} Vaseu. Todos os direitos reservados.
-                    </p>
-                    <p className="text-[11px] text-neutral-500">
-                        Desenvolvido com ♥
                     </p>
                 </div>
             </div>
