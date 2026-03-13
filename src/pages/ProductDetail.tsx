@@ -476,9 +476,11 @@ const ProductDetail = () => {
                 <div className="px-6 md:px-10 pb-5">
                   <div className="text-sm leading-relaxed text-neutral-600 space-y-4">
                     <p>Sua melhor versão não precisa de artifícios. O básico bem feito com Deus é o que sustenta o Reino. Comece em um ambiente limpo. Comece pelo fundamento.</p>
-                    <p>Malha 180g Premium.</p>
-                    <p>100% Algodão Sustentável.</p>
-                    <p>Corte Minimalista.</p>
+                    <div className="pt-2 space-y-2">
+                      <p>• Malha 180g Premium.</p>
+                      <p>• 100% Algodão Sustentável.</p>
+                      <p>• Acabamento Premium.</p>
+                    </div>
                   </div>
                 </div>
               </div>
