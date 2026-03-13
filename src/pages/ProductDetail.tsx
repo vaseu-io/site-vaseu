@@ -130,18 +130,18 @@ const ProductDetail = () => {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container px-0">
         <div className="grid md:grid-cols-2 gap-0">
 
           {/* Image Gallery - Full bleed, Pace-style */}
           <div className="relative border-r border-neutral-200">
             {/* Main Image */}
-            <div className="w-full h-[50vh] sm:h-[60vh] md:h-auto md:aspect-[3/4] bg-neutral-50 overflow-hidden relative group flex items-center justify-center">
+            <div className="w-[350px] sm:w-full sm:h-[60vh] md:h-auto overflow-hidden relative group flex items-center justify-center">
               {images[selectedImageIndex] ? (
                 <img
                   src={images[selectedImageIndex].node.url}
                   alt={images[selectedImageIndex].node.altText || product.title}
-                  className="w-[85%] h-[85%] object-contain md:w-full md:h-full md:object-cover mix-blend-multiply"
+                  className="w-full object-cover md:w-full md:h-full md:object-cover mix-blend-multiply"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-neutral-300 text-sm uppercase tracking-widest">

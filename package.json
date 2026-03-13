@@ -1,7 +1,7 @@
 {
-  "name": "vite_react_shadcn_ts",
-git config --global user.name "Seu Nome"  "version": "0.0.0",
-  "private": true,
+"name": "vite_react_shadcn_ts",
+"version": "0.0.0",
+"private": true,
   "description": "**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID",
   "homepage": "https://github.com/vaseu-io/site-vaseu#readme",
   "bugs": {
