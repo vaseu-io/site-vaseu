@@ -362,8 +362,8 @@ const ProductDetail = () => {
               const savings = totalOriginal - comboPrice;
 
               return (
-                <div className="px-4 md:px-6 lg:px-10 py-6 border-b border-neutral-200">
-                  <div className="border border-neutral-200 p-5 space-y-4">
+                <div className="px-4 md:px-6 lg:px-10 py-6 border-b border-neutral-200 bundle-container">
+                  <div className="border border-neutral-200 p-4 sm:p-5 space-y-4 max-w-full overflow-hidden special-offer">
                     {/* Header */}
                     <div>
                       <p className="text-[11px] uppercase tracking-[0.2em] text-neutral-400 mb-1">Oferta Especial</p>
@@ -371,7 +371,7 @@ const ProductDetail = () => {
                     </div>
 
                     {/* Product Images Row */}
-                    <div className="flex items-center justify-center gap-3">
+                    <div className="flex flex-wrap items-center justify-center gap-3">
                       {/* Current Product */}
                       <div className="flex flex-col items-center gap-2 flex-1 min-w-0">
                         <div className="w-20 h-24 md:w-24 md:h-28 bg-neutral-50 overflow-hidden border border-neutral-100">
@@ -449,7 +449,7 @@ const ProductDetail = () => {
                           setComboLoading(false);
                         }}
                         disabled={comboLoading}
-                        className="w-full sm:w-auto px-5 h-11 bg-black text-white text-[11px] uppercase tracking-[0.2em] flex items-center justify-center hover:bg-neutral-800 transition-all active:scale-[0.98]"
+                        className="w-full sm:w-auto my-2 mx-0 px-5 h-11 bg-black text-white text-[11px] uppercase tracking-[0.2em] flex items-center justify-center hover:bg-neutral-800 transition-all active:scale-[0.98]"
                       >
                         {comboLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Comprar All Basic'}
                       </button>
