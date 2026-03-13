@@ -378,7 +378,15 @@ const ProductDetail = () => {
                       </div>
 
                       {/* Suggested Product */}
-                      <Link to={`/product/${suggested.node.handle}`} className="flex flex-col items-center gap-2 flex-1 min-w-0 group">
+                      <Link
+                        to={`/product/${suggested.node.handle}`}
+                        className="flex flex-col items-center gap-2 flex-1 min-w-0 group"
+                        onClick={() => {
+                          window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+                          document.documentElement.scrollTop = 0;
+                          document.body.scrollTop = 0;
+                        }}
+                      >
                         <div className="w-20 h-24 md:w-24 md:h-28 bg-neutral-50 overflow-hidden border border-neutral-100 group-hover:border-neutral-400 transition-colors">
                           {suggestedImage ? (
                             <img src={suggestedImage.url} alt={suggested.node.title} className="w-full h-full object-cover" />

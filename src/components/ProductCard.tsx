@@ -13,7 +13,15 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   const installmentValue = (priceValue / 3).toFixed(2);
 
   return (
-    <Link to={`/product/${node.handle}`} className="group block">
+    <Link
+      to={`/product/${node.handle}`}
+      className="group block"
+      onClick={() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }}
+    >
       <div className="aspect-[3/4] overflow-hidden bg-muted mb-4">
         {image ? (
           <img
