@@ -87,8 +87,9 @@
 }
 
 @layer base {
-  * {
+  *, *::before, *::after {
     @apply border-border;
+    box-sizing: border-box !important;
   }
 
   html, body {

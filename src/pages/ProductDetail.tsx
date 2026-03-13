@@ -136,7 +136,7 @@ const ProductDetail = () => {
           {/* Image Gallery - Full bleed, Pace-style */}
           <div className="relative border-r border-neutral-200">
             {/* Main Image */}
-            <div className="w-[350px] sm:w-full sm:h-[60vh] md:h-auto overflow-hidden relative group flex items-center justify-center">
+            <div className="w-full max-w-full sm:h-[60vh] md:h-auto overflow-hidden relative group flex items-center justify-center">
               {images[selectedImageIndex] ? (
                 <img
                   src={images[selectedImageIndex].node.url}
