@@ -15,8 +15,10 @@ const ProductDetail = () => {
   const { handle } = useParams<{ handle: string }>();
   const { data: product, isLoading } = useProduct(handle || "");
   const { data: allProducts } = useProducts();
+  const { data: bundleProduct } = useProduct('conjunto-all-basic-black-1');
   const addItem = useCartStore(state => state.addItem);
   const cartLoading = useCartStore(state => state.isLoading);
+  const setIsOpen = useCartStore(state => state.setIsOpen);
   const [selectedOptions, setSelectedOptions] = useState<Record<string, string>>({});
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [buyNowLoading, setBuyNowLoading] = useState(false);
@@ -419,32 +421,39 @@ const ProductDetail = () => {
                       </div>
                       <button
                         onClick={async () => {
+                          if (!bundleProduct) {
+                            toast.error("Produto não disponível no momento");
+                            return;
+                          }
+
                           setComboLoading(true);
                           try {
-                            const res = await fetch('/api/checkout', {
-                              method: 'POST',
-                              headers: { 'Content-Type': 'application/json' },
-                              body: JSON.stringify({
-                                items: [
-                                  { productTitle: product.title, size: currentSize, quantity: 1 },
-                                  { productTitle: suggested.node.title, size: suggestedDefaultSize, quantity: 1 }
-                                ]
-                              })
-                            });
-                            if (res.ok) {
-                              const data = await res.json();
-                              window.open(data.url, '_blank');
+                            // Find the matching size variant in the bundle product
+                            const sizeOption = selectedVariant?.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho');
+                            const currentSize = sizeOption?.value || 'M';
+
+                            const targetVariant = bundleProduct.variants?.edges?.find(v => 
+                              v.node.selectedOptions.some(so => (so.name === 'Size' || so.name === 'Tamanho') && so.value === currentSize)
+                            )?.node || bundleProduct.variants?.edges?.[0]?.node;
+
+                            if (targetVariant) {
+                              await addItem({
+                                product: { node: bundleProduct },
+                                variantId: targetVariant.id,
+                                variantTitle: targetVariant.title,
+                                price: targetVariant.price,
+                                quantity: 1,
+                                selectedOptions: targetVariant.selectedOptions || [],
+                              });
+                              
+                              toast.success("Conjunto adicionado ao carrinho", { position: "top-center" });
+                              setIsOpen(true);
                             } else {
-                              const fallbackUrl = isComboBlack
-                                ? "https://vaseu2.pay.yampi.com.br/r/7K0H6R910Y:1"
-                                : "https://vaseu2.pay.yampi.com.br/r/V5Y42R5D2Z:1";
-                              window.open(fallbackUrl, '_blank');
+                              toast.error("Variação de tamanho não encontrada");
                             }
                           } catch (e) {
-                            const fallbackUrl = isComboBlack
-                              ? "https://vaseu2.pay.yampi.com.br/r/7K0H6R910Y:1"
-                              : "https://vaseu2.pay.yampi.com.br/r/V5Y42R5D2Z:1";
-                            window.open(fallbackUrl, '_blank');
+                            console.error("Erro ao adicionar combo:", e);
+                            toast.error("Erro ao adicionar ao carrinho");
                           }
                           setComboLoading(false);
                         }}
