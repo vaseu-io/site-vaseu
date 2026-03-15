@@ -276,8 +276,12 @@ const ProductDetail = () => {
                     setBuyNowLoading(true);
                     const sizeOption = selectedVariant.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho');
                     const currentSize = sizeOption?.value || selectedVariant.title || 'M';
+                    
+                    // Pre-calculate fallback URL (local tokens matching)
+                    const fallback = getYampiCheckoutUrl(product.title, currentSize);
 
                     try {
+                      // Attempt dynamic checkout via API
                       const res = await fetch('/api/checkout', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
@@ -293,16 +297,31 @@ const ProductDetail = () => {
 
                       if (res.ok) {
                         const data = await res.json();
-                        window.location.href = data.url;
+                        if (data.url) {
+                          window.location.href = data.url;
+                        } else if (fallback) {
+                          window.location.href = fallback;
+                        } else {
+                          toast.error("Checkout não disponível para esta variação.");
+                        }
                       } else {
-                        const fallback = getYampiCheckoutUrl(product.title, currentSize);
-                        if (fallback) window.location.href = fallback;
+                        // API failure or 404/500
+                        if (fallback) {
+                          window.location.href = fallback;
+                        } else {
+                          toast.error("Erro ao gerar link de compra.");
+                        }
                       }
                     } catch (e) {
-                      const fallback = getYampiCheckoutUrl(product.title, currentSize);
-                      if (fallback) window.location.href = fallback;
+                      // Network error or fetch exception
+                      if (fallback) {
+                        window.location.href = fallback;
+                      } else {
+                        toast.error("Erro de conexão ao finalizar compra.");
+                      }
+                    } finally {
+                      setBuyNowLoading(false);
                     }
-                    setBuyNowLoading(false);
                   }}
                   disabled={buyNowLoading}
                   className="w-full h-14 border-2 border-black text-xs uppercase tracking-[0.25em] font-medium text-black hover:bg-neutral-100 transition-all flex items-center justify-center active:scale-[0.98]"
