@@ -42,12 +42,24 @@ async function fetchProductsFromYampi(queries: string[], userToken: string, secr
     for (const query of uniqueQueries) {
         try {
             // Clean query string slightly to improve match rate
-            const cleanQuery = query.replace('t-shirt', '').replace('boxy', '').trim();
+            const cleanQuery = query.replace(/t-shirt|boxy|basic/gi, '').trim();
             const searchTerms = cleanQuery.length > 3 ? cleanQuery : query;
 
-            const response = await fetch(`${YAMPI_API_BASE}?include=skus&limit=50&search=${encodeURIComponent(searchTerms)}`, { headers });
+            let response = await fetch(`${YAMPI_API_BASE}?include=skus&limit=50&search=${encodeURIComponent(searchTerms)}`, { headers });
+            
+            // If No results, try with just the first word (very effective for bundle names)
             if (response.ok) {
-                const json = await response.json() as any;
+                let json = await response.json() as any;
+                if (!json.data || json.data.length === 0) {
+                    const firstWord = query.split(' ')[0];
+                    if (firstWord.length > 3) {
+                        const retryResponse = await fetch(`${YAMPI_API_BASE}?include=skus&limit=20&search=${encodeURIComponent(firstWord)}`, { headers });
+                        if (retryResponse.ok) {
+                            json = await retryResponse.json() as any;
+                        }
+                    }
+                }
+                
                 if (json && json.data) {
                     results.push(...json.data);
                 }

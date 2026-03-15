@@ -8,28 +8,28 @@ const YAMPI_CHECKOUT_BASE = 'https://vaseu2.pay.yampi.com.br/r';
 // Generated from Yampi API data - these are public tokens, safe for frontend
 const YAMPI_TOKENS: Record<string, string> = {
     // T-Shirt Reflexo Preta
-    "T-Shirt `Reflexo Preta|P": "63V1H8JQGY",
-    "T-Shirt `Reflexo Preta|M": "1PSWEME94M",
-    "T-Shirt `Reflexo Preta|G": "JUFITU1GF9",
-    "T-Shirt `Reflexo Preta|GG": "NMLLLV5N1G",
+    "T-Shirt Reflexo Preta|P": "63V1H8JQGY",
+    "T-Shirt Reflexo Preta|M": "1PSWEME94M",
+    "T-Shirt Reflexo Preta|G": "JUFITU1GF9",
+    "T-Shirt Reflexo Preta|GG": "NMLLLV5N1G",
 
     // T-Shirt Reflexo Off-White
-    "T-Shirt `Reflexo Off-White|P": "M1LSKDK12K",
-    "T-Shirt `Reflexo Off-White|M": "GV5J8FBJRG",
-    "T-Shirt `Reflexo Off-White|G": "I0PMS4RRK4",
-    "T-Shirt `Reflexo Off-White|GG": "8NXDYAVTX4",
+    "T-Shirt Reflexo Off-White|P": "M1LSKDK12K",
+    "T-Shirt Reflexo Off-White|M": "GV5J8FBJRG",
+    "T-Shirt Reflexo Off-White|G": "I0PMS4RRK4",
+    "T-Shirt Reflexo Off-White|GG": "8NXDYAVTX4",
 
     // T-Shirt Ruínas
-    "T-Shirt `Ruínas|P": "A1YPDZJPP0",
-    "T-Shirt `Ruínas|M": "RZOFGN6UU2",
-    "T-Shirt `Ruínas|G": "T8BC0EO07J",
-    "T-Shirt `Ruínas|GG": "7S0Z0R004D",
+    "T-Shirt Ruínas|P": "A1YPDZJPP0",
+    "T-Shirt Ruínas|M": "RZOFGN6UU2",
+    "T-Shirt Ruínas|G": "T8BC0EO07J",
+    "T-Shirt Ruínas|GG": "7S0Z0R004D",
 
     // T-Shirt Orquidário | Vaseu x Ibanez
-    "T-Shirt `Orquidário | Vaseu x Ibanez|P": "21I4KNWHHT",
-    "T-Shirt `Orquidário | Vaseu x Ibanez|M": "PE24CN2E6F",
-    "T-Shirt `Orquidário | Vaseu x Ibanez|G": "MUJ5T459O0",
-    "T-Shirt `Orquidário | Vaseu x Ibanez|GG": "E0XWEM17JL",
+    "T-Shirt Orquidário | Vaseu x Ibanez|P": "21I4KNWHHT",
+    "T-Shirt Orquidário | Vaseu x Ibanez|M": "PE24CN2E6F",
+    "T-Shirt Orquidário | Vaseu x Ibanez|G": "MUJ5T459O0",
+    "T-Shirt Orquidário | Vaseu x Ibanez|GG": "E0XWEM17JL",
 
     // Drop Box
     "Drop Box|P": "DX0IZ5D8C1",
@@ -60,11 +60,11 @@ const YAMPI_TOKENS: Record<string, string> = {
     "Moletom Premium | Beija Flor|XG": "BDXF9LSPSB",
 
     // Premium Oversized - Time's Now
-    "Premium Oversized - Time`s Now|P": "99I4160XHI",
-    "Premium Oversized - Time`s Now|M": "L2A9BRS89B",
-    "Premium Oversized - Time`s Now|G": "I55EB5CLJ0",
-    "Premium Oversized - Time`s Now|GG": "1WI1BRCU6N",
-    "Premium Oversized - Time`s Now|XG": "FH5EHI151K",
+    "Premium Oversized - Time's Now|P": "99I4160XHI",
+    "Premium Oversized - Time's Now|M": "L2A9BRS89B",
+    "Premium Oversized - Time's Now|G": "I55EB5CLJ0",
+    "Premium Oversized - Time's Now|GG": "1WI1BRCU6N",
+    "Premium Oversized - Time's Now|XG": "FH5EHI151K",
 
     // Oversized Premium Lisa | Branca
     "Oversized Premium Lisa | Branca|P": "9I47Q3BNEP",
@@ -79,6 +79,22 @@ const YAMPI_TOKENS: Record<string, string> = {
     "Oversized Premium Lisa | Preta|G": "O9VBQ3DDCR",
     "Oversized Premium Lisa | Preta|GG": "7FB5JAS2BT",
     "Oversized Premium Lisa | Preta|XG": "R1BF9O6GBL",
+
+    // Conjunto All Basic Black
+    "Conjunto All Basic Black|PP": "T5HCKASY6Q",
+    "Conjunto All Basic Black|P": "GKCWQT045G",
+    "Conjunto All Basic Black|M": "PVE5YELEBP",
+    "Conjunto All Basic Black|G": "9SWLQ4H4QD",
+    "Conjunto All Basic Black|GG": "6LGRXSXZJA",
+    "Conjunto All Basic Black|XG": "LRCE4XZJYW",
+
+    // Conjunto All Basic White
+    "Conjunto All Basic White|PP": "3087V4UJTJ",
+    "Conjunto All Basic White|P": "3CP57ZOLO6",
+    "Conjunto All Basic White|M": "BLDERFXM57",
+    "Conjunto All Basic White|G": "4C1O5ID9R4",
+    "Conjunto All Basic White|GG": "45PJLMVVPZ",
+    "Conjunto All Basic White|XG": "NJDXU3Z0ZB",
 };
 
 // Size mapping: Shopify sizes might differ from Yampi
