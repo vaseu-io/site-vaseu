@@ -390,61 +390,62 @@ const ProductDetail = () => {
               const savings = totalOriginal - comboPrice;
 
               return (
-                <div className="px-4 md:px-6 lg:px-10 py-6 border-b border-neutral-200 bundle-container">
-                  <div className="border border-neutral-200 p-4 sm:p-5 space-y-4 max-w-full overflow-hidden special-offer">
+                <div className="px-4 md:px-6 lg:px-10 py-10 bg-white border-b border-neutral-100">
+                  <div className="border border-neutral-200 p-6 md:p-10 space-y-8 max-w-full overflow-hidden bg-white">
                     {/* Header */}
-                    <div>
-                      <p className="text-[11px] uppercase tracking-[0.2em] text-neutral-400 mb-1">Oferta Especial</p>
-                      <p className="text-sm text-black">Conjunto Linha Basic Oficial</p>
+                    <div className="text-left space-y-0.5">
+                      <p className="text-[10px] uppercase font-bold tracking-[0.25em] text-neutral-400">Oferta Especial</p>
+                      <h3 className="text-xl md:text-2xl font-bold text-black uppercase tracking-tight">Conjunto Linha Basic Oficial</h3>
                     </div>
 
                     {/* Product Images Row */}
-                    <div className="flex flex-wrap items-center justify-center gap-3">
+                    <div className="flex items-center justify-between gap-4 py-2">
                       {/* Current Product */}
-                      <div className="flex flex-col items-center gap-2 flex-1 min-w-0">
-                        <div className="w-20 h-24 md:w-24 md:h-28 bg-neutral-50 overflow-hidden border border-neutral-100">
+                      <div className="flex flex-col items-center gap-4 flex-1">
+                        <div className="aspect-square w-full bg-neutral-50 flex items-center justify-center border border-neutral-100 p-4">
                           {currentImage ? (
-                            <img src={currentImage.url} alt={product.title} className="w-full h-full object-cover" />
+                            <img src={currentImage.url} alt={product.title} className="w-full h-full object-contain mix-blend-multiply" />
                           ) : (
                             <div className="w-full h-full flex items-center justify-center text-neutral-300 text-[10px]">Sem img</div>
                           )}
                         </div>
-                        <p className="text-[10px] uppercase tracking-wider text-neutral-500 text-center truncate w-full">{product.title}</p>
+                        <p className="text-[9px] md:text-[10px] uppercase font-bold tracking-[0.1em] text-neutral-400 text-center truncate w-full">{product.title}</p>
                       </div>
 
-                      {/* Plus Icon - sem círculo */}
+                      {/* Plus Icon */}
                       <div className="flex-shrink-0">
-                        <Plus className="w-4 h-4 text-neutral-400" />
+                        <Plus className="w-5 h-5 text-neutral-300" strokeWidth={1} />
                       </div>
 
                       {/* Suggested Product */}
                       <Link
                         to={`/product/${suggested.node.handle}`}
-                        className="flex flex-col items-center gap-2 flex-1 min-w-0 group"
+                        className="flex flex-col items-center gap-4 flex-1 group"
                         onClick={() => {
                           window.scrollTo({ top: 0, left: 0, behavior: "auto" });
                           document.documentElement.scrollTop = 0;
                           document.body.scrollTop = 0;
                         }}
                       >
-                        <div className="w-20 h-24 md:w-24 md:h-28 bg-neutral-50 overflow-hidden border border-neutral-100 group-hover:border-neutral-400 transition-colors">
+                        <div className="aspect-square w-full bg-neutral-50 flex items-center justify-center border border-neutral-100 p-4 group-hover:border-neutral-300 transition-colors">
                           {suggestedImage ? (
-                            <img src={suggestedImage.url} alt={suggested.node.title} className="w-full h-full object-cover" />
+                            <img src={suggestedImage.url} alt={suggested.node.title} className="w-full h-full object-contain mix-blend-multiply" />
                           ) : (
                             <div className="w-full h-full flex items-center justify-center text-neutral-300 text-[10px]">Sem img</div>
                           )}
                         </div>
-                        <p className="text-[10px] uppercase tracking-wider text-neutral-500 text-center truncate w-full group-hover:text-black transition-colors">{suggested.node.title}</p>
+                        <p className="text-[9px] md:text-[10px] uppercase font-bold tracking-[0.1em] text-neutral-400 text-center truncate w-full group-hover:text-black transition-all">{suggested.node.title}</p>
                       </Link>
                     </div>
 
-                    {/* Pricing */}
-                    <div className="flex flex-col sm:flex-row items-center sm:justify-between pt-4 border-t border-neutral-100 gap-4">
-                      <div className="w-full sm:w-auto text-center sm:text-left">
-                        <p className="text-xs text-neutral-400 line-through">R$ {totalOriginal.toFixed(2).replace('.', ',')}</p>
-                        <p className="text-base font-bold text-black">R$ {comboPrice.toFixed(2).replace('.', ',')}</p>
-                        <p className="text-[10px] text-green-600">Economize R$ {savings.toFixed(2).replace('.', ',')}</p>
+                    {/* Pricing & CTA */}
+                    <div className="flex flex-row items-end justify-between pt-8 border-t border-neutral-100 gap-4">
+                      <div className="flex flex-col">
+                        <p className="text-xs md:text-sm text-neutral-400 line-through font-medium">R$ {totalOriginal.toFixed(2).replace('.', ',')}</p>
+                        <p className="text-2xl md:text-3xl font-black text-black leading-none py-1">R$ {comboPrice.toFixed(2).replace('.', ',')}</p>
+                        <p className="text-[11px] font-bold text-green-600">Economize R$ {savings.toFixed(2).replace('.', ',')}</p>
                       </div>
+                      
                       <button
                         onClick={async () => {
                           if (!bundleProduct) {
@@ -454,7 +455,6 @@ const ProductDetail = () => {
 
                           setComboLoading(true);
                           try {
-                            // Find the matching size variant in the bundle product
                             const sizeOption = selectedVariant?.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho');
                             const currentSize = sizeOption?.value || 'M';
 
@@ -484,9 +484,9 @@ const ProductDetail = () => {
                           setComboLoading(false);
                         }}
                         disabled={comboLoading}
-                        className="w-full sm:w-auto my-2 mx-0 px-5 h-11 bg-black text-white text-[11px] uppercase tracking-[0.2em] flex items-center justify-center hover:bg-neutral-800 transition-all active:scale-[0.98]"
+                        className="h-14 px-6 md:px-10 bg-black text-white text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] flex items-center justify-center hover:bg-neutral-800 transition-all active:scale-[0.95]"
                       >
-                        {comboLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Comprar All Basic'}
+                        {comboLoading ? <Loader2 className="w-5 h-5 animate-spin" /> : 'Comprar All Basic'}
                       </button>
                     </div>
                   </div>
