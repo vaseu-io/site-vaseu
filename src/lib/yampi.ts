@@ -80,6 +80,54 @@ const YAMPI_TOKENS: Record<string, string> = {
     "Oversized Premium Lisa | Preta|GG": "7FB5JAS2BT",
     "Oversized Premium Lisa | Preta|XG": "R1BF9O6GBL",
 
+    // T-shirt Oversized Basic Black
+    "T-shirt Oversized Basic Black|PP": "KCP2UZN5KI",
+    "T-shirt Oversized Basic Black|P": "MNWEU18XLM",
+    "T-shirt Oversized Basic Black|M": "1IH3RDCBDA",
+    "T-shirt Oversized Basic Black|G": "MM8CWAE7UY",
+    "T-shirt Oversized Basic Black|GG": "3ZFUUOQTW5",
+    "T-shirt Oversized Basic Black|XG": "2FP98H94OW",
+
+    // T-shirt Oversized Basic White
+    "T-shirt Oversized Basic White|PP": "A5NKAED03I",
+    "T-shirt Oversized Basic White|P": "N3SK3T4K5I",
+    "T-shirt Oversized Basic White|M": "GB6A9QHGPB",
+    "T-shirt Oversized Basic White|G": "T0XAMUOQGS",
+    "T-shirt Oversized Basic White|GG": "A1146JNUP8",
+    "T-shirt Oversized Basic White|XG": "CT8SLJZSOH",
+
+    // T-shirt Boxy Basic White
+    "T-shirt Boxy Basic White|PP": "DJWVO5SJXQ",
+    "T-shirt Boxy Basic White|P": "N3SHYQHWYW",
+    "T-shirt Boxy Basic White|M": "8I7AZOAG8S",
+    "T-shirt Boxy Basic White|G": "KDQVPPMK42",
+    "T-shirt Boxy Basic White|GG": "B8HDWHNL33",
+    "T-shirt Boxy Basic White|XG": "LWE3LXI8QP",
+
+    // T-shirt Boxy Basic Black
+    "T-shirt Boxy Basic Black|PP": "RXKQQXMRXI",
+    "T-shirt Boxy Basic Black|P": "6HBUDNO1M0",
+    "T-shirt Boxy Basic Black|M": "GG7UJBIN7D",
+    "T-shirt Boxy Basic Black|G": "77W8KJKMFH",
+    "T-shirt Boxy Basic Black|GG": "AGK95NSZ5B",
+    "T-shirt Boxy Basic Black|XG": "CZA2C9XDEL",
+
+    // Shorts Moletinho Basic Black
+    "Shorts Moletinho Basic Black|PP": "TNFF90H794",
+    "Shorts Moletinho Basic Black|P": "28BUKE2D47",
+    "Shorts Moletinho Basic Black|M": "CABQWR6QYM",
+    "Shorts Moletinho Basic Black|G": "9V7C2WOPDK",
+    "Shorts Moletinho Basic Black|GG": "477X5VJD5E",
+    "Shorts Moletinho Basic Black|XG": "SD7NM2KGHQ",
+
+    // Shorts Moletinho Basic White
+    "Shorts Moletinho Basic White|PP": "NB85UKV7PT",
+    "Shorts Moletinho Basic White|P": "TNSUR8GI5F",
+    "Shorts Moletinho Basic White|M": "1FYSFLD7TN",
+    "Shorts Moletinho Basic White|G": "S4271A61HY",
+    "Shorts Moletinho Basic White|GG": "JHVWTPMNPD",
+    "Shorts Moletinho Basic White|XG": "D7AN9C6LAN",
+
     // Conjunto All Basic Black
     "Conjunto All Basic Black|PP": "T5HCKASY6Q",
     "Conjunto All Basic Black|P": "GKCWQT045G",
@@ -109,6 +157,7 @@ const SIZE_MAP: Record<string, string> = {
     'L': 'G',
     'XL': 'GG',
     'XXL': 'XG',
+    'PP': 'PP',
 };
 
 /**
@@ -122,8 +171,22 @@ export function getYampiCheckoutUrl(
     // Normalize the size
     const normalizedSize = SIZE_MAP[selectedSize] || selectedSize;
 
+    // Normalize the title for search
+    const normalizedTitleSearch = productTitle.toLowerCase().trim();
+    
+    // Mapping for specific titles that might differ between Shopify and Yampi
+    let searchTitle = productTitle; // Start with the original title
+    if (normalizedTitleSearch.includes('t-shirt oversized basic black')) searchTitle = 'T-shirt Oversized Basic Black';
+    else if (normalizedTitleSearch.includes('t-shirt oversized basic white')) searchTitle = 'T-shirt Oversized Basic White';
+    else if (normalizedTitleSearch.includes('t-shirt boxy basic black')) searchTitle = 'T-shirt Boxy Basic Black';
+    else if (normalizedTitleSearch.includes('t-shirt boxy basic white')) searchTitle = 'T-shirt Boxy Basic White';
+    else if (normalizedTitleSearch.includes('shorts moletinho basic black')) searchTitle = 'Shorts Moletinho Basic Black';
+    else if (normalizedTitleSearch.includes('shorts moletinho basic white')) searchTitle = 'Shorts Moletinho Basic White';
+    else if (normalizedTitleSearch.includes('conjunto all basic black')) searchTitle = 'Conjunto All Basic Black';
+    else if (normalizedTitleSearch.includes('conjunto all basic white')) searchTitle = 'Conjunto All Basic White';
+
     // Try exact match first
-    const key = `${productTitle}|${normalizedSize}`;
+    const key = `${searchTitle}|${normalizedSize}`;
     let token = YAMPI_TOKENS[key];
 
     // If no exact match, try fuzzy matching by product name

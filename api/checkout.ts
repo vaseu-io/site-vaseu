@@ -25,6 +25,7 @@ const SIZE_MAP: Record<string, string> = {
     'L': 'G',
     'XL': 'GG',
     'XXL': 'XG',
+    'PP': 'PP',
 };
 
 async function fetchProductsFromYampi(queries: string[], userToken: string, secretKey: string) {
@@ -121,10 +122,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             const matchedProduct = yampiProducts.find((p: any) => {
                 const pName = p.name.toLowerCase();
                 if (pName === targetTitle) return true;
-                if (targetTitle.includes('shorts') && pName.includes('shorts')) return true;
-                if (targetTitle.includes('boxy') && pName.includes('boxy')) return true;
+                if (targetTitle.includes('shorts') && pName.includes('shorts') && 
+                    (targetTitle.includes('black') === pName.includes('black'))) return true;
+                if (targetTitle.includes('boxy') && pName.includes('boxy') && 
+                    (targetTitle.includes('black') === pName.includes('black'))) return true;
+                if (targetTitle.includes('oversized') && pName.includes('oversized') && 
+                    (targetTitle.includes('black') === pName.includes('black'))) return true;
                 return false;
-            }) || yampiProducts.find((p: any) => p.name.toLowerCase().includes(targetTitle.split(' ')[0]));
+            }) || yampiProducts.find((p: any) => {
+                const pName = p.name.toLowerCase();
+                const keywords = targetTitle.split(' ').filter(k => k.length > 3);
+                return keywords.every(k => pName.includes(k));
+            });
 
             if (matchedProduct?.skus?.data) {
                 const variant = matchedProduct.skus.data.find((sku: any) => {

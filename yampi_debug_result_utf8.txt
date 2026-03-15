@@ -1,0 +1,468 @@
+﻿Searching for: T-shirt Oversized Basic Black
+
+=== PRODUCT: T-Shirt `Reflexo Preta (ID: 40253274) ===
+  Size: P | Token: 63V1H8JQGY | SKU: RABRWHMSRS | Variations: [Tamanho:P]
+  Size: M | Token: 1PSWEME94M | SKU: P4FJS7BZLF | Variations: [Tamanho:M]
+  Size: G | Token: JUFITU1GF9 | SKU: D5A4SS7ULU | Variations: [Tamanho:G]
+  Size: GG | Token: NMLLLV5N1G | SKU: DX93S4OC9I | Variations: [Tamanho:GG]
+
+=== PRODUCT: T-Shirt `Reflexo Off-White (ID: 40253275) ===
+  Size: P | Token: M1LSKDK12K | SKU: LY14G43ZVY | Variations: [Tamanho:P]
+  Size: M | Token: GV5J8FBJRG | SKU: 64SAA1PN81 | Variations: [Tamanho:M]
+  Size: G | Token: I0PMS4RRK4 | SKU: TA87LCL8IE | Variations: [Tamanho:G]
+  Size: GG | Token: 8NXDYAVTX4 | SKU: 2LD55BLMX6 | Variations: [Tamanho:GG]
+
+=== PRODUCT: T-Shirt `Ru├¡nas (ID: 40253276) ===
+  Size: P | Token: A1YPDZJPP0 | SKU: HPP4GRMFHE | Variations: [Tamanho:P]
+  Size: M | Token: RZOFGN6UU2 | SKU: DMR2VDS23Q | Variations: [Tamanho:M]
+  Size: G | Token: T8BC0EO07J | SKU: KZ5ZVIY76X | Variations: [Tamanho:G]
+  Size: GG | Token: 7S0Z0R004D | SKU: NEFG85V5IB | Variations: [Tamanho:GG]
+
+=== PRODUCT: T-Shirt `Orquid├írio | Vaseu x Ibanez (ID: 40253277) ===
+  Size: P | Token: 21I4KNWHHT | SKU: QQO3F4OT11 | Variations: [Tamanho:P]
+  Size: M | Token: PE24CN2E6F | SKU: HPU17FITLK | Variations: [Tamanho:M]
+  Size: G | Token: MUJ5T459O0 | SKU: R4GLKD2C66 | Variations: [Tamanho:G]
+  Size: GG | Token: E0XWEM17JL | SKU: R4M3NDM82X | Variations: [Tamanho:GG]
+
+=== PRODUCT: Premium Oversized - Legacy (ID: 42557327) ===
+  Size: Legacy | Token: 259HBPYY4V | SKU: 1SZYA6ESXP | Variations: []
+  Size: Legacy | Token: G804314VKW | SKU: H012GTEMAC | Variations: []
+  Size: Legacy | Token: IVEMB5Y1VL | SKU: SNMY7MU5N0 | Variations: []
+  Size: Legacy | Token: A1QWY5D4WE | SKU: 9K5Q4O7UKH | Variations: []
+  Size: Legacy | Token: P3N7KF7A9X | SKU: IFXIFXU5I6 | Variations: []
+
+=== PRODUCT: Premium Oversized - Discipline (ID: 42557328) ===
+  Size: Discipline | Token: 6MTV9AIWNA | SKU: HQZH3NS957 | Variations: []
+  Size: Discipline | Token: HFZIPZHK4H | SKU: O94MNXC917 | Variations: []
+  Size: Discipline | Token: O0OKND7MJ0 | SKU: FIDCCE4401 | Variations: []
+  Size: Discipline | Token: 4O5OHD9Y7G | SKU: BQDVHM5UX5 | Variations: []
+  Size: Discipline | Token: FSJ4JLV7E3 | SKU: 26RSPBDRW5 | Variations: []
+
+=== PRODUCT: Premium Oversized - Time`s Now (ID: 42557330) ===
+  Size: Now | Token: 99I4160XHI | SKU: E9VY8BK87M | Variations: []
+  Size: Now | Token: L2A9BRS89B | SKU: 5EG4M5VWLR | Variations: []
+  Size: Now | Token: I55EB5CLJ0 | SKU: MEFYGNW0CY | Variations: []
+  Size: Now | Token: 1WI1BRCU6N | SKU: 7R6N0GN0EP | Variations: []
+  Size: Now | Token: FH5EHI151K | SKU: K4NK6WO295 | Variations: []
+
+=== PRODUCT: DROP BOX (ID: 42657762) ===
+  Size: P | Token: HLOFHQHK0G | SKU: N2TPU0X8PH | Variations: [Seu tamanho:P]
+  Size: M | Token: SUD37R2MDE | SKU: QI90OU4J6X | Variations: [Seu tamanho:M]
+  Size: G | Token: SQZ3NBAWWJ | SKU: 3XKVR3EJX3 | Variations: [Seu tamanho:G]
+  Size: GG | Token: J0Q19XQQPU | SKU: DD0U94H7LW | Variations: [Seu tamanho:GG]
+  Size: G1 | Token: 1842O1HRUB | SKU: AQUQK0S6TJ | Variations: [Seu tamanho:G1]
+
+=== PRODUCT: T-shirt Oversized Basic Black (ID: 44376673) ===
+  Size: PP | Token: KCP2UZN5KI | SKU: RMWNR2P32E | Variations: [Tamanho:PP]
+  Size: P | Token: MNWEU18XLM | SKU: TQHG7X9KF3 | Variations: [Tamanho:P]
+  Size: M | Token: 1IH3RDCBDA | SKU: O4T8THX1PB | Variations: [Tamanho:M]
+  Size: G | Token: MM8CWAE7UY | SKU: IA3NV6JCVC | Variations: [Tamanho:G]
+  Size: GG | Token: 3ZFUUOQTW5 | SKU: 7I32AYNZ9I | Variations: [Tamanho:GG]
+  Size: XG | Token: 2FP98H94OW | SKU: P0TLZI973A | Variations: [Tamanho:XG]
+
+=== PRODUCT: T-shirt Oversized Basic White (ID: 44376674) ===
+  Size: PP | Token: A5NKAED03I | SKU: 79D7TY25RD | Variations: [Tamanho:PP]
+  Size: P | Token: N3SK3T4K5I | SKU: CRHD8EBN0R | Variations: [Tamanho:P]
+  Size: M | Token: GB6A9QHGPB | SKU: E6I7LT8HT2 | Variations: [Tamanho:M]
+  Size: G | Token: T0XAMUOQGS | SKU: TH1D7IRDPA | Variations: [Tamanho:G]
+  Size: GG | Token: A1146JNUP8 | SKU: KD0ML34561 | Variations: [Tamanho:GG]
+  Size: XG | Token: CT8SLJZSOH | SKU: GK5XUAO9W3 | Variations: [Tamanho:XG]
+
+=== PRODUCT: T-shirt Boxy Basic White (ID: 44376675) ===
+  Size: PP | Token: DJWVO5SJXQ | SKU: 26XYX6LFBI | Variations: [Tamanho:PP]
+  Size: P | Token: N3SHYQHWYW | SKU: JRN88140H4 | Variations: [Tamanho:P]
+  Size: M | Token: 8I7AZOAG8S | SKU: DH1Y44M86Z | Variations: [Tamanho:M]
+  Size: G | Token: KDQVPPMK42 | SKU: POJP87B19H | Variations: [Tamanho:G]
+  Size: GG | Token: B8HDWHNL33 | SKU: 9G88AZ6FXZ | Variations: [Tamanho:GG]
+  Size: XG | Token: LWE3LXI8QP | SKU: FJFJ5H2SDL | Variations: [Tamanho:XG]
+
+=== PRODUCT: T-shirt Boxy Basic Black (ID: 44376676) ===
+  Size: PP | Token: RXKQQXMRXI | SKU: O5IXABIE3O | Variations: [Tamanho:PP]
+  Size: P | Token: 6HBUDNO1M0 | SKU: 9KSFZFGL5M | Variations: [Tamanho:P]
+  Size: M | Token: GG7UJBIN7D | SKU: 5DCR21DFP0 | Variations: [Tamanho:M]
+  Size: G | Token: 77W8KJKMFH | SKU: 36K0AKR857 | Variations: [Tamanho:G]
+  Size: GG | Token: AGK95NSZ5B | SKU: 3J8W1CL2TA | Variations: [Tamanho:GG]
+  Size: XG | Token: CZA2C9XDEL | SKU: B7V0DZNL38 | Variations: [Tamanho:XG]
+
+=== PRODUCT: Shorts Moletinho Basic Black (ID: 44376677) ===
+  Size: PP | Token: TNFF90H794 | SKU: QWLSJKOLDW | Variations: [Tamanho:PP]
+  Size: P | Token: 28BUKE2D47 | SKU: 1GV6JAD4UQ | Variations: [Tamanho:P]
+  Size: M | Token: CABQWR6QYM | SKU: 504SMHH9AC | Variations: [Tamanho:M]
+  Size: G | Token: 9V7C2WOPDK | SKU: I9FMZH0FTN | Variations: [Tamanho:G]
+  Size: GG | Token: 477X5VJD5E | SKU: QMZPR5GT7U | Variations: [Tamanho:GG]
+  Size: XG | Token: SD7NM2KGHQ | SKU: DYU7F9D606 | Variations: [Tamanho:XG]
+
+=== PRODUCT: Shorts Moletinho Basic White (ID: 44376678) ===
+  Size: PP | Token: NB85UKV7PT | SKU: DUE4ZIMAYW | Variations: [Tamanho:PP]
+  Size: P | Token: TNSUR8GI5F | SKU: JW9KBE5DP0 | Variations: [Tamanho:P]
+  Size: M | Token: 1FYSFLD7TN | SKU: T227YLWO4U | Variations: [Tamanho:M]
+  Size: G | Token: S4271A61HY | SKU: 1ZDMGE1BUD | Variations: [Tamanho:G]
+  Size: GG | Token: JHVWTPMNPD | SKU: 5UNEBVBJJE | Variations: [Tamanho:GG]
+  Size: XG | Token: D7AN9C6LAN | SKU: 842AVMI3R8 | Variations: [Tamanho:XG]
+
+=== PRODUCT: Conjunto All Basic White (ID: 44376679) ===
+  Size: PP | Token: 3087V4UJTJ | SKU: F6T2VVZDHQ | Variations: [Tamanho:PP]
+  Size: P | Token: 3CP57ZOLO6 | SKU: LZ8KAKDEMO | Variations: [Tamanho:P]
+  Size: M | Token: BLDERFXM57 | SKU: RTD2PRYSC3 | Variations: [Tamanho:M]
+  Size: G | Token: 4C1O5ID9R4 | SKU: P2N35SLJL0 | Variations: [Tamanho:G]
+  Size: GG | Token: 45PJLMVVPZ | SKU: RQR1U5S18K | Variations: [Tamanho:GG]
+  Size: XG | Token: NJDXU3Z0ZB | SKU: LSDAJF93ED | Variations: [Tamanho:XG]
+
+=== PRODUCT: Conjunto All Basic Black (ID: 44376680) ===
+  Size: PP | Token: T5HCKASY6Q | SKU: HOK3EZ59IJ | Variations: [Tamanho:PP]
+  Size: P | Token: GKCWQT045G | SKU: F5JL3PE23W | Variations: [Tamanho:P]
+  Size: M | Token: PVE5YELEBP | SKU: 5BEICILX3Q | Variations: [Tamanho:M]
+  Size: G | Token: 9SWLQ4H4QD | SKU: EDXYLPMVXS | Variations: [Tamanho:G]
+  Size: GG | Token: 6LGRXSXZJA | SKU: 7P05CAY8NG | Variations: [Tamanho:GG]
+  Size: XG | Token: LRCE4XZJYW | SKU: F7454E1V7T | Variations: [Tamanho:XG]
+Searching for: T-shirt Oversized Basic White
+
+=== PRODUCT: T-Shirt `Reflexo Preta (ID: 40253274) ===
+  Size: P | Token: 63V1H8JQGY | SKU: RABRWHMSRS | Variations: [Tamanho:P]
+  Size: M | Token: 1PSWEME94M | SKU: P4FJS7BZLF | Variations: [Tamanho:M]
+  Size: G | Token: JUFITU1GF9 | SKU: D5A4SS7ULU | Variations: [Tamanho:G]
+  Size: GG | Token: NMLLLV5N1G | SKU: DX93S4OC9I | Variations: [Tamanho:GG]
+
+=== PRODUCT: T-Shirt `Reflexo Off-White (ID: 40253275) ===
+  Size: P | Token: M1LSKDK12K | SKU: LY14G43ZVY | Variations: [Tamanho:P]
+  Size: M | Token: GV5J8FBJRG | SKU: 64SAA1PN81 | Variations: [Tamanho:M]
+  Size: G | Token: I0PMS4RRK4 | SKU: TA87LCL8IE | Variations: [Tamanho:G]
+  Size: GG | Token: 8NXDYAVTX4 | SKU: 2LD55BLMX6 | Variations: [Tamanho:GG]
+
+=== PRODUCT: T-Shirt `Ru├¡nas (ID: 40253276) ===
+  Size: P | Token: A1YPDZJPP0 | SKU: HPP4GRMFHE | Variations: [Tamanho:P]
+  Size: M | Token: RZOFGN6UU2 | SKU: DMR2VDS23Q | Variations: [Tamanho:M]
+  Size: G | Token: T8BC0EO07J | SKU: KZ5ZVIY76X | Variations: [Tamanho:G]
+  Size: GG | Token: 7S0Z0R004D | SKU: NEFG85V5IB | Variations: [Tamanho:GG]
+
+=== PRODUCT: T-Shirt `Orquid├írio | Vaseu x Ibanez (ID: 40253277) ===
+  Size: P | Token: 21I4KNWHHT | SKU: QQO3F4OT11 | Variations: [Tamanho:P]
+  Size: M | Token: PE24CN2E6F | SKU: HPU17FITLK | Variations: [Tamanho:M]
+  Size: G | Token: MUJ5T459O0 | SKU: R4GLKD2C66 | Variations: [Tamanho:G]
+  Size: GG | Token: E0XWEM17JL | SKU: R4M3NDM82X | Variations: [Tamanho:GG]
+
+=== PRODUCT: Premium Oversized - Legacy (ID: 42557327) ===
+  Size: Legacy | Token: 259HBPYY4V | SKU: 1SZYA6ESXP | Variations: []
+  Size: Legacy | Token: G804314VKW | SKU: H012GTEMAC | Variations: []
+  Size: Legacy | Token: IVEMB5Y1VL | SKU: SNMY7MU5N0 | Variations: []
+  Size: Legacy | Token: A1QWY5D4WE | SKU: 9K5Q4O7UKH | Variations: []
+  Size: Legacy | Token: P3N7KF7A9X | SKU: IFXIFXU5I6 | Variations: []
+
+=== PRODUCT: Premium Oversized - Discipline (ID: 42557328) ===
+  Size: Discipline | Token: 6MTV9AIWNA | SKU: HQZH3NS957 | Variations: []
+  Size: Discipline | Token: HFZIPZHK4H | SKU: O94MNXC917 | Variations: []
+  Size: Discipline | Token: O0OKND7MJ0 | SKU: FIDCCE4401 | Variations: []
+  Size: Discipline | Token: 4O5OHD9Y7G | SKU: BQDVHM5UX5 | Variations: []
+  Size: Discipline | Token: FSJ4JLV7E3 | SKU: 26RSPBDRW5 | Variations: []
+
+=== PRODUCT: Premium Oversized - Time`s Now (ID: 42557330) ===
+  Size: Now | Token: 99I4160XHI | SKU: E9VY8BK87M | Variations: []
+  Size: Now | Token: L2A9BRS89B | SKU: 5EG4M5VWLR | Variations: []
+  Size: Now | Token: I55EB5CLJ0 | SKU: MEFYGNW0CY | Variations: []
+  Size: Now | Token: 1WI1BRCU6N | SKU: 7R6N0GN0EP | Variations: []
+  Size: Now | Token: FH5EHI151K | SKU: K4NK6WO295 | Variations: []
+
+=== PRODUCT: DROP BOX (ID: 42657762) ===
+  Size: P | Token: HLOFHQHK0G | SKU: N2TPU0X8PH | Variations: [Seu tamanho:P]
+  Size: M | Token: SUD37R2MDE | SKU: QI90OU4J6X | Variations: [Seu tamanho:M]
+  Size: G | Token: SQZ3NBAWWJ | SKU: 3XKVR3EJX3 | Variations: [Seu tamanho:G]
+  Size: GG | Token: J0Q19XQQPU | SKU: DD0U94H7LW | Variations: [Seu tamanho:GG]
+  Size: G1 | Token: 1842O1HRUB | SKU: AQUQK0S6TJ | Variations: [Seu tamanho:G1]
+
+=== PRODUCT: T-shirt Oversized Basic Black (ID: 44376673) ===
+  Size: PP | Token: KCP2UZN5KI | SKU: RMWNR2P32E | Variations: [Tamanho:PP]
+  Size: P | Token: MNWEU18XLM | SKU: TQHG7X9KF3 | Variations: [Tamanho:P]
+  Size: M | Token: 1IH3RDCBDA | SKU: O4T8THX1PB | Variations: [Tamanho:M]
+  Size: G | Token: MM8CWAE7UY | SKU: IA3NV6JCVC | Variations: [Tamanho:G]
+  Size: GG | Token: 3ZFUUOQTW5 | SKU: 7I32AYNZ9I | Variations: [Tamanho:GG]
+  Size: XG | Token: 2FP98H94OW | SKU: P0TLZI973A | Variations: [Tamanho:XG]
+
+=== PRODUCT: T-shirt Oversized Basic White (ID: 44376674) ===
+  Size: PP | Token: A5NKAED03I | SKU: 79D7TY25RD | Variations: [Tamanho:PP]
+  Size: P | Token: N3SK3T4K5I | SKU: CRHD8EBN0R | Variations: [Tamanho:P]
+  Size: M | Token: GB6A9QHGPB | SKU: E6I7LT8HT2 | Variations: [Tamanho:M]
+  Size: G | Token: T0XAMUOQGS | SKU: TH1D7IRDPA | Variations: [Tamanho:G]
+  Size: GG | Token: A1146JNUP8 | SKU: KD0ML34561 | Variations: [Tamanho:GG]
+  Size: XG | Token: CT8SLJZSOH | SKU: GK5XUAO9W3 | Variations: [Tamanho:XG]
+
+=== PRODUCT: T-shirt Boxy Basic White (ID: 44376675) ===
+  Size: PP | Token: DJWVO5SJXQ | SKU: 26XYX6LFBI | Variations: [Tamanho:PP]
+  Size: P | Token: N3SHYQHWYW | SKU: JRN88140H4 | Variations: [Tamanho:P]
+  Size: M | Token: 8I7AZOAG8S | SKU: DH1Y44M86Z | Variations: [Tamanho:M]
+  Size: G | Token: KDQVPPMK42 | SKU: POJP87B19H | Variations: [Tamanho:G]
+  Size: GG | Token: B8HDWHNL33 | SKU: 9G88AZ6FXZ | Variations: [Tamanho:GG]
+  Size: XG | Token: LWE3LXI8QP | SKU: FJFJ5H2SDL | Variations: [Tamanho:XG]
+
+=== PRODUCT: T-shirt Boxy Basic Black (ID: 44376676) ===
+  Size: PP | Token: RXKQQXMRXI | SKU: O5IXABIE3O | Variations: [Tamanho:PP]
+  Size: P | Token: 6HBUDNO1M0 | SKU: 9KSFZFGL5M | Variations: [Tamanho:P]
+  Size: M | Token: GG7UJBIN7D | SKU: 5DCR21DFP0 | Variations: [Tamanho:M]
+  Size: G | Token: 77W8KJKMFH | SKU: 36K0AKR857 | Variations: [Tamanho:G]
+  Size: GG | Token: AGK95NSZ5B | SKU: 3J8W1CL2TA | Variations: [Tamanho:GG]
+  Size: XG | Token: CZA2C9XDEL | SKU: B7V0DZNL38 | Variations: [Tamanho:XG]
+
+=== PRODUCT: Shorts Moletinho Basic Black (ID: 44376677) ===
+  Size: PP | Token: TNFF90H794 | SKU: QWLSJKOLDW | Variations: [Tamanho:PP]
+  Size: P | Token: 28BUKE2D47 | SKU: 1GV6JAD4UQ | Variations: [Tamanho:P]
+  Size: M | Token: CABQWR6QYM | SKU: 504SMHH9AC | Variations: [Tamanho:M]
+  Size: G | Token: 9V7C2WOPDK | SKU: I9FMZH0FTN | Variations: [Tamanho:G]
+  Size: GG | Token: 477X5VJD5E | SKU: QMZPR5GT7U | Variations: [Tamanho:GG]
+  Size: XG | Token: SD7NM2KGHQ | SKU: DYU7F9D606 | Variations: [Tamanho:XG]
+
+=== PRODUCT: Shorts Moletinho Basic White (ID: 44376678) ===
+  Size: PP | Token: NB85UKV7PT | SKU: DUE4ZIMAYW | Variations: [Tamanho:PP]
+  Size: P | Token: TNSUR8GI5F | SKU: JW9KBE5DP0 | Variations: [Tamanho:P]
+  Size: M | Token: 1FYSFLD7TN | SKU: T227YLWO4U | Variations: [Tamanho:M]
+  Size: G | Token: S4271A61HY | SKU: 1ZDMGE1BUD | Variations: [Tamanho:G]
+  Size: GG | Token: JHVWTPMNPD | SKU: 5UNEBVBJJE | Variations: [Tamanho:GG]
+  Size: XG | Token: D7AN9C6LAN | SKU: 842AVMI3R8 | Variations: [Tamanho:XG]
+
+=== PRODUCT: Conjunto All Basic White (ID: 44376679) ===
+  Size: PP | Token: 3087V4UJTJ | SKU: F6T2VVZDHQ | Variations: [Tamanho:PP]
+  Size: P | Token: 3CP57ZOLO6 | SKU: LZ8KAKDEMO | Variations: [Tamanho:P]
+  Size: M | Token: BLDERFXM57 | SKU: RTD2PRYSC3 | Variations: [Tamanho:M]
+  Size: G | Token: 4C1O5ID9R4 | SKU: P2N35SLJL0 | Variations: [Tamanho:G]
+  Size: GG | Token: 45PJLMVVPZ | SKU: RQR1U5S18K | Variations: [Tamanho:GG]
+  Size: XG | Token: NJDXU3Z0ZB | SKU: LSDAJF93ED | Variations: [Tamanho:XG]
+
+=== PRODUCT: Conjunto All Basic Black (ID: 44376680) ===
+  Size: PP | Token: T5HCKASY6Q | SKU: HOK3EZ59IJ | Variations: [Tamanho:PP]
+  Size: P | Token: GKCWQT045G | SKU: F5JL3PE23W | Variations: [Tamanho:P]
+  Size: M | Token: PVE5YELEBP | SKU: 5BEICILX3Q | Variations: [Tamanho:M]
+  Size: G | Token: 9SWLQ4H4QD | SKU: EDXYLPMVXS | Variations: [Tamanho:G]
+  Size: GG | Token: 6LGRXSXZJA | SKU: 7P05CAY8NG | Variations: [Tamanho:GG]
+  Size: XG | Token: LRCE4XZJYW | SKU: F7454E1V7T | Variations: [Tamanho:XG]
+Searching for: T-shirt Boxy Basic Black
+
+=== PRODUCT: T-Shirt `Reflexo Preta (ID: 40253274) ===
+  Size: P | Token: 63V1H8JQGY | SKU: RABRWHMSRS | Variations: [Tamanho:P]
+  Size: M | Token: 1PSWEME94M | SKU: P4FJS7BZLF | Variations: [Tamanho:M]
+  Size: G | Token: JUFITU1GF9 | SKU: D5A4SS7ULU | Variations: [Tamanho:G]
+  Size: GG | Token: NMLLLV5N1G | SKU: DX93S4OC9I | Variations: [Tamanho:GG]
+
+=== PRODUCT: T-Shirt `Reflexo Off-White (ID: 40253275) ===
+  Size: P | Token: M1LSKDK12K | SKU: LY14G43ZVY | Variations: [Tamanho:P]
+  Size: M | Token: GV5J8FBJRG | SKU: 64SAA1PN81 | Variations: [Tamanho:M]
+  Size: G | Token: I0PMS4RRK4 | SKU: TA87LCL8IE | Variations: [Tamanho:G]
+  Size: GG | Token: 8NXDYAVTX4 | SKU: 2LD55BLMX6 | Variations: [Tamanho:GG]
+
+=== PRODUCT: T-Shirt `Ru├¡nas (ID: 40253276) ===
+  Size: P | Token: A1YPDZJPP0 | SKU: HPP4GRMFHE | Variations: [Tamanho:P]
+  Size: M | Token: RZOFGN6UU2 | SKU: DMR2VDS23Q | Variations: [Tamanho:M]
+  Size: G | Token: T8BC0EO07J | SKU: KZ5ZVIY76X | Variations: [Tamanho:G]
+  Size: GG | Token: 7S0Z0R004D | SKU: NEFG85V5IB | Variations: [Tamanho:GG]
+
+=== PRODUCT: T-Shirt `Orquid├írio | Vaseu x Ibanez (ID: 40253277) ===
+  Size: P | Token: 21I4KNWHHT | SKU: QQO3F4OT11 | Variations: [Tamanho:P]
+  Size: M | Token: PE24CN2E6F | SKU: HPU17FITLK | Variations: [Tamanho:M]
+  Size: G | Token: MUJ5T459O0 | SKU: R4GLKD2C66 | Variations: [Tamanho:G]
+  Size: GG | Token: E0XWEM17JL | SKU: R4M3NDM82X | Variations: [Tamanho:GG]
+
+=== PRODUCT: Premium Oversized - Legacy (ID: 42557327) ===
+  Size: Legacy | Token: 259HBPYY4V | SKU: 1SZYA6ESXP | Variations: []
+  Size: Legacy | Token: G804314VKW | SKU: H012GTEMAC | Variations: []
+  Size: Legacy | Token: IVEMB5Y1VL | SKU: SNMY7MU5N0 | Variations: []
+  Size: Legacy | Token: A1QWY5D4WE | SKU: 9K5Q4O7UKH | Variations: []
+  Size: Legacy | Token: P3N7KF7A9X | SKU: IFXIFXU5I6 | Variations: []
+
+=== PRODUCT: Premium Oversized - Discipline (ID: 42557328) ===
+  Size: Discipline | Token: 6MTV9AIWNA | SKU: HQZH3NS957 | Variations: []
+  Size: Discipline | Token: HFZIPZHK4H | SKU: O94MNXC917 | Variations: []
+  Size: Discipline | Token: O0OKND7MJ0 | SKU: FIDCCE4401 | Variations: []
+  Size: Discipline | Token: 4O5OHD9Y7G | SKU: BQDVHM5UX5 | Variations: []
+  Size: Discipline | Token: FSJ4JLV7E3 | SKU: 26RSPBDRW5 | Variations: []
+
+=== PRODUCT: Premium Oversized - Time`s Now (ID: 42557330) ===
+  Size: Now | Token: 99I4160XHI | SKU: E9VY8BK87M | Variations: []
+  Size: Now | Token: L2A9BRS89B | SKU: 5EG4M5VWLR | Variations: []
+  Size: Now | Token: I55EB5CLJ0 | SKU: MEFYGNW0CY | Variations: []
+  Size: Now | Token: 1WI1BRCU6N | SKU: 7R6N0GN0EP | Variations: []
+  Size: Now | Token: FH5EHI151K | SKU: K4NK6WO295 | Variations: []
+
+=== PRODUCT: DROP BOX (ID: 42657762) ===
+  Size: P | Token: HLOFHQHK0G | SKU: N2TPU0X8PH | Variations: [Seu tamanho:P]
+  Size: M | Token: SUD37R2MDE | SKU: QI90OU4J6X | Variations: [Seu tamanho:M]
+  Size: G | Token: SQZ3NBAWWJ | SKU: 3XKVR3EJX3 | Variations: [Seu tamanho:G]
+  Size: GG | Token: J0Q19XQQPU | SKU: DD0U94H7LW | Variations: [Seu tamanho:GG]
+  Size: G1 | Token: 1842O1HRUB | SKU: AQUQK0S6TJ | Variations: [Seu tamanho:G1]
+
+=== PRODUCT: T-shirt Oversized Basic Black (ID: 44376673) ===
+  Size: PP | Token: KCP2UZN5KI | SKU: RMWNR2P32E | Variations: [Tamanho:PP]
+  Size: P | Token: MNWEU18XLM | SKU: TQHG7X9KF3 | Variations: [Tamanho:P]
+  Size: M | Token: 1IH3RDCBDA | SKU: O4T8THX1PB | Variations: [Tamanho:M]
+  Size: G | Token: MM8CWAE7UY | SKU: IA3NV6JCVC | Variations: [Tamanho:G]
+  Size: GG | Token: 3ZFUUOQTW5 | SKU: 7I32AYNZ9I | Variations: [Tamanho:GG]
+  Size: XG | Token: 2FP98H94OW | SKU: P0TLZI973A | Variations: [Tamanho:XG]
+
+=== PRODUCT: T-shirt Oversized Basic White (ID: 44376674) ===
+  Size: PP | Token: A5NKAED03I | SKU: 79D7TY25RD | Variations: [Tamanho:PP]
+  Size: P | Token: N3SK3T4K5I | SKU: CRHD8EBN0R | Variations: [Tamanho:P]
+  Size: M | Token: GB6A9QHGPB | SKU: E6I7LT8HT2 | Variations: [Tamanho:M]
+  Size: G | Token: T0XAMUOQGS | SKU: TH1D7IRDPA | Variations: [Tamanho:G]
+  Size: GG | Token: A1146JNUP8 | SKU: KD0ML34561 | Variations: [Tamanho:GG]
+  Size: XG | Token: CT8SLJZSOH | SKU: GK5XUAO9W3 | Variations: [Tamanho:XG]
+
+=== PRODUCT: T-shirt Boxy Basic White (ID: 44376675) ===
+  Size: PP | Token: DJWVO5SJXQ | SKU: 26XYX6LFBI | Variations: [Tamanho:PP]
+  Size: P | Token: N3SHYQHWYW | SKU: JRN88140H4 | Variations: [Tamanho:P]
+  Size: M | Token: 8I7AZOAG8S | SKU: DH1Y44M86Z | Variations: [Tamanho:M]
+  Size: G | Token: KDQVPPMK42 | SKU: POJP87B19H | Variations: [Tamanho:G]
+  Size: GG | Token: B8HDWHNL33 | SKU: 9G88AZ6FXZ | Variations: [Tamanho:GG]
+  Size: XG | Token: LWE3LXI8QP | SKU: FJFJ5H2SDL | Variations: [Tamanho:XG]
+
+=== PRODUCT: T-shirt Boxy Basic Black (ID: 44376676) ===
+  Size: PP | Token: RXKQQXMRXI | SKU: O5IXABIE3O | Variations: [Tamanho:PP]
+  Size: P | Token: 6HBUDNO1M0 | SKU: 9KSFZFGL5M | Variations: [Tamanho:P]
+  Size: M | Token: GG7UJBIN7D | SKU: 5DCR21DFP0 | Variations: [Tamanho:M]
+  Size: G | Token: 77W8KJKMFH | SKU: 36K0AKR857 | Variations: [Tamanho:G]
+  Size: GG | Token: AGK95NSZ5B | SKU: 3J8W1CL2TA | Variations: [Tamanho:GG]
+  Size: XG | Token: CZA2C9XDEL | SKU: B7V0DZNL38 | Variations: [Tamanho:XG]
+
+=== PRODUCT: Shorts Moletinho Basic Black (ID: 44376677) ===
+  Size: PP | Token: TNFF90H794 | SKU: QWLSJKOLDW | Variations: [Tamanho:PP]
+  Size: P | Token: 28BUKE2D47 | SKU: 1GV6JAD4UQ | Variations: [Tamanho:P]
+  Size: M | Token: CABQWR6QYM | SKU: 504SMHH9AC | Variations: [Tamanho:M]
+  Size: G | Token: 9V7C2WOPDK | SKU: I9FMZH0FTN | Variations: [Tamanho:G]
+  Size: GG | Token: 477X5VJD5E | SKU: QMZPR5GT7U | Variations: [Tamanho:GG]
+  Size: XG | Token: SD7NM2KGHQ | SKU: DYU7F9D606 | Variations: [Tamanho:XG]
+
+=== PRODUCT: Shorts Moletinho Basic White (ID: 44376678) ===
+  Size: PP | Token: NB85UKV7PT | SKU: DUE4ZIMAYW | Variations: [Tamanho:PP]
+  Size: P | Token: TNSUR8GI5F | SKU: JW9KBE5DP0 | Variations: [Tamanho:P]
+  Size: M | Token: 1FYSFLD7TN | SKU: T227YLWO4U | Variations: [Tamanho:M]
+  Size: G | Token: S4271A61HY | SKU: 1ZDMGE1BUD | Variations: [Tamanho:G]
+  Size: GG | Token: JHVWTPMNPD | SKU: 5UNEBVBJJE | Variations: [Tamanho:GG]
+  Size: XG | Token: D7AN9C6LAN | SKU: 842AVMI3R8 | Variations: [Tamanho:XG]
+
+=== PRODUCT: Conjunto All Basic White (ID: 44376679) ===
+  Size: PP | Token: 3087V4UJTJ | SKU: F6T2VVZDHQ | Variations: [Tamanho:PP]
+  Size: P | Token: 3CP57ZOLO6 | SKU: LZ8KAKDEMO | Variations: [Tamanho:P]
+  Size: M | Token: BLDERFXM57 | SKU: RTD2PRYSC3 | Variations: [Tamanho:M]
+  Size: G | Token: 4C1O5ID9R4 | SKU: P2N35SLJL0 | Variations: [Tamanho:G]
+  Size: GG | Token: 45PJLMVVPZ | SKU: RQR1U5S18K | Variations: [Tamanho:GG]
+  Size: XG | Token: NJDXU3Z0ZB | SKU: LSDAJF93ED | Variations: [Tamanho:XG]
+
+=== PRODUCT: Conjunto All Basic Black (ID: 44376680) ===
+  Size: PP | Token: T5HCKASY6Q | SKU: HOK3EZ59IJ | Variations: [Tamanho:PP]
+  Size: P | Token: GKCWQT045G | SKU: F5JL3PE23W | Variations: [Tamanho:P]
+  Size: M | Token: PVE5YELEBP | SKU: 5BEICILX3Q | Variations: [Tamanho:M]
+  Size: G | Token: 9SWLQ4H4QD | SKU: EDXYLPMVXS | Variations: [Tamanho:G]
+  Size: GG | Token: 6LGRXSXZJA | SKU: 7P05CAY8NG | Variations: [Tamanho:GG]
+  Size: XG | Token: LRCE4XZJYW | SKU: F7454E1V7T | Variations: [Tamanho:XG]
+Searching for: T-shirt Boxy Basic White
+
+=== PRODUCT: T-Shirt `Reflexo Preta (ID: 40253274) ===
+  Size: P | Token: 63V1H8JQGY | SKU: RABRWHMSRS | Variations: [Tamanho:P]
+  Size: M | Token: 1PSWEME94M | SKU: P4FJS7BZLF | Variations: [Tamanho:M]
+  Size: G | Token: JUFITU1GF9 | SKU: D5A4SS7ULU | Variations: [Tamanho:G]
+  Size: GG | Token: NMLLLV5N1G | SKU: DX93S4OC9I | Variations: [Tamanho:GG]
+
+=== PRODUCT: T-Shirt `Reflexo Off-White (ID: 40253275) ===
+  Size: P | Token: M1LSKDK12K | SKU: LY14G43ZVY | Variations: [Tamanho:P]
+  Size: M | Token: GV5J8FBJRG | SKU: 64SAA1PN81 | Variations: [Tamanho:M]
+  Size: G | Token: I0PMS4RRK4 | SKU: TA87LCL8IE | Variations: [Tamanho:G]
+  Size: GG | Token: 8NXDYAVTX4 | SKU: 2LD55BLMX6 | Variations: [Tamanho:GG]
+
+=== PRODUCT: T-Shirt `Ru├¡nas (ID: 40253276) ===
+  Size: P | Token: A1YPDZJPP0 | SKU: HPP4GRMFHE | Variations: [Tamanho:P]
+  Size: M | Token: RZOFGN6UU2 | SKU: DMR2VDS23Q | Variations: [Tamanho:M]
+  Size: G | Token: T8BC0EO07J | SKU: KZ5ZVIY76X | Variations: [Tamanho:G]
+  Size: GG | Token: 7S0Z0R004D | SKU: NEFG85V5IB | Variations: [Tamanho:GG]
+
+=== PRODUCT: T-Shirt `Orquid├írio | Vaseu x Ibanez (ID: 40253277) ===
+  Size: P | Token: 21I4KNWHHT | SKU: QQO3F4OT11 | Variations: [Tamanho:P]
+  Size: M | Token: PE24CN2E6F | SKU: HPU17FITLK | Variations: [Tamanho:M]
+  Size: G | Token: MUJ5T459O0 | SKU: R4GLKD2C66 | Variations: [Tamanho:G]
+  Size: GG | Token: E0XWEM17JL | SKU: R4M3NDM82X | Variations: [Tamanho:GG]
+
+=== PRODUCT: Premium Oversized - Legacy (ID: 42557327) ===
+  Size: Legacy | Token: 259HBPYY4V | SKU: 1SZYA6ESXP | Variations: []
+  Size: Legacy | Token: G804314VKW | SKU: H012GTEMAC | Variations: []
+  Size: Legacy | Token: IVEMB5Y1VL | SKU: SNMY7MU5N0 | Variations: []
+  Size: Legacy | Token: A1QWY5D4WE | SKU: 9K5Q4O7UKH | Variations: []
+  Size: Legacy | Token: P3N7KF7A9X | SKU: IFXIFXU5I6 | Variations: []
+
+=== PRODUCT: Premium Oversized - Discipline (ID: 42557328) ===
+  Size: Discipline | Token: 6MTV9AIWNA | SKU: HQZH3NS957 | Variations: []
+  Size: Discipline | Token: HFZIPZHK4H | SKU: O94MNXC917 | Variations: []
+  Size: Discipline | Token: O0OKND7MJ0 | SKU: FIDCCE4401 | Variations: []
+  Size: Discipline | Token: 4O5OHD9Y7G | SKU: BQDVHM5UX5 | Variations: []
+  Size: Discipline | Token: FSJ4JLV7E3 | SKU: 26RSPBDRW5 | Variations: []
+
+=== PRODUCT: Premium Oversized - Time`s Now (ID: 42557330) ===
+  Size: Now | Token: 99I4160XHI | SKU: E9VY8BK87M | Variations: []
+  Size: Now | Token: L2A9BRS89B | SKU: 5EG4M5VWLR | Variations: []
+  Size: Now | Token: I55EB5CLJ0 | SKU: MEFYGNW0CY | Variations: []
+  Size: Now | Token: 1WI1BRCU6N | SKU: 7R6N0GN0EP | Variations: []
+  Size: Now | Token: FH5EHI151K | SKU: K4NK6WO295 | Variations: []
+
+=== PRODUCT: DROP BOX (ID: 42657762) ===
+  Size: P | Token: HLOFHQHK0G | SKU: N2TPU0X8PH | Variations: [Seu tamanho:P]
+  Size: M | Token: SUD37R2MDE | SKU: QI90OU4J6X | Variations: [Seu tamanho:M]
+  Size: G | Token: SQZ3NBAWWJ | SKU: 3XKVR3EJX3 | Variations: [Seu tamanho:G]
+  Size: GG | Token: J0Q19XQQPU | SKU: DD0U94H7LW | Variations: [Seu tamanho:GG]
+  Size: G1 | Token: 1842O1HRUB | SKU: AQUQK0S6TJ | Variations: [Seu tamanho:G1]
+
+=== PRODUCT: T-shirt Oversized Basic Black (ID: 44376673) ===
+  Size: PP | Token: KCP2UZN5KI | SKU: RMWNR2P32E | Variations: [Tamanho:PP]
+  Size: P | Token: MNWEU18XLM | SKU: TQHG7X9KF3 | Variations: [Tamanho:P]
+  Size: M | Token: 1IH3RDCBDA | SKU: O4T8THX1PB | Variations: [Tamanho:M]
+  Size: G | Token: MM8CWAE7UY | SKU: IA3NV6JCVC | Variations: [Tamanho:G]
+  Size: GG | Token: 3ZFUUOQTW5 | SKU: 7I32AYNZ9I | Variations: [Tamanho:GG]
+  Size: XG | Token: 2FP98H94OW | SKU: P0TLZI973A | Variations: [Tamanho:XG]
+
+=== PRODUCT: T-shirt Oversized Basic White (ID: 44376674) ===
+  Size: PP | Token: A5NKAED03I | SKU: 79D7TY25RD | Variations: [Tamanho:PP]
+  Size: P | Token: N3SK3T4K5I | SKU: CRHD8EBN0R | Variations: [Tamanho:P]
+  Size: M | Token: GB6A9QHGPB | SKU: E6I7LT8HT2 | Variations: [Tamanho:M]
+  Size: G | Token: T0XAMUOQGS | SKU: TH1D7IRDPA | Variations: [Tamanho:G]
+  Size: GG | Token: A1146JNUP8 | SKU: KD0ML34561 | Variations: [Tamanho:GG]
+  Size: XG | Token: CT8SLJZSOH | SKU: GK5XUAO9W3 | Variations: [Tamanho:XG]
+
+=== PRODUCT: T-shirt Boxy Basic White (ID: 44376675) ===
+  Size: PP | Token: DJWVO5SJXQ | SKU: 26XYX6LFBI | Variations: [Tamanho:PP]
+  Size: P | Token: N3SHYQHWYW | SKU: JRN88140H4 | Variations: [Tamanho:P]
+  Size: M | Token: 8I7AZOAG8S | SKU: DH1Y44M86Z | Variations: [Tamanho:M]
+  Size: G | Token: KDQVPPMK42 | SKU: POJP87B19H | Variations: [Tamanho:G]
+  Size: GG | Token: B8HDWHNL33 | SKU: 9G88AZ6FXZ | Variations: [Tamanho:GG]
+  Size: XG | Token: LWE3LXI8QP | SKU: FJFJ5H2SDL | Variations: [Tamanho:XG]
+
+=== PRODUCT: T-shirt Boxy Basic Black (ID: 44376676) ===
+  Size: PP | Token: RXKQQXMRXI | SKU: O5IXABIE3O | Variations: [Tamanho:PP]
+  Size: P | Token: 6HBUDNO1M0 | SKU: 9KSFZFGL5M | Variations: [Tamanho:P]
+  Size: M | Token: GG7UJBIN7D | SKU: 5DCR21DFP0 | Variations: [Tamanho:M]
+  Size: G | Token: 77W8KJKMFH | SKU: 36K0AKR857 | Variations: [Tamanho:G]
+  Size: GG | Token: AGK95NSZ5B | SKU: 3J8W1CL2TA | Variations: [Tamanho:GG]
+  Size: XG | Token: CZA2C9XDEL | SKU: B7V0DZNL38 | Variations: [Tamanho:XG]
+
+=== PRODUCT: Shorts Moletinho Basic Black (ID: 44376677) ===
+  Size: PP | Token: TNFF90H794 | SKU: QWLSJKOLDW | Variations: [Tamanho:PP]
+  Size: P | Token: 28BUKE2D47 | SKU: 1GV6JAD4UQ | Variations: [Tamanho:P]
+  Size: M | Token: CABQWR6QYM | SKU: 504SMHH9AC | Variations: [Tamanho:M]
+  Size: G | Token: 9V7C2WOPDK | SKU: I9FMZH0FTN | Variations: [Tamanho:G]
+  Size: GG | Token: 477X5VJD5E | SKU: QMZPR5GT7U | Variations: [Tamanho:GG]
+  Size: XG | Token: SD7NM2KGHQ | SKU: DYU7F9D606 | Variations: [Tamanho:XG]
+
+=== PRODUCT: Shorts Moletinho Basic White (ID: 44376678) ===
+  Size: PP | Token: NB85UKV7PT | SKU: DUE4ZIMAYW | Variations: [Tamanho:PP]
+  Size: P | Token: TNSUR8GI5F | SKU: JW9KBE5DP0 | Variations: [Tamanho:P]
+  Size: M | Token: 1FYSFLD7TN | SKU: T227YLWO4U | Variations: [Tamanho:M]
+  Size: G | Token: S4271A61HY | SKU: 1ZDMGE1BUD | Variations: [Tamanho:G]
+  Size: GG | Token: JHVWTPMNPD | SKU: 5UNEBVBJJE | Variations: [Tamanho:GG]
+  Size: XG | Token: D7AN9C6LAN | SKU: 842AVMI3R8 | Variations: [Tamanho:XG]
+
+=== PRODUCT: Conjunto All Basic White (ID: 44376679) ===
+  Size: PP | Token: 3087V4UJTJ | SKU: F6T2VVZDHQ | Variations: [Tamanho:PP]
+  Size: P | Token: 3CP57ZOLO6 | SKU: LZ8KAKDEMO | Variations: [Tamanho:P]
+  Size: M | Token: BLDERFXM57 | SKU: RTD2PRYSC3 | Variations: [Tamanho:M]
+  Size: G | Token: 4C1O5ID9R4 | SKU: P2N35SLJL0 | Variations: [Tamanho:G]
+  Size: GG | Token: 45PJLMVVPZ | SKU: RQR1U5S18K | Variations: [Tamanho:GG]
+  Size: XG | Token: NJDXU3Z0ZB | SKU: LSDAJF93ED | Variations: [Tamanho:XG]
+
+=== PRODUCT: Conjunto All Basic Black (ID: 44376680) ===
+  Size: PP | Token: T5HCKASY6Q | SKU: HOK3EZ59IJ | Variations: [Tamanho:PP]
+  Size: P | Token: GKCWQT045G | SKU: F5JL3PE23W | Variations: [Tamanho:P]
+  Size: M | Token: PVE5YELEBP | SKU: 5BEICILX3Q | Variations: [Tamanho:M]
+  Size: G | Token: 9SWLQ4H4QD | SKU: EDXYLPMVXS | Variations: [Tamanho:G]
+  Size: GG | Token: 6LGRXSXZJA | SKU: 7P05CAY8NG | Variations: [Tamanho:GG]
+  Size: XG | Token: LRCE4XZJYW | SKU: F7454E1V7T | Variations: [Tamanho:XG]
