@@ -39,11 +39,27 @@ const ScrollToTop = () => {
   return null;
 };
 
+const PixelTracker = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    // @ts-ignore
+    if (window.fbq) {
+      // @ts-ignore
+      window.fbq('track', 'PageView', {}, { test_event_code: 'TEST76926' });
+      console.log('FB Pixel: PageView tracked for', pathname);
+    }
+  }, [pathname]);
+
+  return null;
+};
+
 const AppContent = () => {
   useCartSync();
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <PixelTracker />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/produtos" element={<Products />} />
