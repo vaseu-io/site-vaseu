@@ -60,6 +60,11 @@ export async function sendFBEvent({
   }
 
   try {
+    if (typeof fetch === 'undefined') {
+      console.warn('fetch is not available in this environment. Skipping FB Event.');
+      return;
+    }
+
     const response = await fetch(
       `https://graph.facebook.com/v17.0/${FB_PIXEL_ID}/events?access_token=${FB_ACCESS_TOKEN}`,
       {

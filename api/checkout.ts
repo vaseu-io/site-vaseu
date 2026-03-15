@@ -75,24 +75,24 @@ async function fetchProductsFromYampi(queries: string[], userToken: string, secr
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-    if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Method Not Allowed' });
-    }
-
-    const { items, testEventCode } = req.body as { items: CartItem[], testEventCode?: string };
-
-    if (!items || !Array.isArray(items) || items.length === 0) {
-        return res.status(400).json({ error: 'Cart items are required' });
-    }
-
-    const userToken = process.env.YAMPI_USER_TOKEN || 'Ol2JwcBDIZ6wXS5kJ8hlmNIZRuAS1B0ylZqAYmFM'; 
-    const secretKey = process.env.YAMPI_SECRET_KEY || 'sk_8xa8rSlVAufkmWdwxTpVgRgKjFlf8oWbGlDS8';
-
-    if (!userToken || !secretKey) {
-        return res.status(500).json({ error: 'Missing Yampi API credentials' });
-    }
-
     try {
+        if (req.method !== 'POST') {
+            return res.status(405).json({ error: 'Method Not Allowed' });
+        }
+
+        const { items, testEventCode } = req.body as { items: CartItem[], testEventCode?: string };
+
+        if (!items || !Array.isArray(items) || items.length === 0) {
+            return res.status(400).json({ error: 'Cart items are required' });
+        }
+
+        const userToken = process.env.YAMPI_USER_TOKEN || 'Ol2JwcBDIZ6wXS5kJ8hlmNIZRuAS1B0ylZqAYmFM'; 
+        const secretKey = process.env.YAMPI_SECRET_KEY || 'sk_8xa8rSlVAufkmWdwxTpVgRgKjFlf8oWbGlDS8';
+
+        if (!userToken || !secretKey) {
+            return res.status(500).json({ error: 'Missing Yampi API credentials' });
+        }
+
         const productTitlesToSearch = items.map(i => i.productTitle);
         const yampiProducts = await fetchProductsFromYampi(productTitlesToSearch, userToken, secretKey);
 
@@ -139,27 +139,24 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         if (tokenParts.length > 0) {
             const checkoutUrl = `${YAMPI_CHECKOUT_BASE}/${tokenParts.join(',')}`;
 
-            // Send Facebook CAPI Event
-            try {
-                const clientIp = req.headers['x-forwarded-for'] as string || req.socket.remoteAddress;
-                const userAgent = req.headers['user-agent'];
+            // Send Facebook CAPI Event (Non-blocking)
+            const clientIp = (req.headers['x-forwarded-for'] as string || req.socket?.remoteAddress)?.split(',')[0];
+            const userAgent = req.headers['user-agent'];
 
-                await sendFBEvent({
-                    eventName: 'InitiateCheckout',
-                    eventSourceUrl: req.headers.referer || 'https://vaseu.com.br',
-                    clientIpAddress: clientIp?.split(',')[0],
-                    clientUserAgent: userAgent,
-                    testEventCode: testEventCode || process.env.FB_TEST_EVENT_CODE,
-                    customData: {
-                        value: totalValue,
-                        currency: 'BRL',
-                        content_ids: items.map(i => i.productTitle),
-                        content_type: 'product'
-                    }
-                });
-            } catch (fbError) {
-                console.error('Failed to send FB event:', fbError);
-            }
+            sendFBEvent({
+                eventName: 'InitiateCheckout',
+                eventSourceUrl: req.headers.referer || 'https://vaseu.com.br',
+                clientIpAddress: clientIp,
+                clientUserAgent: userAgent,
+                testEventCode: testEventCode || process.env.FB_TEST_EVENT_CODE,
+                customData: {
+                    value: totalValue,
+                    currency: 'BRL',
+                    content_ids: items.map(i => i.productTitle),
+                    content_type: 'product'
+                }
+            }).catch(err => console.error('FB CAPI Background Error:', err));
+
             return res.status(200).json({
                 url: checkoutUrl,
                 success: true,
@@ -168,10 +165,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         } else {
             return res.status(404).json({ error: 'Could not resolve Yampi tokens for requested items' });
         }
-
-    } catch (error) {
-        console.error('Yampi API Error:', error);
-        return res.status(500).json({ error: 'Failed to process checkout link' });
+    } catch (error: any) {
+        console.error('API Handler Error:', error);
+        return res.status(500).json({ error: error.message || 'Internal Server Error' });
     }
 }
 
