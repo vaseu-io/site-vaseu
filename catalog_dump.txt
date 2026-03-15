@@ -1,0 +1,33 @@
+TOTAL RESULTS: 16
+EXACT PRODUCT NAME: "T-Shirt `Reflexo Preta"
+NORMALIZED NAME: t-shirt `reflexo preta
+EXACT PRODUCT NAME: "T-Shirt `Reflexo Off-White"
+NORMALIZED NAME: t-shirt `reflexo off-white
+EXACT PRODUCT NAME: "T-Shirt `Ruínas"
+NORMALIZED NAME: t-shirt `ruínas
+EXACT PRODUCT NAME: "T-Shirt `Orquidário | Vaseu x Ibanez"
+NORMALIZED NAME: t-shirt `orquidário | vaseu x ibanez
+EXACT PRODUCT NAME: "Premium Oversized - Legacy"
+NORMALIZED NAME: premium oversized - legacy
+EXACT PRODUCT NAME: "Premium Oversized - Discipline"
+NORMALIZED NAME: premium oversized - discipline
+EXACT PRODUCT NAME: "Premium Oversized - Time`s Now"
+NORMALIZED NAME: premium oversized - time`s now
+EXACT PRODUCT NAME: "DROP BOX"
+NORMALIZED NAME: drop box
+EXACT PRODUCT NAME: "T-shirt Oversized Basic Black"
+NORMALIZED NAME: t-shirt oversized basic black
+EXACT PRODUCT NAME: "T-shirt Oversized Basic White"
+NORMALIZED NAME: t-shirt oversized basic white
+EXACT PRODUCT NAME: "T-shirt Boxy Basic White"
+NORMALIZED NAME: t-shirt boxy basic white
+EXACT PRODUCT NAME: "T-shirt Boxy Basic Black"
+NORMALIZED NAME: t-shirt boxy basic black
+EXACT PRODUCT NAME: "Shorts Moletinho Basic Black"
+NORMALIZED NAME: shorts moletinho basic black
+EXACT PRODUCT NAME: "Shorts Moletinho Basic White"
+NORMALIZED NAME: shorts moletinho basic white
+EXACT PRODUCT NAME: "Conjunto All Basic White"
+NORMALIZED NAME: conjunto all basic white
+EXACT PRODUCT NAME: "Conjunto All Basic Black"
+NORMALIZED NAME: conjunto all basic black
