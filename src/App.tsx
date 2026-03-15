@@ -46,8 +46,7 @@ const PixelTracker = () => {
     // @ts-ignore
     if (window.fbq) {
       // @ts-ignore
-      window.fbq('track', 'PageView', {}, { test_event_code: 'TEST76926' });
-      console.log('FB Pixel: PageView tracked for', pathname);
+      window.fbq('track', 'PageView');
     }
   }, [pathname]);
 
