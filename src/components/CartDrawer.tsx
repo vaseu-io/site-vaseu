@@ -25,6 +25,7 @@ export const CartDrawer = () => {
           productTitle: item.product.node.title,
           size: sizeOption?.value || item.variantTitle || 'M',
           quantity: item.quantity,
+          price: parseFloat(item.price.amount)
         };
       });
 
@@ -40,7 +41,7 @@ export const CartDrawer = () => {
       if (res.ok) {
         const data = await res.json();
         if (data && data.url) {
-          window.open(data.url, '_blank');
+          window.location.href = data.url;
           setIsOpen(false);
           setCheckoutLoading(false);
           return; // Success
@@ -60,7 +61,7 @@ export const CartDrawer = () => {
     })));
 
     if (cachedUrl) {
-      window.open(cachedUrl, '_blank');
+      window.location.href = cachedUrl;
       setIsOpen(false);
       setCheckoutLoading(false);
       return;
@@ -69,7 +70,7 @@ export const CartDrawer = () => {
     // Absolute Worst-Case Fallback to Shopify
     const checkoutUrl = getCheckoutUrl();
     if (checkoutUrl) {
-      window.open(checkoutUrl, '_blank');
+      window.location.href = checkoutUrl;
       setIsOpen(false);
     }
     setCheckoutLoading(false);

@@ -17,6 +17,7 @@ interface CartStore {
   cartId: string | null;
   checkoutUrl: string | null;
   isLoading: boolean;
+  isSyncing: boolean;
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
   addItem: (item: Omit<CartItem, 'lineId'>) => Promise<void>;

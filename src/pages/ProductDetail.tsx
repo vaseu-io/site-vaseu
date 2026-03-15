@@ -281,19 +281,26 @@ const ProductDetail = () => {
                       const res = await fetch('/api/checkout', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ items: [{ productTitle: product.title, size: currentSize, quantity: 1 }] })
+                        body: JSON.stringify({ 
+                          items: [{ 
+                            productTitle: product.title, 
+                            size: currentSize, 
+                            quantity: 1,
+                            price: currentPrice
+                          }] 
+                        })
                       });
 
                       if (res.ok) {
                         const data = await res.json();
-                        window.open(data.url, '_blank');
+                        window.location.href = data.url;
                       } else {
                         const fallback = getYampiCheckoutUrl(product.title, currentSize);
-                        if (fallback) window.open(fallback, '_blank');
+                        if (fallback) window.location.href = fallback;
                       }
                     } catch (e) {
                       const fallback = getYampiCheckoutUrl(product.title, currentSize);
-                      if (fallback) window.open(fallback, '_blank');
+                      if (fallback) window.location.href = fallback;
                     }
                     setBuyNowLoading(false);
                   }}
