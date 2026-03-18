@@ -155,7 +155,7 @@ const Private = () => {
             </div>
           </div>
           
-          <p className="text-[10px] uppercase tracking-widest opacity-60 mb-8 max-w-xs leading-relaxed">
+          <p className="text-[11px] font-bold uppercase tracking-widest opacity-70 mb-8 max-w-md leading-relaxed">
             dia 04/04, prévia antecipada, <br />
             preencha o formulário para receber em primeira mao.
           </p>
