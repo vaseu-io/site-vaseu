@@ -3,8 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
+import { Lock } from "lucide-react";
 
 const Private = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState("");
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -19,7 +22,8 @@ const Private = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2026-04-04T10:00:00").getTime();
+    // Target date: May 12, 2026
+    const targetDate = new Date("2026-05-12T10:00:00").getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -40,6 +44,19 @@ const Private = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const handlePasswordSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const normalizedPassword = password.toLowerCase().trim();
+    // Allow both "renúncia do legado" and "renuncia do legado" just in case of keyboard/encoding issues
+    if (normalizedPassword === "ren\u00FAncia do legado" || normalizedPassword === "renuncia do legado") {
+      setIsAuthenticated(true);
+      toast.success("Acesso liberado.");
+    } else {
+      toast.error("Senha incorreta.");
+      setPassword("");
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form data:", formData);
@@ -47,15 +64,47 @@ const Private = () => {
     setFormData({ name: "", email: "", phone: "" });
   };
 
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-[#FF1B1B] md:bg-[#BA3329] flex flex-col items-center justify-center p-4 font-sans text-[#EDC967]">
+        <div className="max-w-md w-full space-y-8 text-center bg-black/20 p-8 border-2 border-[#EDC967] backdrop-blur-sm">
+          <div className="flex justify-center">
+            <div className="w-16 h-16 border-2 border-[#EDC967] flex items-center justify-center rounded-full mb-4">
+               <Lock className="w-8 h-8" />
+            </div>
+          </div>
+          <h1 className="text-3xl font-black uppercase tracking-tighter">ACESSO PRIVADO</h1>
+          <p className="text-sm uppercase tracking-widest opacity-80">Digite a senha para continuar</p>
+          <form onSubmit={handlePasswordSubmit} className="space-y-4">
+            <Input 
+              type="password"
+              placeholder="SENHA"
+              className="bg-transparent border-[#EDC967] text-[#EDC967] placeholder:text-[#EDC967]/50 focus-visible:ring-[#EDC967] rounded-none border-2 h-12 text-center text-lg tracking-[0.5em]"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoFocus
+            />
+            <Button 
+              type="submit"
+              className="w-full bg-[#EDC967] text-[#BA3329] hover:bg-[#D4AF37] font-black uppercase tracking-widest h-12 rounded-none"
+            >
+              ENTRAR
+            </Button>
+          </form>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-[#BA3329] flex flex-col items-center justify-center p-4 font-sans text-[#EDC967] overflow-hidden relative">
+    <div className="min-h-screen bg-[#FF1B1B] md:bg-[#BA3329] flex flex-col items-center justify-center p-4 font-sans text-[#EDC967] overflow-x-hidden relative">
       {/* Background elements like lines */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div className="h-full w-[1px] bg-[#EDC967] absolute left-[10%]"></div>
         <div className="h-full w-[1px] bg-[#EDC967] absolute right-[10%]"></div>
       </div>
 
-      <div className="max-w-4xl w-full flex flex-col md:flex-row items-center justify-between gap-12 z-10">
+      <div className="max-w-4xl w-full flex flex-col md:flex-row items-center justify-between gap-12 z-10 py-12">
         
         {/* Left Section - Vertical Title like the image */}
         <div className="hidden md:block">
@@ -66,7 +115,7 @@ const Private = () => {
         
         {/* Mobile Title */}
         <div className="md:hidden text-center mb-8">
-          <h1 className="text-5xl font-black uppercase tracking-tighter leading-none">
+          <h1 className="text-6xl font-black uppercase tracking-tighter leading-none animate-pulse">
             DROP <br /> PANAMERA
           </h1>
         </div>
@@ -101,7 +150,7 @@ const Private = () => {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="w-full max-w-md space-y-6 bg-[#BA3329] p-8 border-2 border-[#EDC967] shadow-[20px_20px_0px_0px_rgba(212,175,55,0.2)]">
+          <form onSubmit={handleSubmit} className="w-full max-w-md space-y-6 bg-transparent md:bg-[#BA3329] p-2 md:p-8 border-none md:border-2 md:border-[#EDC967] shadow-none">
             <div className="space-y-2 text-left">
               <Label htmlFor="name" className="text-[#EDC967] uppercase font-bold text-xs tracking-widest">Nome Completo</Label>
               <Input 
@@ -138,18 +187,37 @@ const Private = () => {
             </div>
             <Button 
               type="submit" 
-              className="w-full bg-[#EDC967] text-[#BA3329] hover:bg-[#D4AF37] font-black uppercase tracking-widest h-14 rounded-none text-lg transition-all transform hover:scale-[1.02] active:scale-[0.98]"
+              className="w-full bg-[#EDC967] text-[#BA3329] hover:bg-[#D4AF37] font-black uppercase tracking-widest h-14 rounded-none text-lg transition-all"
             >
               GARANTIR ACESSO
             </Button>
           </form>
+
+          {/* Ticket info visible on mobile below the form */}
+          <div className="md:hidden mt-12 grid grid-cols-1 gap-8 text-center w-full max-w-md pt-8 border-t border-[#EDC967]/30">
+            <div>
+              <p className="opacity-60 uppercase text-xs tracking-widest">Data</p>
+              <p className="text-3xl font-black">12 MAIO</p>
+            </div>
+            <div>
+              <p className="opacity-60 uppercase text-xs tracking-widest">Hora</p>
+              <p className="text-3xl font-black">10.AM</p>
+            </div>
+            <div>
+              <p className="opacity-60 uppercase text-xs tracking-widest">Local</p>
+              <p className="text-3xl font-black">ONLINE</p>
+            </div>
+            <div className="mt-4">
+              <p className="text-[10px] uppercase tracking-[0.3em] opacity-40 italic">Vaseu Official Next Drop - 2026</p>
+            </div>
+          </div>
         </div>
 
-        {/* Right Section - Additional Ticket Info */}
+        {/* Right Section - Additional Ticket Info (Desktop only) */}
         <div className="hidden lg:flex flex-col gap-12 font-mono text-sm border-l-2 border-[#EDC967] pl-8">
           <div>
             <p className="opacity-60 uppercase">Data</p>
-            <p className="text-2xl font-black">04 ABRIL</p>
+            <p className="text-2xl font-black">12 MAIO</p>
           </div>
           <div>
             <p className="opacity-60 uppercase">Hora</p>
@@ -166,7 +234,7 @@ const Private = () => {
 
       </div>
 
-      {/* Decorative vertical text on the right side of the screen */}
+      {/* Decorative vertical text on the right side of the screen (Desktop only) */}
       <div className="absolute right-4 top-1/2 -translate-y-1/2 hidden md:block">
         <p className="text-xs uppercase tracking-[0.5em] font-bold opacity-30 transform rotate-90 origin-center whitespace-nowrap">
           A CORRIDA NÃO PARA • NEXT DROP • PANAMERA SERIES
