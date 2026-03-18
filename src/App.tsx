@@ -68,7 +68,7 @@ const AppContent = () => {
         <Route path="/rastreio" element={<Tracking />} />
         <Route path="/timer" element={<Timer />} />
         <Route path="/product/:handle" element={<ProductDetail />} />
-        <Route path="/private" element={<Private />} />
+        <Route path="/privado" element={<Private />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
