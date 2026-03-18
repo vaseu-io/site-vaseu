@@ -22,8 +22,8 @@ const Private = () => {
   });
 
   useEffect(() => {
-    // Target date: May 12, 2026
-    const targetDate = new Date("2026-05-12T10:00:00").getTime();
+    // Target date for countdown: April 4, 2026 (Pre-save/Preview)
+    const targetDate = new Date("2026-04-04T10:00:00").getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -46,9 +46,14 @@ const Private = () => {
 
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const normalizedPassword = password.toLowerCase().trim();
-    // Allow both "renúncia do legado" and "renuncia do legado" just in case of keyboard/encoding issues
-    if (normalizedPassword === "ren\u00FAncia do legado" || normalizedPassword === "renuncia do legado") {
+    // Normalização: minúsculas, remove acentos, remove espaços
+    const normalizedInput = password
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/\s+/g, "");
+    
+    if (normalizedInput === "renunciadolegado") {
       setIsAuthenticated(true);
       toast.success("Acesso liberado.");
     } else {
@@ -128,8 +133,8 @@ const Private = () => {
              <img src="https://flagcdn.com/w40/mx.png" alt="Mexico" className="w-8 h-auto shadow-lg" />
           </div>
 
-          <div className="border-y-2 border-[#EDC967] py-6 mb-12 w-full max-w-md">
-            <h2 className="text-sm font-bold uppercase tracking-[0.3em] mb-4">CONVITE OFICIAL - NEXT DROP</h2>
+          <div className="border-y-2 border-[#EDC967] py-6 mb-8 w-full max-w-md">
+            <h2 className="text-sm font-bold uppercase tracking-[0.3em] mb-4">Convite Oficial - Prévia 1</h2>
             <div className="grid grid-cols-4 gap-4">
               <div className="flex flex-col">
                 <span className="text-4xl font-black">{timeLeft.days}</span>
@@ -149,6 +154,11 @@ const Private = () => {
               </div>
             </div>
           </div>
+          
+          <p className="text-[10px] uppercase tracking-widest opacity-60 mb-8 max-w-xs leading-relaxed">
+            dia 04/04, prévia antecipada, <br />
+            preencha o formulário para receber em primeira mao.
+          </p>
 
           <form onSubmit={handleSubmit} className="w-full max-w-md space-y-6 bg-transparent md:bg-[#BA3329] p-2 md:p-8 border-none md:border-2 md:border-[#EDC967] shadow-none">
             <div className="space-y-2 text-left">
@@ -194,41 +204,58 @@ const Private = () => {
           </form>
 
           {/* Ticket info visible on mobile below the form */}
-          <div className="md:hidden mt-12 grid grid-cols-1 gap-8 text-center w-full max-w-md pt-8 border-t border-[#EDC967]/30">
-            <div>
-              <p className="opacity-60 uppercase text-xs tracking-widest">Data</p>
-              <p className="text-3xl font-black">12 MAIO</p>
-            </div>
-            <div>
-              <p className="opacity-60 uppercase text-xs tracking-widest">Hora</p>
-              <p className="text-3xl font-black">10.AM</p>
-            </div>
-            <div>
-              <p className="opacity-60 uppercase text-xs tracking-widest">Local</p>
-              <p className="text-3xl font-black">ONLINE</p>
-            </div>
-            <div className="mt-4">
-              <p className="text-[10px] uppercase tracking-[0.3em] opacity-40 italic">Vaseu Official Next Drop - 2026</p>
+          <div className="md:hidden mt-12 flex flex-col items-center w-full max-w-md pt-8 border-t border-[#EDC967]/30">
+            <p className="text-[10px] font-black uppercase tracking-[0.4em] mb-8 bg-[#EDC967] text-[#FF1B1B] px-4 py-1">
+              DATA DO DROP OFICIAL
+            </p>
+            <div className="flex gap-6 items-start">
+              {/* Vertical line from anexo */}
+              <div className="w-[3px] h-48 bg-[#EDC967]"></div>
+              
+              <div className="flex flex-col gap-6 text-left">
+                <div>
+                  <p className="opacity-60 uppercase text-[10px] tracking-widest font-bold">Data</p>
+                  <p className="text-3xl font-black leading-none">12 MAIO</p>
+                </div>
+                <div>
+                  <p className="opacity-60 uppercase text-[10px] tracking-widest font-bold">Hora</p>
+                  <p className="text-3xl font-black leading-none">10.AM</p>
+                </div>
+                <div>
+                  <p className="opacity-60 uppercase text-[10px] tracking-widest font-bold">Local</p>
+                  <p className="text-3xl font-black leading-none">ONLINE</p>
+                </div>
+                <div className="mt-4">
+                   <p className="text-[10px] uppercase tracking-[0.3em] opacity-40 italic">Vaseu Official Next Drop - 2026</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Right Section - Additional Ticket Info (Desktop only) */}
-        <div className="hidden lg:flex flex-col gap-12 font-mono text-sm border-l-2 border-[#EDC967] pl-8">
-          <div>
-            <p className="opacity-60 uppercase">Data</p>
-            <p className="text-2xl font-black">12 MAIO</p>
-          </div>
-          <div>
-            <p className="opacity-60 uppercase">Hora</p>
-            <p className="text-2xl font-black">10.AM</p>
-          </div>
-          <div>
-            <p className="opacity-60 uppercase">Local</p>
-            <p className="text-2xl font-black">ONLINE</p>
-          </div>
-          <div className="mt-auto">
-            <p className="text-xs transform rotate-90 origin-left whitespace-nowrap opacity-40">VASEU OFFICIAL NEXT DROP - 2026</p>
+        <div className="hidden lg:flex flex-col gap-4 items-center border-l-2 border-[#EDC967] pl-8">
+           <p className="text-[10px] font-black uppercase tracking-[0.4em] mb-4 bg-[#EDC967] text-[#BA3329] px-4 py-1 whitespace-nowrap">
+              DATA DO DROP OFICIAL
+           </p>
+           <div className="flex gap-6 items-start">
+             <div className="flex flex-col gap-12 font-mono text-sm ">
+              <div>
+                <p className="opacity-60 uppercase text-[10px] tracking-widest font-bold">Data</p>
+                <p className="text-2xl font-black">12 MAIO</p>
+              </div>
+              <div>
+                <p className="opacity-60 uppercase text-[10px] tracking-widest font-bold">Hora</p>
+                <p className="text-2xl font-black">10.AM</p>
+              </div>
+              <div>
+                <p className="opacity-60 uppercase text-[10px] tracking-widest font-bold">Local</p>
+                <p className="text-2xl font-black">ONLINE</p>
+              </div>
+            </div>
+            <div className="mt-auto">
+              <p className="text-[10px] transform rotate-90 origin-left whitespace-nowrap opacity-40 uppercase tracking-[0.5em]">VASEU OFFICIAL NEXT DROP - 2026</p>
+            </div>
           </div>
         </div>
 
