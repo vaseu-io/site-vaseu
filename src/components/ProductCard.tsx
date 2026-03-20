@@ -3,14 +3,16 @@ import { ShopifyProduct } from "@/lib/shopify";
 
 interface ProductCardProps {
   product: ShopifyProduct;
+  originalPrice?: number;
 }
 
-export const ProductCard = ({ product }: ProductCardProps) => {
+export const ProductCard = ({ product, originalPrice }: ProductCardProps) => {
   const { node } = product;
   const image = node.images?.edges?.[0]?.node;
   const price = node.priceRange.minVariantPrice;
   const priceValue = parseFloat(price.amount);
   const installmentValue = (priceValue / 3).toFixed(2);
+  const hasDiscount = originalPrice && originalPrice > priceValue;
 
   return (
     <Link
@@ -38,11 +40,18 @@ export const ProductCard = ({ product }: ProductCardProps) => {
       </div>
       <div className="space-y-1">
         <h3 className="font-medium text-sm uppercase tracking-wide truncate">{node.title}</h3>
-        <p className="text-sm font-mono">
-          R$ {priceValue.toFixed(2)}
-        </p>
+        <div className="flex flex-col gap-0.5">
+          {hasDiscount && (
+            <span className="text-[10px] text-muted-foreground line-through decoration-neutral-400">
+              R$ {originalPrice.toFixed(2).replace('.', ',')}
+            </span>
+          )}
+          <p className={`text-sm font-mono ${hasDiscount ? 'text-green-600 font-bold' : ''}`}>
+            R$ {priceValue.toFixed(2).replace('.', ',')}
+          </p>
+        </div>
         <p className="text-xs text-muted-foreground">
-          ou 3x de R$ {installmentValue}
+          ou 3x de R$ {installmentValue.replace('.', ',')}
         </p>
       </div>
     </Link>

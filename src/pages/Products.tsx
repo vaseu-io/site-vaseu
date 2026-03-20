@@ -88,9 +88,32 @@ const Products = () => {
 
                 {sortedProducts && sortedProducts.length > 0 && (
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-10 md:gap-x-6 md:gap-y-12">
-                        {sortedProducts.map((product) => (
-                            <ProductCard key={product.node.id} product={product} />
-                        ))}
+                        {sortedProducts.map((product) => {
+                            const title = product.node.title.toUpperCase();
+                            let originalPrice: number | undefined;
+
+                            if (title.includes("CONJUNTO T-SHIRT OVER E SHORTS ALL BASIC")) {
+                                const isBlack = title.includes("BLACK");
+                                
+                                // Dynamic calculation from current products if available
+                                const overshirt = products?.find(p => 
+                                    p.node.title.toUpperCase() === (isBlack ? "T-SHIRT OVERSIZED BASIC BLACK" : "T-SHIRT OVERSIZED BASIC WHITE")
+                                );
+                                const shorts = products?.find(p => 
+                                    p.node.title.toUpperCase() === (isBlack ? "SHORTS MOLETINHO BASIC BLACK" : "SHORTS MOLETINHO BASIC WHITE")
+                                );
+
+                                if (overshirt && shorts) {
+                                    originalPrice = parseFloat(overshirt.node.priceRange.minVariantPrice.amount) + 
+                                                   parseFloat(shorts.node.priceRange.minVariantPrice.amount);
+                                } else {
+                                    // Fallback to discovered prices: 149.90 + 129.90
+                                    originalPrice = 279.80;
+                                }
+                            }
+
+                            return <ProductCard key={product.node.id} product={product} originalPrice={originalPrice} />;
+                        })}
                     </div>
                 )}
             </div>
