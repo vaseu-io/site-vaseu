@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/checkout/:path*", "destination": "https://vaseu2.pay.yampi.com.br/r/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

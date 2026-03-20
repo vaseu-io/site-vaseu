@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { ShoppingCart, Minus, Plus, Trash2, ExternalLink, Loader2 } from "lucide-react";
 import { useCartStore } from "@/stores/cartStore";
-import { getYampiCartCheckoutUrl } from "@/lib/yampi";
+import { getYampiCartCheckoutUrl, getBrandedCheckoutUrl } from "@/lib/yampi";
 
 export const CartDrawer = () => {
   const { items, isLoading, isSyncing, updateQuantity, removeItem, getCheckoutUrl, syncCart, isOpen, setIsOpen } = useCartStore();
@@ -41,7 +41,7 @@ export const CartDrawer = () => {
       if (res.ok) {
         const data = await res.json();
         if (data && data.url) {
-          window.location.href = data.url;
+          window.location.href = getBrandedCheckoutUrl(data.url) || data.url;
           setIsOpen(false);
           setCheckoutLoading(false);
           return; // Success
@@ -61,7 +61,7 @@ export const CartDrawer = () => {
     })));
 
     if (cachedUrl) {
-      window.location.href = cachedUrl;
+      window.location.href = getBrandedCheckoutUrl(cachedUrl) || cachedUrl;
       setIsOpen(false);
       setCheckoutLoading(false);
       return;

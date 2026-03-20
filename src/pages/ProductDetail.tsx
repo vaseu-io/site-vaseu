@@ -7,7 +7,7 @@ import { useCartStore } from "@/stores/cartStore";
 import { ShopifyProduct } from "@/lib/shopify";
 import { Loader2, ChevronLeft, ChevronRight, ChevronDown, Plus } from "lucide-react";
 import { toast } from "sonner";
-import { getYampiCheckoutUrl, getYampiCartCheckoutUrl } from "@/lib/yampi";
+import { getYampiCheckoutUrl, getYampiCartCheckoutUrl, getBrandedCheckoutUrl } from "@/lib/yampi";
 
 const BUNDLE_DISCOUNT = 0.10; // 10% de desconto no combo
 
@@ -298,9 +298,9 @@ const ProductDetail = () => {
                       if (res.ok) {
                         const data = await res.json();
                         if (data.url) {
-                          window.location.href = data.url;
+                          window.location.href = getBrandedCheckoutUrl(data.url) || data.url;
                         } else if (fallback) {
-                          window.location.href = fallback;
+                          window.location.href = getBrandedCheckoutUrl(fallback) || fallback;
                         } else {
                           toast.error("Checkout não disponível para esta variação.");
                         }
