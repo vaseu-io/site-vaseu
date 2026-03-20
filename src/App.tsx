@@ -3,18 +3,27 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, lazy, Suspense } from "react";
 import { useCartSync } from "@/hooks/useCartSync";
-import Index from "./pages/Index";
-import ProductDetail from "./pages/ProductDetail";
-import Products from "./pages/Products";
-import Contact from "./pages/Contact";
-import ExchangeReturns from "./pages/ExchangeReturns";
-import Tracking from "./pages/Tracking";
-import Timer from "./pages/Timer";
-import Private from "./pages/Private";
-import Checkout from "./pages/Checkout";
-import NotFound from "./pages/NotFound";
+
+// Lazy load pages for better performance
+const Index = lazy(() => import("./pages/Index"));
+const ProductDetail = lazy(() => import("./pages/ProductDetail"));
+const Products = lazy(() => import("./pages/Products"));
+const Contact = lazy(() => import("./pages/Contact"));
+const ExchangeReturns = lazy(() => import("./pages/ExchangeReturns"));
+const Tracking = lazy(() => import("./pages/Tracking"));
+const Timer = lazy(() => import("./pages/Timer"));
+const Private = lazy(() => import("./pages/Private"));
+const Checkout = lazy(() => import("./pages/Checkout"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+
+// Loading fallback component
+const PageLoader = () => (
+  <div className="flex h-[50vh] w-full items-center justify-center">
+    <div className="h-6 w-6 animate-spin rounded-full border-2 border-neutral-200 border-t-neutral-800" />
+  </div>
+);
 
 const queryClient = new QueryClient();
 
@@ -61,18 +70,20 @@ const AppContent = () => {
     <BrowserRouter>
       <ScrollToTop />
       <PixelTracker />
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/produtos" element={<Products />} />
-        <Route path="/contato" element={<Contact />} />
-        <Route path="/trocas-e-devolucoes" element={<ExchangeReturns />} />
-        <Route path="/rastreio" element={<Tracking />} />
-        <Route path="/timer" element={<Timer />} />
-        <Route path="/product/:handle" element={<ProductDetail />} />
-        <Route path="/privado" element={<Private />} />
-        <Route path="/checkout/*" element={<Checkout />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/produtos" element={<Products />} />
+          <Route path="/contato" element={<Contact />} />
+          <Route path="/trocas-e-devolucoes" element={<ExchangeReturns />} />
+          <Route path="/rastreio" element={<Tracking />} />
+          <Route path="/timer" element={<Timer />} />
+          <Route path="/product/:handle" element={<ProductDetail />} />
+          <Route path="/privado" element={<Private />} />
+          <Route path="/checkout/*" element={<Checkout />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 };
