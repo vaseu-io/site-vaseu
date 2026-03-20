@@ -13,40 +13,34 @@ const Products = () => {
         const result = [...products];
         
         // Target titles (case insensitive)
+        const featuredTitle = "2 T-SHIRT OVERSIZED BASIC BLACK&WHITE";
         const blackConjuntoTitle = "CONJUNTO T-SHIRT OVER E SHORTS ALL BASIC BLACK";
         const whiteConjuntoTitle = "CONJUNTO T-SHIRT OVER E SHORTS ALL BASIC WHITE";
 
         // Find the indices of the target products
+        const featuredIndex = result.findIndex(p => p.node.title.toUpperCase() === featuredTitle);
         const blackIndex = result.findIndex(p => p.node.title.toUpperCase() === blackConjuntoTitle);
         const whiteIndex = result.findIndex(p => p.node.title.toUpperCase() === whiteConjuntoTitle);
 
         const itemsToMove: typeof result = [];
 
-        // Extract products if found
-        // Note: we extract from right to left or carefully as indices change
-        if (blackIndex !== -1) {
-            const [item] = result.splice(blackIndex, 1);
-            itemsToMove.push(item);
-        }
-        
-        // Re-find whiteIndex after black is removed
-        const whiteIndexCurrent = result.findIndex(p => p.node.title.toUpperCase() === whiteConjuntoTitle);
-        if (whiteIndexCurrent !== -1) {
-            const [item] = result.splice(whiteIndexCurrent, 1);
-            itemsToMove.push(item);
-        }
+        // Extract products in a way that doesn't mess up indices
+        // We'll collect those we find and then filter them out of the original result
+        const targetTitles = [featuredTitle, blackConjuntoTitle, whiteConjuntoTitle];
+        const extractedItems = result.filter(p => targetTitles.includes(p.node.title.toUpperCase()));
+        const remainingItems = result.filter(p => !targetTitles.includes(p.node.title.toUpperCase()));
 
-        // Insert at 3rd and 4th positions (index 2 and 3)
-        // If we have both, insert them. If only one, insert one.
-        // We sort them within itemsToMove to ensure Black is first if both are there
-        itemsToMove.sort((a, b) => {
-            if (a.node.title.toUpperCase() === blackConjuntoTitle) return -1;
-            return 1;
-        });
+        // Order the extracted items: Featured first, then Black Conjunto, then White Conjunto
+        const sortedFeatured = [
+            extractedItems.find(p => p.node.title.toUpperCase() === featuredTitle),
+            extractedItems.find(p => p.node.title.toUpperCase() === blackConjuntoTitle),
+            extractedItems.find(p => p.node.title.toUpperCase() === whiteConjuntoTitle)
+        ].filter(Boolean);
 
-        result.splice(2, 0, ...itemsToMove);
+        // Insert at 3rd position (index 2)
+        remainingItems.splice(2, 0, ...sortedFeatured as typeof result);
 
-        return result;
+        return remainingItems;
     })();
 
     return (
@@ -91,6 +85,8 @@ const Products = () => {
                         {sortedProducts.map((product) => {
                             const title = product.node.title.toUpperCase();
                             let originalPrice: number | undefined;
+                            
+                            const isFeatured = title === "2 T-SHIRT OVERSIZED BASIC BLACK&WHITE";
 
                             if (title.includes("CONJUNTO T-SHIRT OVER E SHORTS ALL BASIC")) {
                                 const isBlack = title.includes("BLACK");
@@ -112,7 +108,27 @@ const Products = () => {
                                 }
                             }
 
-                            return <ProductCard key={product.node.id} product={product} originalPrice={originalPrice} />;
+                            if (isFeatured) {
+                                const blackShirt = products?.find(p => p.node.title.toUpperCase() === "T-SHIRT OVERSIZED BASIC BLACK");
+                                const whiteShirt = products?.find(p => p.node.title.toUpperCase() === "T-SHIRT OVERSIZED BASIC WHITE");
+                                if (blackShirt && whiteShirt) {
+                                    originalPrice = parseFloat(blackShirt.node.priceRange.minVariantPrice.amount) + 
+                                                   parseFloat(whiteShirt.node.priceRange.minVariantPrice.amount);
+                                } else {
+                                    // Fallback: 149.90 * 2
+                                    originalPrice = 299.80;
+                                }
+                            }
+
+                            return (
+                                <div key={product.node.id} className={isFeatured ? "col-span-2" : ""}>
+                                    <ProductCard 
+                                        product={product} 
+                                        originalPrice={originalPrice} 
+                                        isFeatured={isFeatured}
+                                    />
+                                </div>
+                            );
                         })}
                     </div>
                 )}
