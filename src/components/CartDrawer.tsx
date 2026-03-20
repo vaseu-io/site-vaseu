@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTr
 import { ShoppingCart, Minus, Plus, Trash2, ExternalLink, Loader2 } from "lucide-react";
 import { useCartStore } from "@/stores/cartStore";
 import { getYampiCartCheckoutUrl, getBrandedCheckoutUrl } from "@/lib/yampi";
+import { toast } from "sonner";
 
 export const CartDrawer = () => {
   const { items, isLoading, isSyncing, updateQuantity, removeItem, getCheckoutUrl, syncCart, isOpen, setIsOpen } = useCartStore();
@@ -17,62 +18,20 @@ export const CartDrawer = () => {
 
   const handleCheckout = async () => {
     setCheckoutLoading(true);
-
-    try {
-      const yampiItems = items.map(item => {
-        const sizeOption = item.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho');
-        return {
-          productTitle: item.product.node.title,
-          size: sizeOption?.value || item.variantTitle || 'M',
-          quantity: item.quantity,
-          price: parseFloat(item.price.amount)
-        };
-      });
-
-      // Call the dynamic serverless backend
-      const res = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ items: yampiItems }),
-      });
-
-      if (res.ok) {
-        const data = await res.json();
-        if (data && data.url) {
-          window.location.href = getBrandedCheckoutUrl(data.url) || data.url;
-          setIsOpen(false);
-          setCheckoutLoading(false);
-          return; // Success
-        }
-      }
-
-      console.warn("Dynamic Yampi failed, falling back to cached local search or Shopify");
-    } catch (err) {
-      console.error("Yampi Dynamic API Checkout Error:", err);
-    }
-
-    // Fallback to local hardcoded dictionary just in case
-    const cachedUrl = getYampiCartCheckoutUrl(items.map(i => ({
+    
+    // Use the dynamic Yampi cart checkout generation
+    const checkoutUrl = getYampiCartCheckoutUrl(items.map(i => ({
       productTitle: i.product.node.title,
       size: i.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho')?.value || 'M',
       quantity: i.quantity
     })));
 
-    if (cachedUrl) {
-      window.location.href = getBrandedCheckoutUrl(cachedUrl) || cachedUrl;
-      setIsOpen(false);
-      setCheckoutLoading(false);
-      return;
-    }
-
-    // Absolute Worst-Case Fallback to Shopify
-    const checkoutUrl = getCheckoutUrl();
     if (checkoutUrl) {
       window.location.href = getBrandedCheckoutUrl(checkoutUrl) || checkoutUrl;
-      setIsOpen(false);
+    } else {
+      toast.error("Erro ao gerar link de compra");
     }
+    
     setCheckoutLoading(false);
   };
 

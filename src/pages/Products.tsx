@@ -103,8 +103,8 @@ const Products = () => {
                                     originalPrice = parseFloat(overshirt.node.priceRange.minVariantPrice.amount) + 
                                                    parseFloat(shorts.node.priceRange.minVariantPrice.amount);
                                 } else {
-                                    // Fallback to discovered prices: 149.90 + 129.90
-                                    originalPrice = 279.80;
+                                    // Fallback to discovered prices: 149.90 + 169.90
+                                    originalPrice = 319.80;
                                 }
                             }
 

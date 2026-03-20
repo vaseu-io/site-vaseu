@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useProduct, useProducts } from "@/hooks/useProducts";
 import { Header } from "@/components/Header";
@@ -8,6 +8,7 @@ import { ShopifyProduct } from "@/lib/shopify";
 import { Loader2, ChevronLeft, ChevronRight, ChevronDown, Plus } from "lucide-react";
 import { toast } from "sonner";
 import { getYampiCheckoutUrl, getYampiCartCheckoutUrl, getBrandedCheckoutUrl } from "@/lib/yampi";
+import { SizeChart } from "@/components/SizeChart";
 
 const BUNDLE_DISCOUNT = 0.10; // 10% de desconto no combo
 
@@ -15,7 +16,9 @@ const ProductDetail = () => {
   const { handle } = useParams<{ handle: string }>();
   const { data: product, isLoading } = useProduct(handle || "");
   const { data: allProducts } = useProducts();
-  const { data: bundleProduct } = useProduct('conjunto-all-basic-black-1');
+  const targetColor = product?.title.toLowerCase().includes("white") ? "white" : "black";
+  const bundleHandle = targetColor === "black" ? "conjunto-all-basic-black-1" : "conjunto-all-basic-black";
+  const { data: bundleProduct } = useProduct(bundleHandle);
   const addItem = useCartStore(state => state.addItem);
   const cartLoading = useCartStore(state => state.isLoading);
   const setIsOpen = useCartStore(state => state.setIsOpen);
@@ -23,7 +26,9 @@ const ProductDetail = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [buyNowLoading, setBuyNowLoading] = useState(false);
   const [comboLoading, setComboLoading] = useState(false);
-  const [openTabs, setOpenTabs] = useState<Record<string, boolean>>({ design: true, envio: true });
+  const [openTabs, setOpenTabs] = useState<Record<string, boolean>>({ design: true, envio: true, sizeChart: false });
+  const [bundleSize, setBundleSize] = useState('M');
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
     const resetScroll = () => {
@@ -100,6 +105,7 @@ const ProductDetail = () => {
     });
   };
 
+
   const handleAddToCart = async () => {
     if (!selectedVariant) return;
     const shopifyProduct: ShopifyProduct = { node: product };
@@ -114,8 +120,23 @@ const ProductDetail = () => {
     toast.success("Adicionado ao carrinho", { position: "top-center" });
   };
 
-  const nextImage = () => setSelectedImageIndex(prev => (prev + 1) % images.length);
-  const prevImage = () => setSelectedImageIndex(prev => (prev - 1 + images.length) % images.length);
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const container = e.currentTarget;
+    const index = Math.round(container.scrollLeft / container.clientWidth);
+    if (index !== selectedImageIndex) {
+      setSelectedImageIndex(index);
+    }
+  };
+
+  const scrollToImage = (index: number) => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo({
+        left: index * scrollRef.current.clientWidth,
+        behavior: 'smooth'
+      });
+      setSelectedImageIndex(index);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white text-black" style={{ overflowAnchor: "none" }}>
@@ -135,38 +156,29 @@ const ProductDetail = () => {
       <div className="container px-0">
         <div className="grid md:grid-cols-2 gap-0">
 
-          {/* Image Gallery - Full bleed, Pace-style */}
+          {/* Image Gallery - Swipable */}
           <div className="relative border-r border-neutral-200">
-            {/* Main Image */}
-            <div className="w-full max-w-full sm:h-[60vh] md:h-auto overflow-hidden relative group flex items-center justify-center">
-              {images[selectedImageIndex] ? (
-                <img
-                  src={images[selectedImageIndex].node.url}
-                  alt={images[selectedImageIndex].node.altText || product.title}
-                  className="w-full object-cover md:w-full md:h-full md:object-cover mix-blend-multiply"
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-neutral-300 text-sm uppercase tracking-widest">
+            {/* Main Image Container */}
+            <div 
+              ref={scrollRef}
+              onScroll={handleScroll}
+              className="w-full h-full overflow-x-auto overflow-y-hidden flex snap-x snap-mandatory hide-scrollbar"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {images.map((img, i) => (
+                <div key={i} className="flex-shrink-0 w-full h-auto min-h-[50vh] md:h-auto snap-start flex items-center justify-center">
+                  <img
+                    src={img.node.url}
+                    alt={img.node.altText || product.title}
+                    className="w-full object-contain md:w-full md:h-full md:object-cover mix-blend-multiply"
+                  />
+                </div>
+              ))}
+              
+              {images.length === 0 && (
+                <div className="w-full h-full min-h-[50vh] flex items-center justify-center text-neutral-300 text-sm uppercase tracking-widest">
                   Sem imagem
                 </div>
-              )}
-
-              {/* Navigation Arrows */}
-              {images.length > 1 && (
-                <>
-                  <button
-                    onClick={prevImage}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity"
-                  >
-                    <ChevronLeft className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={nextImage}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity"
-                  >
-                    <ChevronRight className="w-5 h-5" />
-                  </button>
-                </>
               )}
             </div>
 
@@ -176,7 +188,7 @@ const ProductDetail = () => {
                 {images.map((_, i) => (
                   <button
                     key={i}
-                    onClick={() => setSelectedImageIndex(i)}
+                    onClick={() => scrollToImage(i)}
                     className={`w-2 h-2 rounded-full transition-colors ${i === selectedImageIndex ? 'bg-black' : 'bg-neutral-300'
                       }`}
                   />
@@ -190,7 +202,7 @@ const ProductDetail = () => {
                 {images.map((img, i) => (
                   <button
                     key={i}
-                    onClick={() => setSelectedImageIndex(i)}
+                    onClick={() => scrollToImage(i)}
                     className={`w-16 h-20 flex-shrink-0 overflow-hidden border transition-all ${i === selectedImageIndex ? 'border-black' : 'border-transparent hover:border-neutral-300'
                       }`}
                   >
@@ -280,48 +292,16 @@ const ProductDetail = () => {
                     // Pre-calculate fallback URL (local tokens matching)
                     const fallback = getYampiCheckoutUrl(product.title, currentSize);
 
-                    try {
-                      // Attempt dynamic checkout via API
-                      const res = await fetch('/api/checkout', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ 
-                          items: [{ 
-                            productTitle: product.title, 
-                            size: currentSize, 
-                            quantity: 1,
-                            price: currentPrice
-                          }] 
-                        })
-                      });
-
-                      if (res.ok) {
-                        const data = await res.json();
-                        if (data.url) {
-                          window.location.href = getBrandedCheckoutUrl(data.url) || data.url;
-                        } else if (fallback) {
-                          window.location.href = getBrandedCheckoutUrl(fallback) || fallback;
-                        } else {
-                          toast.error("Checkout não disponível para esta variação.");
-                        }
-                      } else {
-                        // API failure or 404/500
-                        if (fallback) {
-                          window.location.href = fallback;
-                        } else {
-                          toast.error("Erro ao gerar link de compra.");
-                        }
-                      }
-                    } catch (e) {
-                      // Network error or fetch exception
-                      if (fallback) {
-                        window.location.href = fallback;
-                      } else {
-                        toast.error("Erro de conexão ao finalizar compra.");
-                      }
-                    } finally {
-                      setBuyNowLoading(false);
+                    // Direct client-side Yampi redirect for better reliability
+                    const yampiUrl = getYampiCheckoutUrl(product.title, currentSize, 1);
+                    const finalUrl = getBrandedCheckoutUrl(yampiUrl) || yampiUrl || fallback;
+                    
+                    if (finalUrl) {
+                      window.location.href = finalUrl;
+                    } else {
+                      toast.error("Erro ao gerar link de compra.");
                     }
+                    setBuyNowLoading(false);
                   }}
                   disabled={buyNowLoading}
                   className="w-full h-14 border-2 border-black text-xs uppercase tracking-[0.25em] font-medium text-black hover:bg-neutral-100 transition-all flex items-center justify-center active:scale-[0.98]"
@@ -331,135 +311,111 @@ const ProductDetail = () => {
               )}
             </div>
 
-            {/* Bundle Deal Section */}
+            {/* Oferta Especial - Bundle Deal Section */}
             {(() => {
               if (!allProducts) return null;
-
+              
               const titleLower = product.title.toLowerCase();
+              if (titleLower.includes("boxy") || titleLower.includes("2 t-shirt") || titleLower.includes("conjunto")) return null;
 
-              // No bundle for Boxy
-              if (titleLower.includes("boxy")) return null;
-
-              let targetColor = "";
-              if (titleLower.includes("black") || titleLower.includes("preta")) targetColor = "black";
-              else if (titleLower.includes("white") || titleLower.includes("branca") || titleLower.includes("off-white")) targetColor = "white";
-
-              // Check item type
+              const targetColor = (titleLower.includes("black") || titleLower.includes("preta")) ? "black" : 
+                                 (titleLower.includes("white") || titleLower.includes("branca") || titleLower.includes("off-white")) ? "white" : "";
               const isShorts = titleLower.includes("shorts");
               const isTShirt = titleLower.includes("t-shirt") || titleLower.includes("oversized");
 
-              // Only show bundle for T-shirts (or Oversized) or Shorts with a target color
-              if (!isShorts && !isTShirt) return null;
-              if (!targetColor) return null;
+              if (!targetColor || (!isShorts && !isTShirt)) return null;
 
-              // Find matching companion
               const suggested = allProducts.find(p => {
                 const pTitle = p.node.title.toLowerCase();
-
-                // If current item is shorts, suggest a t-shirt. Avoid boxy.
-                if (isShorts) {
-                  if (pTitle.includes("boxy")) return false;
-                  if (!pTitle.includes("t-shirt") && !pTitle.includes("oversized")) return false;
-                }
-
-                // If current item is a t-shirt, suggest shorts.
-                if (isTShirt && !pTitle.includes("shorts")) return false;
-
-                // Match color
-                if (targetColor === "black" && (pTitle.includes("black") || pTitle.includes("preto"))) return true;
-                if (targetColor === "white" && (pTitle.includes("white") || pTitle.includes("branco") || pTitle.includes("off-white"))) return true;
-
-                return false;
+                const colorMatch = targetColor === "black" ? (pTitle.includes("black") || pTitle.includes("preto")) : (pTitle.includes("white") || pTitle.includes("branco") || pTitle.includes("off-white"));
+                if (!colorMatch) return false;
+                if (isShorts) return !pTitle.includes("boxy") && (pTitle.includes("t-shirt") || pTitle.includes("oversized"));
+                return pTitle.includes("shorts");
               });
 
               if (!suggested || suggested.node.handle === product.handle) return null;
-              const suggestedImage = suggested.node.images?.edges?.[0]?.node;
-              const currentImage = images[0]?.node;
-
-              // Combo prices for Black and White
-              const isComboBlack = targetColor === "black";
-              const comboPrice = isComboBlack ? 289.90 : 289.90; // Ambos combos são 289,90 segundo histórico
-
-              const sizeOption = selectedVariant?.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho');
-              const currentSize = sizeOption?.value || selectedVariant?.title || 'M';
-              const suggestedDefaultSize = suggested.node.options?.find(o => o.name === 'Size' || o.name === 'Tamanho')?.values?.[0] || 'M';
-
+              
+              const comboPrice = targetColor === "black" ? 249.90 : 247.00;
               const currentPriceRaw = parseFloat(selectedVariant?.price?.amount || product.priceRange.minVariantPrice.amount);
               const suggestedPriceRaw = parseFloat(suggested.node.priceRange.minVariantPrice.amount);
               const totalOriginal = currentPriceRaw + suggestedPriceRaw;
               const savings = totalOriginal - comboPrice;
 
+              const sizes = ['PP', 'P', 'M', 'G', 'GG', 'XG'];
+
               return (
                 <div className="px-4 md:px-6 lg:px-10 py-6 border-b border-neutral-200 bundle-container">
-                  <div className="border border-neutral-200 p-4 sm:p-5 space-y-4 max-w-full overflow-hidden special-offer">
-                    {/* Header */}
-                    <div>
-                      <p className="text-[11px] uppercase tracking-[0.2em] text-neutral-400 mb-1">Oferta Especial</p>
-                      <p className="text-sm text-black">Conjunto Linha Basic Oficial</p>
+                  <div className="border border-neutral-200 p-5 space-y-6 max-w-full overflow-hidden special-offer">
+                    <div className="text-left">
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 mb-1">Oferta Especial</p>
+                      <p className="text-sm font-bold text-black">Conjunto Linha Basic Oficial</p>
                     </div>
 
-                    {/* Product Images Row */}
-                    <div className="flex flex-wrap items-center justify-center gap-3">
-                      {/* Current Product */}
-                      <div className="flex flex-col items-center gap-2 flex-1 min-w-0">
-                        <div className="w-20 h-24 md:w-24 md:h-28 bg-neutral-50 overflow-hidden border border-neutral-100">
-                          {currentImage ? (
-                            <img src={currentImage.url} alt={product.title} className="w-full h-full object-cover" />
-                          ) : (
-                            <div className="w-full h-full flex items-center justify-center text-neutral-300 text-[10px]">Sem img</div>
-                          )}
+                    <div className="flex flex-col gap-6">
+                      <div className="flex items-center justify-between gap-2 px-2">
+                        {/* Main Product */}
+                        <div className="flex flex-col items-center text-center gap-2 flex-1">
+                          <div className="w-16 h-20 bg-neutral-50 flex-shrink-0">
+                            {images[0] && <img src={images[0].node.url} alt="" className="w-full h-full object-cover mix-blend-multiply" />}
+                          </div>
+                          <p className="text-[9px] uppercase tracking-wider text-black font-medium leading-tight max-w-[80px]">{product.title}</p>
                         </div>
-                        <p className="text-[10px] uppercase tracking-wider text-neutral-500 text-center truncate w-full">{product.title}</p>
-                      </div>
 
-                      {/* Plus Icon - sem círculo */}
-                      <div className="flex-shrink-0">
-                        <Plus className="w-4 h-4 text-neutral-400" />
-                      </div>
+                        <Plus className="w-4 h-4 text-neutral-300 flex-shrink-0" />
 
-                      {/* Suggested Product */}
-                      <Link
-                        to={`/product/${suggested.node.handle}`}
-                        className="flex flex-col items-center gap-2 flex-1 min-w-0 group"
-                        onClick={() => {
-                          window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-                          document.documentElement.scrollTop = 0;
-                          document.body.scrollTop = 0;
-                        }}
-                      >
-                        <div className="w-20 h-24 md:w-24 md:h-28 bg-neutral-50 overflow-hidden border border-neutral-100 group-hover:border-neutral-400 transition-colors">
-                          {suggestedImage ? (
-                            <img src={suggestedImage.url} alt={suggested.node.title} className="w-full h-full object-cover" />
-                          ) : (
-                            <div className="w-full h-full flex items-center justify-center text-neutral-300 text-[10px]">Sem img</div>
-                          )}
+                        {/* Suggested Product */}
+                        <div className="flex flex-col items-center text-center gap-2 flex-1">
+                          <div className="w-16 h-20 bg-neutral-50 flex-shrink-0">
+                            {suggested.node.images.edges[0] && <img src={suggested.node.images.edges[0].node.url} alt="" className="w-full h-full object-cover mix-blend-multiply" />}
+                          </div>
+                          <p className="text-[9px] uppercase tracking-wider text-black font-medium leading-tight max-w-[80px]">{suggested.node.title}</p>
                         </div>
-                        <p className="text-[10px] uppercase tracking-wider text-neutral-500 text-center truncate w-full group-hover:text-black transition-colors">{suggested.node.title}</p>
-                      </Link>
-                    </div>
-
-                    {/* Pricing */}
-                    <div className="flex flex-col sm:flex-row items-center sm:justify-between pt-4 border-t border-neutral-100 gap-4">
-                      <div className="w-full sm:w-auto text-center sm:text-left">
-                        <p className="text-xs text-neutral-400 line-through">R$ {totalOriginal.toFixed(2).replace('.', ',')}</p>
-                        <p className="text-base font-bold text-black">R$ {comboPrice.toFixed(2).replace('.', ',')}</p>
-                        <p className="text-[10px] text-green-600">Economize R$ {savings.toFixed(2).replace('.', ',')}</p>
                       </div>
+
+                      {/* Unified Size Selection */}
+                      <div className="pt-4 border-t border-neutral-100">
+                        <p className="text-[10px] uppercase tracking-[0.15em] text-neutral-400 mb-3">Selecione o Tamanho do Conjunto</p>
+                        <div className="flex flex-wrap gap-1">
+                          {sizes.map(s => (
+                            <button
+                              key={s}
+                              onClick={() => setBundleSize(s)}
+                              className={`w-10 h-10 text-[10px] flex items-center justify-center border transition-all ${
+                                bundleSize === s ? 'bg-black text-white border-black' : 'border-neutral-200 text-neutral-400 hover:border-black'
+                              }`}
+                            >
+                              {s}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="pt-2 space-y-1">
+                        <div className="flex items-baseline gap-2">
+                          <p className="text-lg font-bold text-black border-l-2 border-black pl-3 text-left">
+                            R$ {comboPrice.toFixed(2).replace('.', ',')}
+                          </p>
+                          <p className="text-xs text-neutral-400 line-through">
+                            R$ {totalOriginal.toFixed(2).replace('.', ',')}
+                          </p>
+                        </div>
+                        {savings > 0 && (
+                          <p className="text-[11px] text-green-600 font-medium pl-3 text-left">
+                            Economize R$ {savings.toFixed(2).replace('.', ',')}
+                          </p>
+                        )}
+                      </div>
+
                       <button
                         onClick={async () => {
                           if (!bundleProduct) {
                             toast.error("Produto não disponível no momento");
                             return;
                           }
-
                           setComboLoading(true);
                           try {
-                            // Find the matching size variant in the bundle product
-                            const sizeOption = selectedVariant?.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho');
-                            const currentSize = sizeOption?.value || 'M';
-
                             const targetVariant = bundleProduct.variants?.edges?.find(v => 
-                              v.node.selectedOptions.some(so => (so.name === 'Size' || so.name === 'Tamanho') && so.value === currentSize)
+                              v.node.selectedOptions.some(so => (so.name === 'Size' || so.name === 'Tamanho') && so.value === bundleSize)
                             )?.node || bundleProduct.variants?.edges?.[0]?.node;
 
                             if (targetVariant) {
@@ -471,20 +427,19 @@ const ProductDetail = () => {
                                 quantity: 1,
                                 selectedOptions: targetVariant.selectedOptions || [],
                               });
-                              
-                              toast.success("Conjunto adicionado ao carrinho", { position: "top-center" });
+                              toast.success("Conjunto adicionado!", { position: "top-center" });
                               setIsOpen(true);
                             } else {
-                              toast.error("Variação de tamanho não encontrada");
+                              toast.error("Variação não encontrada");
                             }
                           } catch (e) {
                             console.error("Erro ao adicionar combo:", e);
-                            toast.error("Erro ao adicionar ao carrinho");
+                            toast.error("Erro ao adicionar combo");
                           }
                           setComboLoading(false);
                         }}
                         disabled={comboLoading}
-                        className="w-full sm:w-auto my-2 mx-0 px-5 h-11 bg-black text-white text-[11px] uppercase tracking-[0.2em] flex items-center justify-center hover:bg-neutral-800 transition-all active:scale-[0.98]"
+                        className="w-full h-11 bg-black text-white text-[11px] uppercase tracking-[0.2em] flex items-center justify-center transition-all active:scale-[0.98]"
                       >
                         {comboLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Comprar All Basic'}
                       </button>
@@ -520,6 +475,55 @@ const ProductDetail = () => {
                 </div>
               </div>
             </div>
+
+            {/* Medidas Accordion Tab */}
+            {(() => {
+              const titleLower = product.title.toLowerCase();
+              const isBoxy = titleLower.includes("boxy");
+              const isShorts = titleLower.includes("shorts");
+              const isOversized = titleLower.includes("oversized") || titleLower.includes("2 t-shirt");
+              const isConjunto = titleLower.includes("conjunto");
+              
+              if (!isBoxy && !isShorts && !isOversized && !isConjunto) return null;
+
+              return (
+                <div className="border-b border-neutral-200">
+                  <button
+                    onClick={() => setOpenTabs(prev => ({ ...prev, sizeChart: !prev.sizeChart }))}
+                    className="w-full px-4 md:px-6 lg:px-10 py-5 flex items-center justify-between text-left hover:bg-neutral-50 transition-colors"
+                  >
+                    <span className="text-sm font-normal text-black">Medidas</span>
+                    <ChevronDown
+                      className={`w-5 h-5 text-neutral-400 transition-transform duration-300 ${openTabs.sizeChart ? 'rotate-180' : ''}`}
+                    />
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ease-in-out ${openTabs.sizeChart ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}
+                  >
+                    <div className="px-4 md:px-6 lg:px-10 pb-5 overflow-x-auto space-y-8">
+                      {isConjunto ? (
+                        <>
+                          <div className="space-y-4">
+                            <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-black border-b border-neutral-100 pb-2">Camiseta</h3>
+                            <SizeChart type="oversized" />
+                          </div>
+                          <div className="space-y-4 pt-4">
+                            <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-black border-b border-neutral-100 pb-2">Shorts</h3>
+                            <SizeChart type="shorts" />
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          {isBoxy && <SizeChart type="boxy" />}
+                          {isShorts && <SizeChart type="shorts" />}
+                          {isOversized && <SizeChart type="oversized" />}
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
 
             {/* Envio Accordion Tab */}
             <div className="border-b border-neutral-200">

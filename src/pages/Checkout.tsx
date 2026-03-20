@@ -12,11 +12,22 @@ import { Loader2 } from "lucide-react";
  */
 const Checkout = () => {
   useEffect(() => {
-    // Basic diagnostic
-    console.log("Checkout page loaded as a fallback/SPA route.");
-    
-    // If we're here and there's a token but no rewrite, we might want to redirect manually
-    // but the rewrite is the preferred way for the "clean URL" stay-in-address-bar feature.
+    // Extract token from path (e.g. /checkout/TOKEN)
+    const pathParts = window.location.pathname.split('/');
+    const token = pathParts[pathParts.length - 1];
+
+    if (token && token !== 'checkout') {
+      console.log("Token detected, redirecting to Yampi:", token);
+      
+      // Delay slightly for better UX (showing the loader)
+      const timer = setTimeout(() => {
+        window.location.href = `https://vaseu2.pay.yampi.com.br/r/${token}${window.location.search}`;
+      }, 1500);
+
+      return () => clearTimeout(timer);
+    } else {
+      console.log("No token found in path, staying on fallback page.");
+    }
   }, []);
 
   return (
