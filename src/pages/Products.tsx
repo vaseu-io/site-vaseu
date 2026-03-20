@@ -13,8 +13,8 @@ const Products = () => {
         const result = [...products];
         
         // Target titles (case insensitive)
-        const blackConjuntoTitle = "CONJUNTO ALL BASIC BLACK";
-        const whiteConjuntoTitle = "CONJUNTO ALL BASIC WHITE";
+        const blackConjuntoTitle = "CONJUNTO T-SHIRT OVER E SHORTS ALL BASIC BLACK";
+        const whiteConjuntoTitle = "CONJUNTO T-SHIRT OVER E SHORTS ALL BASIC WHITE";
 
         // Find the indices of the target products
         const blackIndex = result.findIndex(p => p.node.title.toUpperCase() === blackConjuntoTitle);
