@@ -13,6 +13,7 @@ import ExchangeReturns from "./pages/ExchangeReturns";
 import Tracking from "./pages/Tracking";
 import Timer from "./pages/Timer";
 import Private from "./pages/Private";
+import Checkout from "./pages/Checkout";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -69,6 +70,7 @@ const AppContent = () => {
         <Route path="/timer" element={<Timer />} />
         <Route path="/product/:handle" element={<ProductDetail />} />
         <Route path="/privado" element={<Private />} />
+        <Route path="/checkout/*" element={<Checkout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

@@ -70,7 +70,7 @@ export const CartDrawer = () => {
     // Absolute Worst-Case Fallback to Shopify
     const checkoutUrl = getCheckoutUrl();
     if (checkoutUrl) {
-      window.location.href = checkoutUrl;
+      window.location.href = getBrandedCheckoutUrl(checkoutUrl) || checkoutUrl;
       setIsOpen(false);
     }
     setCheckoutLoading(false);

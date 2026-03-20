@@ -9,10 +9,29 @@ const YAMPI_CHECKOUT_BASE = 'https://vaseu2.pay.yampi.com.br/r';
  */
 export function getBrandedCheckoutUrl(yampiUrl: string | null): string | null {
     if (!yampiUrl) return null;
+    
+    // Handle standard /r/ structure
     if (yampiUrl.includes('/r/')) {
         const tokenPath = yampiUrl.split('/r/')[1];
         return `/checkout/${tokenPath}`;
     }
+
+    // Handle checkout?tokenReference=... structure (like in user screenshot)
+    if (yampiUrl.includes('/checkout?') && yampiUrl.includes('yampi.com.br')) {
+        const query = yampiUrl.split('/checkout?')[1];
+        return `/checkout?${query}`;
+    }
+
+    // Generic domain replacement for any yampi.com.br checkout link
+    if (yampiUrl.includes('yampi.com.br')) {
+        try {
+            const url = new URL(yampiUrl);
+            return `/checkout${url.search}${url.hash}`;
+        } catch (e) {
+            return yampiUrl;
+        }
+    }
+
     return yampiUrl;
 }
 
