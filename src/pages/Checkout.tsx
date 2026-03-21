@@ -14,14 +14,22 @@ const Checkout = () => {
   useEffect(() => {
     // Extract token from path (e.g. /checkout/TOKEN)
     const pathParts = window.location.pathname.split('/');
-    const token = pathParts[pathParts.length - 1];
+    const pathToken = pathParts[pathParts.length - 1];
 
-    if (token && token !== 'checkout') {
-      console.log("Token detected, redirecting to Yampi:", token);
+    // Check if we have tokenReference or other query params
+    const searchParams = new URLSearchParams(window.location.search);
+    const hasCheckoutParams = searchParams.has('tokenReference') || window.location.search.length > 1;
+
+    if ((pathToken && pathToken !== 'checkout') || hasCheckoutParams) {
+      console.log("Checkout data detected, redirecting to Yampi.");
       
       // Delay slightly for better UX (showing the loader)
       const timer = setTimeout(() => {
-        window.location.href = `https://vaseu2.pay.yampi.com.br/r/${token}${window.location.search}`;
+        if (pathToken && pathToken !== 'checkout') {
+          window.location.href = `https://vaseu2.pay.yampi.com.br/r/${pathToken}${window.location.search}`;
+        } else {
+          window.location.href = `https://vaseu2.pay.yampi.com.br/checkout${window.location.search}`;
+        }
       }, 1500);
 
       return () => clearTimeout(timer);
