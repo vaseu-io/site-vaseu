@@ -1,8 +1,6 @@
 {
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/checkout/:path*", "destination": "https://vaseu2.pay.yampi.com.br/r/:path*" },
-    { "source": "/checkout(.*)", "destination": "https://vaseu2.pay.yampi.com.br/checkout$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
