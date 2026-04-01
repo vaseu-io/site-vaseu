@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { persist, createJSONStorage } from 'zustand/middleware';
+import { persist, createJSONStorage, StateStorage } from 'zustand/middleware';
 import {
   CartItem,
   createShopifyCart,
@@ -27,6 +27,31 @@ interface CartStore {
   syncCart: () => Promise<void>;
   getCheckoutUrl: () => string | null;
 }
+
+const safeStorage: StateStorage = {
+  getItem: (name: string): string | null => {
+    try {
+      return localStorage.getItem(name);
+    } catch (e) {
+      console.warn('localStorage is not available', e);
+      return null;
+    }
+  },
+  setItem: (name: string, value: string): void => {
+    try {
+      localStorage.setItem(name, value);
+    } catch (e) {
+      console.warn('localStorage is not available', e);
+    }
+  },
+  removeItem: (name: string): void => {
+    try {
+      localStorage.removeItem(name);
+    } catch (e) {
+      console.warn('localStorage is not available', e);
+    }
+  },
+};
 
 export const useCartStore = create<CartStore>()(
   persist(
@@ -146,7 +171,7 @@ export const useCartStore = create<CartStore>()(
     }),
     {
       name: 'shopify-cart',
-      storage: createJSONStorage(() => localStorage),
+      storage: createJSONStorage(() => safeStorage),
       partialize: (state) => ({ items: state.items, cartId: state.cartId, checkoutUrl: state.checkoutUrl }),
     }
   )
