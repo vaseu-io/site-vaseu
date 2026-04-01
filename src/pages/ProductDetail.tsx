@@ -158,12 +158,12 @@ const ProductDetail = () => {
         <div className="grid md:grid-cols-2 gap-0">
 
           {/* Image Gallery - Swipable */}
-          <div className="relative border-r border-neutral-200">
+          <div className="relative border-r border-neutral-200 md:sticky md:top-[80px] md:h-[calc(100vh-80px)] flex flex-col">
             {/* Main Image Container */}
             <div 
               ref={scrollRef}
               onScroll={handleScroll}
-              className="w-full h-full overflow-x-auto overflow-y-hidden flex snap-x snap-mandatory hide-scrollbar"
+              className="w-full flex-1 min-h-0 overflow-x-auto overflow-y-hidden flex snap-x snap-mandatory hide-scrollbar"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {images.map((img, i) => (
@@ -185,7 +185,7 @@ const ProductDetail = () => {
 
             {/* Dot Indicators */}
             {images.length > 1 && (
-              <div className="flex justify-center gap-2 py-4 border-t border-neutral-200">
+              <div className="flex justify-center gap-2 py-4 border-t border-neutral-200 flex-shrink-0">
                 {images.map((_, i) => (
                   <button
                     key={i}
@@ -199,7 +199,7 @@ const ProductDetail = () => {
 
             {/* Thumbnail Strip */}
             {images.length > 1 && (
-              <div className="hidden md:flex gap-1 px-4 pb-4 overflow-x-auto">
+              <div className="hidden md:flex gap-1 px-4 pb-4 overflow-x-auto flex-shrink-0">
                 {images.map((img, i) => (
                   <button
                     key={i}
