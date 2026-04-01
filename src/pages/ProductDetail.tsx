@@ -9,6 +9,7 @@ import { Loader2, ChevronLeft, ChevronRight, ChevronDown, Plus } from "lucide-re
 import { toast } from "sonner";
 import { getYampiCheckoutUrl, getYampiCartCheckoutUrl, getBrandedCheckoutUrl } from "@/lib/yampi";
 import { SizeChart } from "@/components/SizeChart";
+import { ProductCard } from "@/components/ProductCard";
 
 const BUNDLE_DISCOUNT = 0.10; // 10% de desconto no combo
 
@@ -26,7 +27,7 @@ const ProductDetail = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [buyNowLoading, setBuyNowLoading] = useState(false);
   const [comboLoading, setComboLoading] = useState(false);
-  const [openTabs, setOpenTabs] = useState<Record<string, boolean>>({ design: true, envio: true, sizeChart: false });
+  const [openTabs, setOpenTabs] = useState<Record<string, boolean>>({ design: true, envio: false, sizeChart: false });
   const [bundleSize, setBundleSize] = useState('M');
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -541,24 +542,42 @@ const ProductDetail = () => {
               >
                 <div className="px-4 md:px-6 lg:px-10 pb-5">
                   <p className="text-sm leading-relaxed text-neutral-600">
-                    Todas as nossas encomendas são enviadas pela Azul Cargo Express, com código de rastreio e total segurança. Oferecemos envio gratuito para todo o Brasil, não nos responsabilizamos por erros no preenchimento dos dados de envio, em casos de divergência resolvemos junto com você.
+                    Todas as nossas encomendas são enviadas pela Azul Cargo Express, com código de rastreio e total segurança. Não nos responsabilizamos por erros no preenchimento dos dados de envio, em casos de divergência resolvemos junto com você.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Back Link */}
-            <div className="px-4 md:px-6 lg:px-10 py-6">
-              <Link
-                to="/produtos"
-                className="text-[11px] uppercase tracking-[0.2em] text-neutral-400 hover:text-black transition-colors"
-              >
-                ← Voltar para produtos
-              </Link>
-            </div>
+
           </div>
         </div>
       </div>
+
+      {/* Relacionados */}
+      {allProducts && allProducts.length > 1 && (
+        <div className="border-t border-neutral-200 bg-white">
+          <div className="container py-16">
+            <h2 className="text-center text-sm md:text-base font-bold uppercase tracking-[0.2em] mb-10">
+              Você também vai gostar
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-10 md:gap-x-6">
+              {allProducts
+                .filter(p => p.node.id !== product.id)
+                .slice(0, 4)
+                .map(p => {
+                  const title = p.node.title.toUpperCase();
+                  const isFeatured = title === "PACK 3 T-SHIRT OVERSIZED BASIC";
+                  
+                  return (
+                    <div key={p.node.id} className={isFeatured ? "col-span-2" : ""}>
+                      <ProductCard product={p} isFeatured={isFeatured} />
+                    </div>
+                  );
+                })}
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>

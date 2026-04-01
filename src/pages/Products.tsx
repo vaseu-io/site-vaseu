@@ -13,7 +13,7 @@ const Products = () => {
         const result = [...products];
         
         // Target titles (case insensitive)
-        const featuredTitle = "2 T-SHIRT OVERSIZED BASIC BLACK&WHITE";
+        const featuredTitle = "PACK 3 T-SHIRT OVERSIZED BASIC";
         const blackConjuntoTitle = "CONJUNTO T-SHIRT OVER E SHORTS ALL BASIC BLACK";
         const whiteConjuntoTitle = "CONJUNTO T-SHIRT OVER E SHORTS ALL BASIC WHITE";
 
@@ -86,7 +86,7 @@ const Products = () => {
                             const title = product.node.title.toUpperCase();
                             let originalPrice: number | undefined;
                             
-                            const isFeatured = title === "2 T-SHIRT OVERSIZED BASIC BLACK&WHITE";
+                            const isFeatured = title === "PACK 3 T-SHIRT OVERSIZED BASIC";
 
                             if (title.includes("CONJUNTO T-SHIRT OVER E SHORTS ALL BASIC")) {
                                 const isBlack = title.includes("BLACK");
@@ -110,13 +110,11 @@ const Products = () => {
 
                             if (isFeatured) {
                                 const blackShirt = products?.find(p => p.node.title.toUpperCase() === "T-SHIRT OVERSIZED BASIC BLACK");
-                                const whiteShirt = products?.find(p => p.node.title.toUpperCase() === "T-SHIRT OVERSIZED BASIC WHITE");
-                                if (blackShirt && whiteShirt) {
-                                    originalPrice = parseFloat(blackShirt.node.priceRange.minVariantPrice.amount) + 
-                                                   parseFloat(whiteShirt.node.priceRange.minVariantPrice.amount);
+                                if (blackShirt) {
+                                    originalPrice = parseFloat(blackShirt.node.priceRange.minVariantPrice.amount) * 3;
                                 } else {
-                                    // Fallback: 149.90 * 2
-                                    originalPrice = 299.80;
+                                    // Fallback: 149.90 * 3
+                                    originalPrice = 449.70;
                                 }
                             }
 

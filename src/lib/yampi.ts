@@ -154,13 +154,13 @@ const YAMPI_TOKENS: Record<string, string> = {
     "Conjunto All Basic White|GG": "45PJLMVVPZ",
     "Conjunto All Basic White|XG": "NJDXU3Z0ZB",
 
-    // 2 T-Shirt Oversized Basic Black&White
-    "2 T-Shirt Oversized Basic Black&White|PP": "CHYNRADRVV",
-    "2 T-Shirt Oversized Basic Black&White|P": "5J9Q9294KS",
-    "2 T-Shirt Oversized Basic Black&White|M": "OF50781WL4",
-    "2 T-Shirt Oversized Basic Black&White|G": "4HYT6TKLGS",
-    "2 T-Shirt Oversized Basic Black&White|GG": "JP7N7F9VMD",
-    "2 T-Shirt Oversized Basic Black&White|XG": "3ONGE8MQEM",
+    // PACK 3 T-Shirt Oversized Basic
+    "PACK 3 T-Shirt Oversized Basic|PP": "CHYNRADRVV",
+    "PACK 3 T-Shirt Oversized Basic|P": "5J9Q9294KS",
+    "PACK 3 T-Shirt Oversized Basic|M": "OF50781WL4",
+    "PACK 3 T-Shirt Oversized Basic|G": "4HYT6TKLGS",
+    "PACK 3 T-Shirt Oversized Basic|GG": "JP7N7F9VMD",
+    "PACK 3 T-Shirt Oversized Basic|XG": "3ONGE8MQEM",
 };
 
 // Size mapping: Shopify sizes might differ from Yampi
@@ -192,7 +192,7 @@ function normalizeProductTitle(productTitle: string): string {
     if (normalized.includes('shorts moletinho basic white')) return 'Shorts Moletinho Basic White';
     if (normalized.includes('conjunto') && (normalized.includes('black') || normalized.includes('preta'))) return 'Conjunto All Basic Black';
     if (normalized.includes('conjunto') && (normalized.includes('white') || normalized.includes('branca') || normalized.includes('off-white'))) return 'Conjunto All Basic White';
-    if (normalized.includes('2 t-shirt oversized basic black&white')) return '2 T-Shirt Oversized Basic Black&White';
+    if (normalized.includes('pack 3 t-shirt oversized basic')) return 'PACK 3 T-Shirt Oversized Basic';
     
     return productTitle;
 }

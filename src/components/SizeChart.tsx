@@ -30,7 +30,7 @@ interface SizeChartProps {
 }
 
 export const SizeChart = ({ type }: SizeChartProps) => {
-  const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
+  const [selectedIdx, setSelectedIdx] = useState<number | null>(3);
   const measurements = DATA[type];
 
   return (
