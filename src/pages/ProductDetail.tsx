@@ -48,7 +48,7 @@ const ProductDetail = () => {
   useEffect(() => {
     if (!product) return;
 
-    const isPack3 = product.title.toUpperCase().includes("PACK 3 T-SHIRT OVERSIZED BASIC");
+    const isPack3 = product.title.toUpperCase().includes("PACK 3");
     const options = isPack3 ? 
       [{ name: "Tamanho", values: ["PP", "P", "M", "G", "GG", "XG"] }] : 
       (product.options || []);
@@ -89,7 +89,7 @@ const ProductDetail = () => {
   }
 
   const images = product.images?.edges || [];
-  const isPack3 = product.title.toUpperCase().includes("PACK 3 T-SHIRT OVERSIZED BASIC");
+  const isPack3 = product.title.toUpperCase().includes("PACK 3");
   const options = isPack3 ? 
     [{ name: "Tamanho", values: ["PP", "P", "M", "G", "GG", "XG"] }] : 
     (product.options || []);

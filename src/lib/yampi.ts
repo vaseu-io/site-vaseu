@@ -192,7 +192,7 @@ function normalizeProductTitle(productTitle: string): string {
     if (normalized.includes('shorts moletinho basic white')) return 'Shorts Moletinho Basic White';
     if (normalized.includes('conjunto') && (normalized.includes('black') || normalized.includes('preta'))) return 'Conjunto All Basic Black';
     if (normalized.includes('conjunto') && (normalized.includes('white') || normalized.includes('branca') || normalized.includes('off-white'))) return 'Conjunto All Basic White';
-    if (normalized.includes('pack 3 t-shirt oversized basic')) return 'PACK 3 T-Shirt Oversized Basic';
+    if (normalized.includes('pack 3')) return 'PACK 3 T-Shirt Oversized Basic';
     
     return productTitle;
 }
