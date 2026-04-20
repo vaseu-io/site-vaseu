@@ -96,6 +96,9 @@ const ProductDetail = () => {
 
   // Check if a specific option value is available for sale
   const isOptionValueAvailable = (optionName: string, value: string) => {
+    // Allow all options for PACK 3 as per user request (managing stock manually)
+    if (product.title.toUpperCase().includes("PACK 3")) return true;
+    
     return product.variants?.edges?.some(v => {
       const matchesThisOption = v.node.selectedOptions.some(so => so.name === optionName && so.value === value);
       const matchesOtherOptions = v.node.selectedOptions.every(so => {
@@ -110,6 +113,7 @@ const ProductDetail = () => {
   const handleAddToCart = async () => {
     if (!selectedVariant) return;
     const shopifyProduct: ShopifyProduct = { node: product };
+    
     await addItem({
       product: shopifyProduct,
       variantId: selectedVariant.id,
@@ -138,6 +142,8 @@ const ProductDetail = () => {
       setSelectedImageIndex(index);
     }
   };
+
+  const isAvailableForSale = product.title.toUpperCase().includes("PACK 3") ? true : selectedVariant?.availableForSale;
 
   return (
     <div className="min-h-screen bg-white text-black" style={{ overflowAnchor: "none" }}>
@@ -269,21 +275,21 @@ const ProductDetail = () => {
             <div className="px-4 md:px-6 lg:px-10 py-6 border-b border-neutral-200 space-y-3">
               <button
                 onClick={handleAddToCart}
-                disabled={cartLoading || !selectedVariant?.availableForSale}
-                className={`w-full h-14 text-xs uppercase tracking-[0.25em] font-medium transition-all ${!selectedVariant?.availableForSale
+                disabled={cartLoading || !isAvailableForSale}
+                className={`w-full h-14 text-xs uppercase tracking-[0.25em] font-medium transition-all ${!isAvailableForSale
                   ? 'bg-neutral-200 text-neutral-400 cursor-not-allowed'
                   : 'bg-black text-white hover:bg-neutral-800 active:scale-[0.98]'
                   }`}
               >
                 {cartLoading ? (
                   <Loader2 className="w-4 h-4 animate-spin mx-auto" />
-                ) : !selectedVariant?.availableForSale ? (
+                ) : !isAvailableForSale ? (
                   'Esgotado'
                 ) : (
                   'Adicionar ao Carrinho'
                 )}
               </button>
-              {selectedVariant?.availableForSale && (
+              {isAvailableForSale && (
                 <button
                   onClick={async () => {
                     setBuyNowLoading(true);
