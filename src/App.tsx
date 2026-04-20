@@ -2,14 +2,14 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { useEffect, useLayoutEffect, lazy, Suspense } from "react";
 import { useCartSync } from "@/hooks/useCartSync";
 
 // Lazy load pages for better performance
 const Index = lazy(() => import("./pages/Index"));
 const ProductDetail = lazy(() => import("./pages/ProductDetail"));
-const Products = lazy(() => import("./pages/Products"));
+const Products = lazy(() => import("./pages/products"));
 const Contact = lazy(() => import("./pages/Contact"));
 const ExchangeReturns = lazy(() => import("./pages/ExchangeReturns"));
 const Tracking = lazy(() => import("./pages/Tracking"));
@@ -74,11 +74,14 @@ const AppContent = () => {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/produtos" element={<Products />} />
+          <Route path="/produtos/:handle" element={<ProductDetail />} />
+          <Route path="/product/:handle" element={<ProductDetail />} />
+          <Route path="/products" element={<Navigate to="/produtos" replace />} />
+          <Route path="/produto" element={<Navigate to="/produtos" replace />} />
           <Route path="/contato" element={<Contact />} />
           <Route path="/trocas-e-devolucoes" element={<ExchangeReturns />} />
           <Route path="/rastreio" element={<Tracking />} />
           <Route path="/timer" element={<Timer />} />
-          <Route path="/product/:handle" element={<ProductDetail />} />
           <Route path="/privado" element={<Private />} />
           <Route path="/checkout/*" element={<Checkout />} />
           <Route path="*" element={<NotFound />} />
