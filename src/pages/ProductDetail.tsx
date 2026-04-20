@@ -48,7 +48,11 @@ const ProductDetail = () => {
   useEffect(() => {
     if (!product) return;
 
-    const options = product.options || [];
+    const isPack3 = product.title.toUpperCase().includes("PACK 3 T-SHIRT OVERSIZED BASIC");
+    const options = isPack3 ? 
+      [{ name: "Tamanho", values: ["PP", "P", "M", "G", "GG", "XG"] }] : 
+      (product.options || []);
+
     if (options.length === 0) return;
 
     setSelectedOptions(prev => {
@@ -85,8 +89,10 @@ const ProductDetail = () => {
   }
 
   const images = product.images?.edges || [];
-  const options = product.options || [];
-
+  const isPack3 = product.title.toUpperCase().includes("PACK 3 T-SHIRT OVERSIZED BASIC");
+  const options = isPack3 ? 
+    [{ name: "Tamanho", values: ["PP", "P", "M", "G", "GG", "XG"] }] : 
+    (product.options || []);
 
   const selectedVariant = product.variants?.edges?.find(v =>
     v.node.selectedOptions.every(so => selectedOptions[so.name] === so.value)
@@ -96,6 +102,9 @@ const ProductDetail = () => {
 
   // Check if a specific option value is available for sale
   const isOptionValueAvailable = (optionName: string, value: string) => {
+    // For Pack 3, all options are always available
+    if (isPack3) return true;
+
     return product.variants?.edges?.some(v => {
       const matchesThisOption = v.node.selectedOptions.some(so => so.name === optionName && so.value === value);
       const matchesOtherOptions = v.node.selectedOptions.every(so => {
@@ -140,7 +149,7 @@ const ProductDetail = () => {
     }
   };
 
-  const isAvailableForSale = selectedVariant?.availableForSale;
+  const isAvailableForSale = isPack3 || selectedVariant?.availableForSale;
 
   return (
     <div className="min-h-screen bg-white text-black" style={{ overflowAnchor: "none" }}>
@@ -290,8 +299,7 @@ const ProductDetail = () => {
                 <button
                   onClick={async () => {
                     setBuyNowLoading(true);
-                    const sizeOption = selectedVariant.selectedOptions.find(o => o.name === 'Size' || o.name === 'Tamanho');
-                    const currentSize = sizeOption?.value || selectedVariant.title || 'M';
+                    const currentSize = selectedOptions['Size'] || selectedOptions['Tamanho'] || 'M';
                     
                     // Pre-calculate fallback URL (local tokens matching)
                     const fallback = getYampiCheckoutUrl(product.title, currentSize);
