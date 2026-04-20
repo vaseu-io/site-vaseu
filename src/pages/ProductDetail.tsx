@@ -96,9 +96,6 @@ const ProductDetail = () => {
 
   // Check if a specific option value is available for sale
   const isOptionValueAvailable = (optionName: string, value: string) => {
-    // Allow all options for PACK 3 as per user request (managing stock manually)
-    if (product.title.toUpperCase().includes("PACK 3")) return true;
-    
     return product.variants?.edges?.some(v => {
       const matchesThisOption = v.node.selectedOptions.some(so => so.name === optionName && so.value === value);
       const matchesOtherOptions = v.node.selectedOptions.every(so => {
@@ -143,7 +140,7 @@ const ProductDetail = () => {
     }
   };
 
-  const isAvailableForSale = product.title.toUpperCase().includes("PACK 3") ? true : selectedVariant?.availableForSale;
+  const isAvailableForSale = selectedVariant?.availableForSale;
 
   return (
     <div className="min-h-screen bg-white text-black" style={{ overflowAnchor: "none" }}>
