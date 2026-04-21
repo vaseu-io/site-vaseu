@@ -48,10 +48,8 @@ const ProductDetail = () => {
   useEffect(() => {
     if (!product) return;
 
-    const isPack3 = product.title.toUpperCase().includes("PACK 3");
-    const options = isPack3 ? 
-      [{ name: "Tamanho", values: ["PP", "P", "M", "G", "GG", "XG"] }] : 
-      (product.options || []);
+    const isPack3 = product.title.toUpperCase().includes("PACK") || product.handle.toLowerCase().includes("pack");
+    const options = product.options || [];
 
     if (options.length === 0) return;
 
@@ -89,10 +87,8 @@ const ProductDetail = () => {
   }
 
   const images = product.images?.edges || [];
-  const isPack3 = product.title.toUpperCase().includes("PACK 3");
-  const options = isPack3 ? 
-    [{ name: "Tamanho", values: ["PP", "P", "M", "G", "GG", "XG"] }] : 
-    (product.options || []);
+  const isPack3 = product.title.toUpperCase().includes("PACK") || product.handle.toLowerCase().includes("pack");
+  const options = product.options || [];
 
   const selectedVariant = product.variants?.edges?.find(v =>
     v.node.selectedOptions.every(so => selectedOptions[so.name] === so.value)
