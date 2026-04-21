@@ -48,6 +48,9 @@ const ProductDetail = () => {
   useEffect(() => {
     if (!product) return;
 
+    // Atualiza o título da aba com o nome do produto
+    document.title = `${product.title} | Vaseu Oficial`;
+
     const options = product.options || [];
 
     if (options.length === 0) return;
