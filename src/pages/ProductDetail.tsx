@@ -556,13 +556,20 @@ const ProductDetail = () => {
             {/* Lifestyle Images for Pack 3 */}
             {(handle === 'oferta-pack-3-t-shirt-oversized-basic' || product.title.toUpperCase().includes("PACK 3 T-SHIRT OVERSIZED BASIC")) && (
               <div className="px-4 md:px-6 lg:px-10 py-10 space-y-8">
-                <div className="flex flex-col gap-8">
-                  {[1, 2, 3, 4, 5].map((num) => (
-                    <div key={num} className="group relative overflow-hidden bg-neutral-50">
+                <div className="flex flex-col gap-0 border-t border-neutral-200 pt-8">
+                  {[
+                    "Modelo_pose_primeira_202604211438.jpeg",
+                    "faça_uma_nova_202604211405 (1).png",
+                    "faça_uma_nova_202604211405 (2).png",
+                    "faça_uma_nova_202604211405.png",
+                    "faça_uma_nova_202604211406 (1).png",
+                    "faça_uma_nova_202604211406.png"
+                  ].map((filename, idx) => (
+                    <div key={idx} className="relative overflow-hidden flex justify-center w-full">
                       <img 
-                        src={`/images/pack3/lifestyle-${num}.webp`} 
-                        alt={`Vaseu Lifestyle ${num}`}
-                        className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105"
+                        src={`/images/pack3/${filename}`} 
+                        alt={`Vaseu Lifestyle ${idx + 1}`}
+                        className="w-full h-auto object-cover"
                       />
                     </div>
                   ))}
