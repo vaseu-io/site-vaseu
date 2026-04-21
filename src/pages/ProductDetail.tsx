@@ -225,16 +225,36 @@ const ProductDetail = () => {
 
             {/* Title + Price */}
             <div className="px-4 md:px-6 lg:px-10 pt-8 pb-6 border-b border-neutral-200">
-              <h1 className="text-base md:text-lg font-bold uppercase tracking-[0.15em]">
+              <h1 className="text-[16px] md:text-[18px] font-medium text-[#111] uppercase tracking-[0.02em] mb-4">
                 {product.title}
               </h1>
-              <p className="text-base mt-1">
-                R$ {currentPrice.toFixed(2).replace('.', ',')}
-              </p>
-              {currentPrice >= 30 && (
-                <p className="text-[11px] text-neutral-400 mt-1">
-                  em até 3x de R$ {(currentPrice / 3).toFixed(2).replace('.', ',')}
-                </p>
+              
+              {product.title.toUpperCase().includes("PACK 3") ? (
+                <div className="flex flex-col">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[#888] line-through text-[13px]">R$ 389,70</span>
+                    <span className="text-[#00a650] text-[13px] font-medium">Economize R$ 131,80</span>
+                  </div>
+                  <div className="text-[26px] md:text-[28px] font-medium text-black leading-none mt-1">
+                    R$ {currentPrice.toFixed(2).replace('.', ',')}
+                  </div>
+                  {currentPrice >= 30 && (
+                    <div className="text-[14px] text-[#666] mt-2">
+                      ou 3x de R$ {(currentPrice / 3).toFixed(2).replace('.', ',')}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="flex flex-col">
+                  <div className="text-[26px] md:text-[28px] font-medium text-black leading-none mt-1">
+                    R$ {currentPrice.toFixed(2).replace('.', ',')}
+                  </div>
+                  {currentPrice >= 30 && (
+                    <div className="text-[14px] text-[#666] mt-2">
+                      ou 3x de R$ {(currentPrice / 3).toFixed(2).replace('.', ',')}
+                    </div>
+                  )}
+                </div>
               )}
             </div>
 
