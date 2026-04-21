@@ -553,6 +553,23 @@ const ProductDetail = () => {
               </div>
             </div>
 
+            {/* Lifestyle Images for Pack 3 */}
+            {(handle === 'oferta-pack-3-t-shirt-oversized-basic' || product.title.toUpperCase().includes("PACK 3 T-SHIRT OVERSIZED BASIC")) && (
+              <div className="px-4 md:px-6 lg:px-10 py-10 space-y-8">
+                <div className="flex flex-col gap-8">
+                  {[1, 2, 3, 4, 5].map((num) => (
+                    <div key={num} className="group relative overflow-hidden bg-neutral-50">
+                      <img 
+                        src={`/images/pack3/lifestyle-${num}.webp`} 
+                        alt={`Vaseu Lifestyle ${num}`}
+                        className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
 
           </div>
         </div>
