@@ -9,9 +9,13 @@ export function useProducts() {
 }
 
 export function useProduct(handle: string) {
+  const mappedHandle = handle === 'oferta-pack-3-t-shirt-oversized-basic' 
+    ? 't-shirt-oversized-basic-black-white' 
+    : handle;
+
   return useQuery({
-    queryKey: ['shopify-product', handle],
-    queryFn: () => fetchProductByHandle(handle),
-    enabled: !!handle,
+    queryKey: ['shopify-product', mappedHandle],
+    queryFn: () => fetchProductByHandle(mappedHandle),
+    enabled: !!mappedHandle,
   });
 }
