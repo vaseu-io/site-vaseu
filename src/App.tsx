@@ -75,6 +75,9 @@ const AppContent = () => {
           <Route path="/" element={<Index />} />
           <Route path="/produtos" element={<Products />} />
           <Route path="/produtos/:handle" element={<ProductDetail />} />
+          {/* PACK 3 redirects — old/wrong handles → correct Shopify handle */}
+          <Route path="/product/t-shirt-oversized-basic-black-z" element={<Navigate to="/product/t-shirt-oversized-basic-black-white" replace />} />
+          <Route path="/product/pack-3-t-shirt-oversized-basic" element={<Navigate to="/product/t-shirt-oversized-basic-black-white" replace />} />
           <Route path="/product/:handle" element={<ProductDetail />} />
           <Route path="/products" element={<Navigate to="/produtos" replace />} />
           <Route path="/produto" element={<Navigate to="/produtos" replace />} />
