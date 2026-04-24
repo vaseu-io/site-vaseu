@@ -21,9 +21,9 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    legacy({
-      targets: ['defaults', 'not IE 11']
-    }),
+    // legacy({
+    //   targets: ['defaults', 'not IE 11']
+    // }),
     mode === "development" && componentTagger()
   ].filter(Boolean),
   resolve: {
